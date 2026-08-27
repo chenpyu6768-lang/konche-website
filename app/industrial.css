@@ -4693,3 +4693,57 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
 .premium-demo.cinema-hero .contact-cta h2 {color: #fff;}
 .premium-demo.cinema-hero .contact-cta .button-primary {background: #fff; color: #063526;}
 .premium-demo.cinema-hero .contact-cta .contact-alt-link {color: #d9f0d8;}
+
+/* 70. Hero banner corrections — ocean home, balanced solutions, centered resources, ocean about — 2026-08-27 */
+
+/* 1) Home hero: ocean photo + centered intro (restores the earlier version;
+      the industrial-equipment image came from an older rule that this overrides). */
+.premium-demo.cinema-hero .hero.ind-hero-banner {
+  background:
+    linear-gradient(180deg, rgba(6, 24, 38, .62) 0%, rgba(7, 33, 50, .38) 48%, rgba(9, 47, 68, .55) 100%),
+    url("images/scenery/reservoir-intake-hero.jpg") center 45% / cover no-repeat;
+  background-color: #08293C;
+  min-height: 700px;
+}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-inner {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  min-height: 700px;
+  padding-top: 132px;
+  padding-bottom: 40px;
+}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-content {max-width: 780px; margin: 0 auto;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-content h1,
+.premium-demo.cinema-hero .hero.ind-hero-banner h1 .hero-green {color: #fff; text-shadow: 0 2px 24px rgba(6, 24, 38, .55);}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-anchor {color: #cfe0ee; justify-content: center;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-description {color: rgba(255, 255, 255, .92); margin-left: auto; margin-right: auto;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-actions {justify-content: center;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-stats {justify-content: center; border-top: 1px solid rgba(255, 255, 255, .22); padding-top: 18px; width: 100%;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-stats dt {color: #fff;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-stats dd {color: #c3d4de;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-stats > div {border-left-color: rgba(255, 255, 255, .35);}
+.premium-demo.cinema-hero .hero.ind-hero-banner .scroll-cue {display: none;}
+.premium-demo.cinema-hero .hero.ind-hero-banner .hero-grid {display: none;}
+
+/* 2) Solutions hero: copy left, aside right — balanced 55/45 with vertical centering. */
+.solutions-hero .product-hero-inner {grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; min-height: 560px; padding-top: 0; padding-bottom: 0;}
+.solutions-hero .product-hero-copy {padding-top: 0;}
+.solutions-hero .product-hero-visual.solutions-hero-aside {min-height: 0; align-items: center;}
+
+/* 3) Resources hero: copy vertically centered. */
+.resources-hero .product-hero-copy,
+.contact-hero .product-hero-copy {padding-top: 0;}
+
+/* 4) About hero: use the home ocean photo. */
+.about-new-hero {background: url("images/scenery/reservoir-intake-hero.jpg") center 45% / cover no-repeat, #071C2C;}
+.about-new-hero::before {background: linear-gradient(100deg, rgba(4, 24, 40, .8) 0%, rgba(4, 24, 40, .52) 52%, rgba(4, 24, 40, .26) 100%);}
+
+@media (max-width: 1000px) {
+  .solutions-hero .product-hero-inner {grid-template-columns: minmax(0, 1fr); min-height: 0;}
+}
+@media (max-width: 720px) {
+  .premium-demo.cinema-hero .hero.ind-hero-banner {min-height: 640px;}
+  .premium-demo.cinema-hero .hero.ind-hero-banner .hero-inner {min-height: 640px; padding-top: 112px;}
+}
