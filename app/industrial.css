@@ -4751,3 +4751,7 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
 
 /* 70b. Solutions aside overrides the global hidden visual — 2026-08-27 */
 .solutions-hero .product-hero-visual.solutions-hero-aside {display: flex;}
+
+/* 70c. Ensure solutions aside renders regardless of legacy hiding rules — 2026-08-27 */
+.premium-demo.cinema-hero .solutions-hero .product-hero-visual.solutions-hero-aside {display: flex !important; visibility: visible !important; min-width: 0;}
+.premium-demo.cinema-hero .solutions-hero .product-hero-inner {display: grid !important; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr) !important;}
