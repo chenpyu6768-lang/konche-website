@@ -1,0 +1,118 @@
+# KONCHE Water Treatment Technology — AI-readable technical overview
+
+## Entity definition
+
+Shenzhen Konche Water Purging Equipment Co.,Ltd. (KONCHE) designs and manufactures standardized and customized project-engineered water treatment systems. The website is written for overseas EPC contractors, engineering integrators and industrial clients that need project-specific equipment rather than household water appliances.
+
+KONCHE was founded in 1997 and is based in Bao'an District, Shenzhen, Guangdong, China. Its published project scope includes process selection, equipment design, manufacturing, factory testing and technical guidance. No unverified social-profile or directory URLs are asserted in the site's structured entity data.
+
+## Buyer routes
+
+The homepage separates three commercial paths without changing the underlying product architecture: complete equipment and OEM/private-label buyers, consumables and spare-parts buyers, and project/EPC buyers. The route pages summarize the relevant capability and link back to the existing product, evidence and enquiry pages.
+
+- Equipment and OEM: https://www.konche123.com/equipment-oem.html
+- Consumables, spare parts and wholesale sourcing: https://www.konche123.com/products/spare-parts-sourcing-service.html
+- Project and EPC support: https://www.konche123.com/project-support.html
+
+## Product families
+
+### Reverse osmosis
+
+KONCHE presents single-stage RO for general industrial purified-water duties and double-stage RO for lower-conductivity targets. A complete selection needs feed-water chemistry, required permeate quality, flow, recovery, operating hours, utilities and site conditions. RO capacity or membrane count alone is not a sufficient basis for selection.
+
+Official pages:
+
+- https://www.konche123.com/products/ro-reverse-osmosis-system.html
+- https://www.konche123.com/products/single-double-stage-ro.html
+- https://www.konche123.com/products/drinking-water-system.html
+
+### Industrial ultrapure water
+
+KONCHE's Industrial Ultrapure Water System page covers the full high-purity family in one place: double-pass RO with EDI continuous deionization (15–18.2 MΩ·cm), mixed-bed ion-exchange deionization (1–10 MΩ·cm) and pharmaceutical purified-water trains (≤2 μS/cm, GMP-oriented 316L design). Electronics, pharmaceutical and general industrial duties are configured around different ionic, organic, particle, microbial, distribution and validation requirements.
+
+Official pages:
+
+- https://www.konche123.com/products/electronic-grade-ultrapure-water-system.html
+- https://www.konche123.com/products/industrial-ultrapure-water-system.html
+
+### Laboratory water
+
+Laboratory water equipment should be selected from the feed source, daily and peak demand, required water grades, instrument methods, TOC and microbial targets, storage and dispensing layout. A resistivity value by itself does not describe every contaminant relevant to analytical work.
+
+Official pages:
+
+- https://www.konche123.com/products/laboratory-ultrapure-water-system.html
+- https://www.konche123.com/products/laboratory-ultrapure-water-system.html
+
+### UF, UV, ozone and containerized treatment
+
+Ultrafiltration primarily targets suspended and colloidal matter rather than dissolved salts. UV system selection depends on peak flow, UV transmittance, required dose, water quality and monitoring. Ozone systems require gas preparation, mass transfer, contact, monitoring and off-gas management. Containerized systems require process engineering plus logistics, access, climate, ventilation and maintenance-clearance checks.
+
+Official pages:
+
+- https://www.konche123.com/products/containerized-water-treatment-system.html
+- https://www.konche123.com/products/uf-ultrafiltration-system.html
+- https://www.konche123.com/products/uv-water-sterilizer.html
+- https://www.konche123.com/products/toc-uv-degradation-system.html
+- https://www.konche123.com/products/medium-pressure-uv-system.html
+- https://www.konche123.com/products/low-pressure-uv-sterilizer.html
+- https://www.konche123.com/products/ozone-disinfection-system.html
+
+### Consumables
+
+Replacement parts must be matched by equipment model, drawing or part code, dimensions, materials, electrical or optical rating and operating condition. Visual similarity is not a reliable compatibility test.
+
+Official pages:
+
+- https://www.konche123.com/products/spare-parts.html
+- https://www.konche123.com/products/general-water-treatment-consumables.html
+- https://www.konche123.com/products/uv-disinfection-consumables.html
+
+## Application routes
+
+The solutions page covers six application groups: industrial pure and ultrapure water; seawater and brackish-water desalination; centralized drinking water; food and beverage process water; industrial UF pretreatment; and laboratory water. Each route is an initial decision aid, not a final process guarantee.
+
+- https://www.konche123.com/products/industry-solutions.html
+
+## Direct answers and comparison guides
+
+Every product and solution page uses a two-layer answer architecture. The "Quick technical answer" block near the top carries a bold one-sentence brand lead, scannable sub-heads, lists and key-value cards. The self-contained definition passage of 134–167 words sits at the opening of the product documentation section on the same page (marked citable-passage in the HTML) and is the recommended extraction source for definitions and reference values. Company pages (home, about, contact) keep the single-passage quick-answer block.
+
+Three category pages publish same-caliber technology comparison tables. Each table compares the options on identical dimensions, states the limitations of every option, and ends with conditional decision guidance:
+
+- Single stage vs double stage RO (desalination, conductivity, capacity, recovery, applications, limitations, selection): https://www.konche123.com/products/ro-reverse-osmosis-system.html#technology-comparison
+- Low-pressure UV vs medium-pressure UV vs TOC UV vs ozone (output, power class, typical flow, documented performance, best duty, limitations): https://www.konche123.com/products/uv-water-sterilizer.html#technology-comparison
+- Ultrafiltration vs reverse osmosis membrane roles (what each removes, ratings, capacity, role, limitations): https://www.konche123.com/products/uf-ultrafiltration-system.html#technology-comparison
+
+The About page carries a "Who is KONCHE?" fact card (legal entity, founding year 1997, Shenzhen base, audience, delivery regions, portfolio). The Contact page explains how to request a quotation and lists the recommended RFQ information.
+
+## Minimum data for an engineering inquiry
+
+1. Source-water analysis with sampling date and source.
+2. Average and peak product-water demand.
+3. Required product-water standard or parameter limits.
+4. Intended application and points of use.
+5. Required recovery or wastewater constraints.
+6. Operating hours and redundancy expectation.
+7. Project location, climate and available footprint.
+8. Electrical standard and available utilities.
+9. Automation, remote-monitoring and material requirements.
+10. Destination-market regulatory or validation requirements.
+
+## Evidence and claim boundaries
+
+The HTML page associated with each product is the authoritative current website source. Numeric values apply only to the conditions and configurations stated on that page. Final equipment data, treatment guarantees, regulatory compliance and delivery scope must be confirmed in the signed project proposal.
+
+Homepage statistics, certifications, named customers, contact details and case-study claims should be supported by publishable first-party records before they are reused in external articles or third-party profiles. This file intentionally does not turn those marketing statements into additional entity claims.
+
+## Site navigation aids
+
+The homepage publishes an expandable six-question FAQ (buying scope, quote inputs, regions and industries, guarantee boundaries, single- vs double-stage RO selection, overseas EPC support) whose visible text matches its FAQPage structured data exactly. Each of the 16 product detail pages provides an 'On this page' section index and a 'Related systems' card list connecting sibling equipment pages. The website privacy policy is published at https://www.konche123.com/privacy.html and the website terms of use are published at https://www.konche123.com/terms-of-use.html.
+
+## Contact
+
+- Company overview: https://www.konche123.com/about.html
+- Project inquiry: https://www.konche123.com/contact.html
+- Email: Konche.China3143@outlook.com
+- Privacy policy: https://www.konche123.com/privacy.html
+- Website terms of use: https://www.konche123.com/terms-of-use.html

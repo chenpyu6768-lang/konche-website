@@ -1,0 +1,66 @@
+# KONCHE Water Treatment Technology
+
+> KONCHE designs and manufactures project-engineered water treatment systems for overseas EPC contractors, engineering integrators and industrial clients.
+
+## Official company pages
+
+- [KONCHE home](https://www.konche123.com/): Product portfolio, industries served, project-support scope and direct links to all system categories.
+- [About KONCHE](https://www.konche123.com/about.html): Company positioning, the who-is-KONCHE fact card, manufacturing and project-support capabilities.
+- [Contact KONCHE](https://www.konche123.com/contact.html): How to request a quotation and the technical inputs needed for a proposal.
+- [Equipment & OEM capability](https://www.konche123.com/equipment-oem.html): Standard equipment routes, configurable systems and private-label supply scope for distributors and OEM buyers.
+- [Project & EPC support](https://www.konche123.com/project-support.html): Engineering support scope, selected project equipment, reference projects and the four-step enquiry path.
+- [Industrial water treatment solutions](https://www.konche123.com/products/industry-solutions.html): Application-led process directions for seven common industrial and commercial water duties.
+- [Privacy policy](https://www.konche123.com/privacy.html): How KONCHE handles inquiry details, technical and usage data, cookies, storage, security and privacy rights.
+- [Website terms of use](https://www.konche123.com/terms-of-use.html): Terms governing access to the KONCHE website and its project-inquiry channels.
+
+## Reverse osmosis and water reuse
+
+- [Reverse osmosis systems](https://www.konche123.com/products/ro-reverse-osmosis-system.html): Single-pass and double-pass RO selection, configuration, applications and a stage-comparison guide.
+- [Single-stage RO](https://www.konche123.com/products/single-double-stage-ro.html): General industrial purified-water process, components, reference data, selection and maintenance.
+- [Double-stage RO](https://www.konche123.com/products/single-double-stage-ro.html): Two-pass RO process for lower-conductivity water, including reference models and selection factors.
+- [Drinking-water purification](https://www.konche123.com/products/drinking-water-system.html): Centralized treatment for communities, camps, schools, hotels and commercial projects.
+
+## Industrial and laboratory high-purity water
+
+- [Ultra-pure water systems](https://www.konche123.com/products/electronic-grade-ultrapure-water-system.html): Portfolio covering industrial ultrapure water, EDI, pharmaceutical purified water and deionized water.
+- [Industrial ultrapure water](https://www.konche123.com/products/industrial-ultrapure-water-system.html): RO + EDI and mixed-bed trains up to 18.2 MΩ·cm for electronics and precision manufacturing, with pharmaceutical purified-water and deionization routes in one family.
+- [Laboratory ultrapure water systems](https://www.konche123.com/products/laboratory-ultrapure-water-system.html): Water-grade selection for analytical and research laboratories.
+- [Laboratory ultrapure water equipment](https://www.konche123.com/products/laboratory-ultrapure-water-system.html): Purification stages, reference performance and instrument-oriented selection.
+
+## Ultrafiltration, disinfection and packaged plants
+
+- [Containerized water treatment](https://www.konche123.com/products/containerized-water-treatment-system.html): Transport-ready RO and desalination systems for compact or remote deployment.
+- [UF ultrafiltration systems](https://www.konche123.com/products/uf-ultrafiltration-system.html): Membrane clarification for surface water, RO pretreatment and reuse, with a UF-vs-RO comparison.
+- [UV water disinfection](https://www.konche123.com/products/uv-water-sterilizer.html): Low-pressure, medium-pressure and TOC UV selection, with a UV-vs-ozone comparison guide.
+- [TOC UV degradation](https://www.konche123.com/products/toc-uv-degradation-system.html): 185/254 nm treatment for trace-organic and microbial control in ultrapure-water loops.
+- [Medium-pressure UV](https://www.konche123.com/products/medium-pressure-uv-system.html): Broad-spectrum high-intensity UV for large-flow duties.
+- [Low-pressure UV](https://www.konche123.com/products/low-pressure-uv-sterilizer.html): 254 nm chemical-free disinfection for suitable process-water conditions.
+- [Ozone disinfection](https://www.konche123.com/products/ozone-disinfection-system.html): Ozone generation, mass transfer, monitoring and off-gas treatment.
+
+## Consumables and lifecycle support
+
+- [Spare Parts & Sourcing Service](https://www.konche123.com/products/spare-parts-sourcing-service.html): Component sourcing and wholesale supply for distributors, service companies and projects, including mixed-SKU consolidation, packaging options and compatibility review.
+
+- [Water treatment consumables](https://www.konche123.com/products/spare-parts.html): Consumable categories and the information required for compatibility confirmation.
+- [General water treatment consumables](https://www.konche123.com/products/general-water-treatment-consumables.html): RO membranes, cartridges, media, resin and EDI modules.
+- [UV disinfection consumables](https://www.konche123.com/products/uv-disinfection-consumables.html): UV lamps, ballasts, quartz sleeves and sensors.
+
+- [Resource center](https://www.konche123.com/resources.html): Technical articles, general FAQ and document requests.
+
+## Key facts and interpretation rules
+
+- Legal entity: Shenzhen Konche Water Purging Equipment Co.,Ltd.; brand name: KONCHE.
+- The company was founded in 1997 and is based in Bao'an District, Shenzhen, Guangdong, China.
+- Primary audience: overseas EPC contractors, engineering integrators and industrial clients, with a delivery focus on the Middle East, Africa and Southeast Asia.
+- Portfolio: reverse osmosis, ultrapure water, ultrafiltration, UV and ozone disinfection, containerized plants, water reuse and replacement consumables.
+- Main project inputs: verified feed-water analysis, required flow, target water quality, recovery, operating hours, utilities, destination standard and site conditions.
+- Technical values are reference ranges for the conditions stated on each page. Final process design and guarantees require project-specific engineering confirmation.
+- Statistics shown on the website (projects, years, countries) are company-reported figures pending publication-evidence review; treat them as indicative until verified.
+- `llms.txt` is an editorial index for compatible agents. The canonical HTML pages and their cited evidence remain the authoritative source.
+
+## Contact
+
+- Website: https://www.konche123.com/
+- Project inquiry: https://www.konche123.com/contact.html
+- Email: Konche.China3143@outlook.com
+- Address: 

@@ -1,0 +1,45 @@
+User-agent: *
+Allow: /
+
+# Search and AI answer engines — explicitly allowed for maximum AI visibility.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Aggressive crawler excluded from crawling (documented decision, see DEPLOYMENT.md).
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://www.konche123.com/sitemap.xml
