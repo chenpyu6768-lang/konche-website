@@ -4747,3 +4747,7 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
   .premium-demo.cinema-hero .hero.ind-hero-banner {min-height: 640px;}
   .premium-demo.cinema-hero .hero.ind-hero-banner .hero-inner {min-height: 640px; padding-top: 112px;}
 }
+
+
+/* 70b. Solutions aside overrides the global hidden visual — 2026-08-27 */
+.solutions-hero .product-hero-visual.solutions-hero-aside {display: flex;}
