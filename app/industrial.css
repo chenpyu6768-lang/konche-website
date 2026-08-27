@@ -4542,3 +4542,154 @@ body.premium-demo.cinema-hero {background: #071627; color: #c7d6e5;}
 .solutions-answer-citable {margin-top: 18px; padding: 16px 18px; background: #FFFFFF; border: 1px solid #E4EBE8; border-left: 3px solid #005C43; border-radius: 6px;}
 .solutions-answer-citable .citable-passage {max-width: none; margin: 0; color: #4A5A57; font-size: 13.5px; line-height: 1.8; columns: 2; column-gap: 40px;}
 @media (max-width: 820px) {.solutions-answer-citable .citable-passage {columns: 1;}}
+
+
+/* 69. Homepage light theme — white + soft grey-green bands, no deep navy — 2026-08-27 */
+
+/* Hero back to light base; photo on the right reads naturally. */
+.premium-demo.cinema-hero .hero.ind-hero-banner {background:
+    linear-gradient(90deg,
+      #F5F7F6 0%,
+      rgba(220, 232, 246, .96) 30%,
+      rgba(220, 232, 246, .55) 55%,
+      rgba(220, 232, 246, 0) 84%),
+    url("images/products/hero-ultrapure-banner.webp") right center / cover no-repeat;}
+.premium-demo.cinema-hero .hero-content h1 {color: #081b33; text-shadow: none;}
+.premium-demo.cinema-hero .hero.ind-hero-banner h1 .hero-green {color: #005C43; text-shadow: none;}
+.premium-demo.cinema-hero .hero-anchor {color: #33424e;}
+.premium-demo.cinema-hero .hero-anchor::before {background: #E4573F;}
+.premium-demo.cinema-hero .hero-description {color: #4A575E;}
+.premium-demo.cinema-hero .hero .button-primary {background: #005C43; color: #fff; border: 1px solid #005C43; box-shadow: 0 10px 24px rgba(0, 92, 67, .25);}
+.premium-demo.cinema-hero .hero .button-primary:hover {background: #004532; color: #fff;}
+.premium-demo.cinema-hero .hero .hero-quote-cta {background: #fff; color: #081b33; border-color: rgba(8, 27, 51, .35); box-shadow: none;}
+.premium-demo.cinema-hero .hero .hero-quote-cta:hover {background: #fff; color: #005C43; border-color: #005C43;}
+.premium-demo.cinema-hero .hero-stats dt {color: #081b33; text-shadow: none;}
+.premium-demo.cinema-hero .hero-stats dd {color: #5f6b7e;}
+.premium-demo.cinema-hero .hero-stats > div {border-left-color: rgba(8, 27, 51, .3);}
+.premium-demo.cinema-hero .site-header {background: rgba(245, 247, 246, .92); border-bottom-color: rgba(0, 92, 67, .18); backdrop-filter: blur(14px);}
+.premium-demo.cinema-hero .site-header .brand-copy strong {color: #081b33;}
+.premium-demo.cinema-hero .site-header .brand-copy small {color: #5f6b7e;}
+.premium-demo.cinema-hero .site-header .main-nav > a,
+.premium-demo.cinema-hero .site-header .nav-dropdown > a,
+.premium-demo.cinema-hero .site-header .nav-category-link {color: #223836;}
+.premium-demo.cinema-hero .site-header .main-nav > a:hover,
+.premium-demo.cinema-hero .site-header .nav-dropdown > a:hover,
+.premium-demo.cinema-hero .site-header .nav-category-link:hover,
+.premium-demo.cinema-hero .site-header .main-nav a.active {color: #005C43;}
+.premium-demo.cinema-hero .site-header .header-cta {color: #fff; background: #005C43; border: 0; border-radius: 6px; padding: 10px 18px;}
+.premium-demo.cinema-hero .site-header .header-cta span {color: #fff;}
+.premium-demo.cinema-hero .site-header .menu-toggle span {background: #081b33;}
+.premium-demo.cinema-hero .hero-grid {background-image: linear-gradient(rgba(0, 92, 67, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 92, 67, .07) 1px, transparent 1px);}
+.premium-demo.cinema-hero .scroll-cue {color: #6d936f;}
+.premium-demo.cinema-hero .scroll-cue i {background: #6d936f;}
+
+/* Section bands: white / soft grey-green alternation. */
+body.premium-demo.cinema-hero {background: #fff; color: #223836;}
+.premium-demo.cinema-hero .product-wall {background: #fff;}
+.premium-demo.cinema-hero .outsourcing {background: #F4F8F6;}
+.premium-demo.cinema-hero .home-projects {background: #fff;}
+.premium-demo.cinema-hero .partner-pathways {background: #F4F8F6;}
+.premium-demo.cinema-hero #why-partner {background: #fff;}
+.premium-demo.cinema-hero .regions {background: #F4F8F6;}
+.premium-demo.cinema-hero .clients {background: #fff;}
+.premium-demo.cinema-hero .industry-solutions {background: #F4F8F6;}
+.premium-demo.cinema-hero .certifications {background: #fff;}
+.premium-demo.cinema-hero .home-faq {background: #F4F8F6;}
+.premium-demo.cinema-hero .process-band {background: #fff;}
+.premium-demo.cinema-hero .about {background: #F4F8F6;}
+.premium-demo.cinema-hero .stats {background: linear-gradient(120deg, #F4F8F6 0%, #E8F0EC 55%, #F4F8F6 100%);}
+
+/* Band heading/text colors. */
+.premium-demo.cinema-hero .section-heading h2,
+.premium-demo.cinema-hero .section-heading h2 span,
+.premium-demo.cinema-hero .stats h2 {color: #081b33;}
+.premium-demo.cinema-hero .section-heading > p {color: #5f6b7e;}
+.premium-demo.cinema-hero .text-link {color: #081b33;}
+.premium-demo.cinema-hero .eyebrow {color: #6d936f;}
+
+/* AT A GLANCE numerals on light band. */
+.premium-demo.cinema-hero .stat-grid strong {color: #005C43; text-shadow: none;}
+.premium-demo.cinema-hero .stat-grid strong span {color: #E4573F;}
+.premium-demo.cinema-hero .stat-grid p {color: #5f6b7e;}
+.premium-demo.cinema-hero .stat-grid small {color: #6d936f;}
+.premium-demo.cinema-hero .stat-grid > div {border-color: rgba(0, 92, 67, .2);}
+
+/* Cards stay white with soft borders. */
+.premium-demo.cinema-hero .product-tile,
+.premium-demo.cinema-hero .home-project-card,
+.premium-demo.cinema-hero .audience-card,
+.premium-demo.cinema-hero .buyer-card,
+.premium-demo.cinema-hero .process-steps li,
+.premium-demo.cinema-hero .region-card,
+.premium-demo.cinema-hero .certificate-card,
+.premium-demo.cinema-hero .faq-list details,
+.premium-demo.cinema-hero .home-resource-card,
+.premium-demo.cinema-hero .industry-showcase,
+.premium-demo.cinema-hero .industry-badge,
+.premium-demo.cinema-hero .outsourcing-card,
+.premium-demo.cinema-hero .home-direction-card {background: #fff; border-color: rgba(8, 27, 51, .14); box-shadow: 0 8px 24px rgba(8, 27, 51, .07);}
+.premium-demo.cinema-hero .product-tile strong,
+.premium-demo.cinema-hero .home-project-body h3,
+.premium-demo.cinema-hero .audience-card h3,
+.premium-demo.cinema-hero .buyer-card h3,
+.premium-demo.cinema-hero .process-steps h3,
+.premium-demo.cinema-hero .region-card h3,
+.premium-demo.cinema-hero .certificate-card h3,
+.premium-demo.cinema-hero .faq-list summary,
+.premium-demo.cinema-hero .home-resource-card h3,
+.premium-demo.cinema-hero .home-direction-card-body h3,
+.premium-demo.cinema-hero .industry-badge strong {color: #081b33;}
+.premium-demo.cinema-hero .product-tile small,
+.premium-demo.cinema-hero .home-project-summary,
+.premium-demo.cinema-hero .audience-lead,
+.premium-demo.cinema-hero .audience-card li,
+.premium-demo.cinema-hero .buyer-card p,
+.premium-demo.cinema-hero .process-steps p,
+.premium-demo.cinema-hero .region-card p,
+.premium-demo.cinema-hero .certificate-card p,
+.premium-demo.cinema-hero .faq-list details p,
+.premium-demo.cinema-hero .industry-badge span {color: #5f6b7e;}
+
+/* Accent details: green structure, red highlights. */
+.premium-demo.cinema-hero .home-project-card {border-left: 3px solid #E4573F;}
+.premium-demo.cinema-hero .home-project-kicker {color: #E4573F;}
+.premium-demo.cinema-hero .home-project-meta {border-color: rgba(8, 27, 51, .12);}
+.premium-demo.cinema-hero .home-project-meta b {color: #005C43;}
+.premium-demo.cinema-hero .home-project-meta span {color: #33424e;}
+.premium-demo.cinema-hero .home-project-result {background: rgba(0, 92, 67, .07); border-left-color: #005C43;}
+.premium-demo.cinema-hero .home-project-result b {color: #E4573F;}
+.premium-demo.cinema-hero .audience-card-meta {color: #005C43;}
+.premium-demo.cinema-hero .audience-index {background: #005C43;}
+.premium-demo.cinema-hero .buyer-card-index {color: #005C43;}
+.premium-demo.cinema-hero .service-promise {background: #fff; border-color: rgba(8, 27, 51, .14); border-left-color: #005C43;}
+.premium-demo.cinema-hero .service-promise p {color: #081b33;}
+.premium-demo.cinema-hero .service-promise li {color: #5f6b7e;}
+.premium-demo.cinema-hero .process-steps li b {color: rgba(8, 27, 51, .1);}
+.premium-demo.cinema-hero .process-steps li:nth-child(1) b,
+.premium-demo.cinema-hero .process-steps li:nth-child(4) b {color: rgba(228, 87, 63, .32);}
+.premium-demo.cinema-hero .process-cta {background: #081b33;}
+.premium-demo.cinema-hero .process-cta p {color: #d5e6e8;}
+.premium-demo.cinema-hero .region-card {border-left: 4px solid #005C43;}
+.premium-demo.cinema-hero .region-tag {color: #005C43;}
+.premium-demo.cinema-hero .certificate-placeholder {background: #f4f7fa; border: 1px dashed rgba(8, 27, 51, .25); color: #5f6b7e;}
+.premium-demo.cinema-hero .cert-badges li {background: #fff; border-color: rgba(8, 27, 51, .2); color: #22403a;}
+.premium-demo.cinema-hero .faq-list details[open] {border-color: #E4573F; box-shadow: 0 12px 26px rgba(228, 87, 63, .08);}
+.premium-demo.cinema-hero .faq-list details[open] summary::after {color: #E4573F;}
+.premium-demo.cinema-hero .faq-copy h2,
+.premium-demo.cinema-hero .faq-copy h2 span {color: #081b33;}
+.premium-demo.cinema-hero .faq-copy p {color: #5f6b7e;}
+.premium-demo.cinema-hero .home-resource-card small {color: #005C43;}
+.premium-demo.cinema-hero .industry-tab {color: #223836;}
+.premium-demo.cinema-hero .industry-tab.is-active {background: #005C43; color: #fff;}
+.premium-demo.cinema-hero .solution-copy p {color: #5f6b7e;}
+.premium-demo.cinema-hero .about-values h3 {color: #081b33;}
+.premium-demo.cinema-hero .about-values p {color: #5f6b7e;}
+.premium-demo.cinema-hero .about-values > div {border-left-color: rgba(0, 92, 67, .3);}
+.premium-demo.cinema-hero .geo-chips li {background: #081b33; color: #d5e6e8; border-color: rgba(0, 92, 67, .3);}
+.premium-demo.cinema-hero .geo-chips b {color: #9EC4D6;}
+
+/* Closing CTA: brand green band. */
+.premium-demo.cinema-hero .contact-cta {background: linear-gradient(120deg, #005C43 0%, #03412f 100%);}
+.premium-demo.cinema-hero .contact-cta h2 {color: #fff;}
+.premium-demo.cinema-hero .contact-cta .button-primary {background: #fff; color: #063526;}
+.premium-demo.cinema-hero .contact-cta .contact-alt-link {color: #d9f0d8;}
