@@ -39,7 +39,7 @@
     new window.google.translate.TranslateElement({
       pageLanguage: "en",
       includedLanguages: LANGS.map(function (l) { return l.code; }).join(","),
-      layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+      layout: window.google.translate.TranslateElement.InlineLayout.VERTICAL,
       autoDisplay: false
     }, "gt-host");
   };
@@ -56,6 +56,8 @@
 
   function build() {
     if (document.querySelector(".lang-switch")) return;
+    var header = document.querySelector(".site-header .header-inner, .site-header .header-shell");
+    if (!header) return;
 
     var wrap = document.createElement("div");
     wrap.className = "lang-switch";
@@ -65,7 +67,15 @@
       "<span class=\"lang-current\">Language</span><i class=\"lang-caret\"></i>" +
       "</button>" +
       '<div class="lang-menu" role="menu"></div>';
-    document.body.appendChild(wrap);
+    header.insertBefore(wrap, header.firstChild);
+
+    // Hidden host required by the Google Translate element.
+    if (!document.getElementById("gt-host")) {
+      var gtHost = document.createElement("div");
+      gtHost.id = "gt-host";
+      gtHost.setAttribute("style", "position:absolute;left:-9999px;top:-9999px;width:10px;height:10px;overflow:hidden;");
+      document.body.appendChild(gtHost);
+    }
 
     var menu = wrap.querySelector(".lang-menu");
     LANGS.forEach(function (l) {
@@ -109,7 +119,7 @@
           setTimeout(function () { tryDrive(tries - 1); }, 400);
         }
       };
-      tryDrive(10);
+      tryDrive(25);
     });
 
     // Keep the label in sync if the user changes language via Google's own banner.

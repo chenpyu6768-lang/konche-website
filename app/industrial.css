@@ -4774,3 +4774,34 @@ body.translate-arabic {direction: rtl;}
 .lang-btn {background: #fff; box-shadow: 0 8px 24px rgba(8, 27, 51, .18);}
 .lang-menu {top: auto; right: 0; bottom: calc(100% + 8px);}
 body:not(.premium-demo) .lang-btn {color: #223836;}
+
+/* 71c. Language switcher in header, left of the logo, menu opens downward — 2026-08-27 */
+.lang-switch {position: relative; right: auto; bottom: auto; margin: 0 20px 0 0; z-index: 300;}
+.lang-btn {background: rgba(255, 255, 255, .9); box-shadow: none;}
+.lang-menu {top: calc(100% + 8px); bottom: auto; left: 0; right: auto;}
+
+/* 71d. Language switcher anchored at header far-left (left of the logo), menu opens downward — 2026-08-27 */
+.site-header.nav-v2 .header-shell {padding-left: 168px;}
+.lang-switch {position: absolute; left: 0; top: 50%; transform: translateY(-50%); margin: 0;}
+.lang-menu {top: calc(100% + 8px); bottom: auto; left: 0; right: auto;}
+@media (max-width: 1020px) {
+  .site-header.nav-v2 .header-shell {padding-left: 0;}
+  .lang-switch {position: fixed; left: auto; top: auto; right: 16px; bottom: 16px; transform: none;}
+  .lang-menu {top: auto; bottom: calc(100% + 8px); left: auto; right: 0;}
+}
+
+/* 71e. Suppress Google Translate's own chrome (banner/menu frames) — custom switcher only — 2026-08-27 */
+.goog-te-banner-frame, .goog-te-balloon-frame, .VIpgJd-ZVi9od-xl07Ob-OEVmcd,
+.goog-te-gadget-icon, #goog-gt-tt, .goog-te-gadget-simple {
+  display: none !important;
+  pointer-events: none !important;
+}
+body {top: 0 !important;}
+.skiptranslate {display: none !important;}
+#gt-host {display: block !important;}
+
+/* 71f. Hide Google Translate activity overlay (blocks clicks while switching) — 2026-08-27 */
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-ORHb-OEVmcd, .goog-te-spink-bearing {
+  display: none !important;
+  pointer-events: none !important;
+}
