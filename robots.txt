@@ -42,4 +42,4 @@ Allow: /
 User-agent: Bytespider
 Disallow: /
 
-Sitemap: https://www.konche123.com/sitemap.xml
+Sitemap: https://www.konchewater.com/sitemap.xml

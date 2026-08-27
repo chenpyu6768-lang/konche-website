@@ -4517,3 +4517,19 @@ body.premium-demo.cinema-hero {background: #071627; color: #c7d6e5;}
 .contact-hero.product-hero {min-height: 610px;}
 .resources-hero .product-hero-inner,
 .contact-hero .product-hero-inner {align-items: center; padding-top: 0; padding-bottom: 0;}
+
+/* 67. Solutions hero two-column + light answer band — 2026-08-27 */
+.solutions-hero .product-hero-inner {align-items: center;}
+.solutions-hero .product-hero-copy {padding-top: 0;}
+.solutions-hero-aside {display: flex; align-items: center; justify-content: flex-end; height: auto; min-height: 340px;}
+.solutions-aside-card {width: 100%; max-width: 470px; padding: 28px 30px 24px; background: linear-gradient(165deg, rgba(8, 27, 51, .78), rgba(8, 27, 51, .5)); border: 1px solid rgba(158, 196, 214, .3); border-left: 3px solid #E4573F; border-radius: 10px; backdrop-filter: blur(10px); color: #fff;}
+.solutions-aside-label {display: block; margin-bottom: 16px; color: #9EC4D6; font-size: 10.5px; font-weight: 800; letter-spacing: .16em;}
+.solutions-aside-list {display: grid; gap: 12px; margin: 0 0 18px; padding: 0; list-style: none;}
+.solutions-aside-list li {display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 9px 0 0; border-top: 1px solid rgba(158, 196, 214, .16); color: #d5e6e8; font-size: 13.5px; line-height: 1.5;}
+.solutions-aside-list li b {color: #fff; font-size: 13px;}
+.solutions-aside-note {margin: 0; color: #b9c9d9; font-size: 12.5px; line-height: 1.7;}
+@media (max-width: 900px) {.solutions-hero-aside {justify-content: flex-start; min-height: 0; margin-top: 10px;}}
+
+/* Light background for the quick-answer band (matches sibling light modules). */
+.solutions-answer-light {background: #F0F4F2;}
+.solutions-answer-light .geo-answer::after {display: none;}

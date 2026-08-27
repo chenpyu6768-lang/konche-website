@@ -10,9 +10,9 @@ KONCHE was founded in 1997 and is based in Bao'an District, Shenzhen, Guangdong,
 
 The homepage separates three commercial paths without changing the underlying product architecture: complete equipment and OEM/private-label buyers, consumables and spare-parts buyers, and project/EPC buyers. The route pages summarize the relevant capability and link back to the existing product, evidence and enquiry pages.
 
-- Equipment and OEM: https://www.konche123.com/equipment-oem.html
-- Consumables, spare parts and wholesale sourcing: https://www.konche123.com/products/spare-parts-sourcing-service.html
-- Project and EPC support: https://www.konche123.com/project-support.html
+- Equipment and OEM: https://www.konchewater.com/equipment-oem.html
+- Consumables, spare parts and wholesale sourcing: https://www.konchewater.com/products/spare-parts-sourcing-service.html
+- Project and EPC support: https://www.konchewater.com/project-support.html
 
 ## Product families
 
@@ -22,9 +22,9 @@ KONCHE presents single-stage RO for general industrial purified-water duties and
 
 Official pages:
 
-- https://www.konche123.com/products/ro-reverse-osmosis-system.html
-- https://www.konche123.com/products/single-double-stage-ro.html
-- https://www.konche123.com/products/drinking-water-system.html
+- https://www.konchewater.com/products/ro-reverse-osmosis-system.html
+- https://www.konchewater.com/products/single-double-stage-ro.html
+- https://www.konchewater.com/products/drinking-water-system.html
 
 ### Industrial ultrapure water
 
@@ -32,8 +32,8 @@ KONCHE's Industrial Ultrapure Water System page covers the full high-purity fami
 
 Official pages:
 
-- https://www.konche123.com/products/electronic-grade-ultrapure-water-system.html
-- https://www.konche123.com/products/industrial-ultrapure-water-system.html
+- https://www.konchewater.com/products/electronic-grade-ultrapure-water-system.html
+- https://www.konchewater.com/products/industrial-ultrapure-water-system.html
 
 ### Laboratory water
 
@@ -41,8 +41,8 @@ Laboratory water equipment should be selected from the feed source, daily and pe
 
 Official pages:
 
-- https://www.konche123.com/products/laboratory-ultrapure-water-system.html
-- https://www.konche123.com/products/laboratory-ultrapure-water-system.html
+- https://www.konchewater.com/products/laboratory-ultrapure-water-system.html
+- https://www.konchewater.com/products/laboratory-ultrapure-water-system.html
 
 ### UF, UV, ozone and containerized treatment
 
@@ -50,13 +50,13 @@ Ultrafiltration primarily targets suspended and colloidal matter rather than dis
 
 Official pages:
 
-- https://www.konche123.com/products/containerized-water-treatment-system.html
-- https://www.konche123.com/products/uf-ultrafiltration-system.html
-- https://www.konche123.com/products/uv-water-sterilizer.html
-- https://www.konche123.com/products/toc-uv-degradation-system.html
-- https://www.konche123.com/products/medium-pressure-uv-system.html
-- https://www.konche123.com/products/low-pressure-uv-sterilizer.html
-- https://www.konche123.com/products/ozone-disinfection-system.html
+- https://www.konchewater.com/products/containerized-water-treatment-system.html
+- https://www.konchewater.com/products/uf-ultrafiltration-system.html
+- https://www.konchewater.com/products/uv-water-sterilizer.html
+- https://www.konchewater.com/products/toc-uv-degradation-system.html
+- https://www.konchewater.com/products/medium-pressure-uv-system.html
+- https://www.konchewater.com/products/low-pressure-uv-sterilizer.html
+- https://www.konchewater.com/products/ozone-disinfection-system.html
 
 ### Consumables
 
@@ -64,15 +64,15 @@ Replacement parts must be matched by equipment model, drawing or part code, dime
 
 Official pages:
 
-- https://www.konche123.com/products/spare-parts.html
-- https://www.konche123.com/products/general-water-treatment-consumables.html
-- https://www.konche123.com/products/uv-disinfection-consumables.html
+- https://www.konchewater.com/products/spare-parts.html
+- https://www.konchewater.com/products/general-water-treatment-consumables.html
+- https://www.konchewater.com/products/uv-disinfection-consumables.html
 
 ## Application routes
 
 The solutions page covers six application groups: industrial pure and ultrapure water; seawater and brackish-water desalination; centralized drinking water; food and beverage process water; industrial UF pretreatment; and laboratory water. Each route is an initial decision aid, not a final process guarantee.
 
-- https://www.konche123.com/products/industry-solutions.html
+- https://www.konchewater.com/products/industry-solutions.html
 
 ## Direct answers and comparison guides
 
@@ -80,9 +80,9 @@ Every product and solution page uses a two-layer answer architecture. The "Quick
 
 Three category pages publish same-caliber technology comparison tables. Each table compares the options on identical dimensions, states the limitations of every option, and ends with conditional decision guidance:
 
-- Single stage vs double stage RO (desalination, conductivity, capacity, recovery, applications, limitations, selection): https://www.konche123.com/products/ro-reverse-osmosis-system.html#technology-comparison
-- Low-pressure UV vs medium-pressure UV vs TOC UV vs ozone (output, power class, typical flow, documented performance, best duty, limitations): https://www.konche123.com/products/uv-water-sterilizer.html#technology-comparison
-- Ultrafiltration vs reverse osmosis membrane roles (what each removes, ratings, capacity, role, limitations): https://www.konche123.com/products/uf-ultrafiltration-system.html#technology-comparison
+- Single stage vs double stage RO (desalination, conductivity, capacity, recovery, applications, limitations, selection): https://www.konchewater.com/products/ro-reverse-osmosis-system.html#technology-comparison
+- Low-pressure UV vs medium-pressure UV vs TOC UV vs ozone (output, power class, typical flow, documented performance, best duty, limitations): https://www.konchewater.com/products/uv-water-sterilizer.html#technology-comparison
+- Ultrafiltration vs reverse osmosis membrane roles (what each removes, ratings, capacity, role, limitations): https://www.konchewater.com/products/uf-ultrafiltration-system.html#technology-comparison
 
 The About page carries a "Who is KONCHE?" fact card (legal entity, founding year 1997, Shenzhen base, audience, delivery regions, portfolio). The Contact page explains how to request a quotation and lists the recommended RFQ information.
 
@@ -107,12 +107,12 @@ Homepage statistics, certifications, named customers, contact details and case-s
 
 ## Site navigation aids
 
-The homepage publishes an expandable six-question FAQ (buying scope, quote inputs, regions and industries, guarantee boundaries, single- vs double-stage RO selection, overseas EPC support) whose visible text matches its FAQPage structured data exactly. Each of the 16 product detail pages provides an 'On this page' section index and a 'Related systems' card list connecting sibling equipment pages. The website privacy policy is published at https://www.konche123.com/privacy.html and the website terms of use are published at https://www.konche123.com/terms-of-use.html.
+The homepage publishes an expandable six-question FAQ (buying scope, quote inputs, regions and industries, guarantee boundaries, single- vs double-stage RO selection, overseas EPC support) whose visible text matches its FAQPage structured data exactly. Each of the 16 product detail pages provides an 'On this page' section index and a 'Related systems' card list connecting sibling equipment pages. The website privacy policy is published at https://www.konchewater.com/privacy.html and the website terms of use are published at https://www.konchewater.com/terms-of-use.html.
 
 ## Contact
 
-- Company overview: https://www.konche123.com/about.html
-- Project inquiry: https://www.konche123.com/contact.html
+- Company overview: https://www.konchewater.com/about.html
+- Project inquiry: https://www.konchewater.com/contact.html
 - Email: Konche.China3143@outlook.com
-- Privacy policy: https://www.konche123.com/privacy.html
-- Website terms of use: https://www.konche123.com/terms-of-use.html
+- Privacy policy: https://www.konchewater.com/privacy.html
+- Website terms of use: https://www.konchewater.com/terms-of-use.html
