@@ -4768,3 +4768,9 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
 .lang-menu button {display: block; width: 100%; padding: 9px 12px; border: 0; border-radius: 5px; background: transparent; color: #223836; font: inherit; font-size: 13px; text-align: left; cursor: pointer;}
 .lang-menu button:hover {background: rgba(0, 92, 67, .08); color: #005C43;}
 body.translate-arabic {direction: rtl;}
+
+/* 71b. Language switcher as floating pill (bottom-right) — 2026-08-27 */
+.lang-switch {position: fixed; right: 18px; bottom: 18px; z-index: 400; margin: 0;}
+.lang-btn {background: #fff; box-shadow: 0 8px 24px rgba(8, 27, 51, .18);}
+.lang-menu {top: auto; right: 0; bottom: calc(100% + 8px);}
+body:not(.premium-demo) .lang-btn {color: #223836;}

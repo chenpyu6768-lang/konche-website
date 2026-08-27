@@ -56,8 +56,6 @@
 
   function build() {
     if (document.querySelector(".lang-switch")) return;
-    var header = document.querySelector(".site-header .header-inner, .site-header .header-shell");
-    if (!header) return;
 
     var wrap = document.createElement("div");
     wrap.className = "lang-switch";
@@ -67,7 +65,7 @@
       "<span class=\"lang-current\">Language</span><i class=\"lang-caret\"></i>" +
       "</button>" +
       '<div class="lang-menu" role="menu"></div>';
-    header.appendChild(wrap);
+    document.body.appendChild(wrap);
 
     var menu = wrap.querySelector(".lang-menu");
     LANGS.forEach(function (l) {
