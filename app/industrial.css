@@ -4533,3 +4533,12 @@ body.premium-demo.cinema-hero {background: #071627; color: #c7d6e5;}
 /* Light background for the quick-answer band (matches sibling light modules). */
 .solutions-answer-light {background: #F0F4F2;}
 .solutions-answer-light .geo-answer::after {display: none;}
+
+/* 68. Answer band: outer shell light, citable inside the fold — 2026-08-27 */
+.solutions-answer-light {background: #F0F4F2 !important; color: #223836;}
+.solutions-answer-light .container {position: relative; z-index: 1;}
+.solutions-answer-light .geo-answer::after,
+.solutions-answer-light::after {display: none !important;}
+.solutions-answer-citable {margin-top: 18px; padding: 16px 18px; background: #FFFFFF; border: 1px solid #E4EBE8; border-left: 3px solid #005C43; border-radius: 6px;}
+.solutions-answer-citable .citable-passage {max-width: none; margin: 0; color: #4A5A57; font-size: 13.5px; line-height: 1.8; columns: 2; column-gap: 40px;}
+@media (max-width: 820px) {.solutions-answer-citable .citable-passage {columns: 1;}}
