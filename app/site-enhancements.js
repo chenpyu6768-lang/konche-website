@@ -16,7 +16,7 @@
   // form silently falls back to the previous mailto: behavior.
   // TURNSTILE_SITEKEY: "" = no captcha widget. Set it together with the
   // Worker's TURNSTILE_SECRET_KEY, or leave both empty.
-  const API_BASE = "https://konche-form.workers.dev";
+  const API_BASE = "https://konche-form.chenpyu6768.workers.dev";
   const TURNSTILE_SITEKEY = "";
 
   function pageIsHome() {

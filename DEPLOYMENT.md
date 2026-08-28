@@ -3,7 +3,7 @@
 ## Inquiry form backend (added 2026-08-27)
 
 All three site forms now submit directly to a Cloudflare Worker
-(`https://konche-form.workers.dev`) with mailto as the automatic fallback.
+(`https://konche-form.chenpyu6768.workers.dev`) with mailto as the automatic fallback.
 The Worker source, D1 schema and step-by-step setup live in
 `../konche-platform/form-worker/` (see `README-部署指南.md`; repo-level
 handoff notes in `../konche-platform/HANDOFF.md`). Key points:
