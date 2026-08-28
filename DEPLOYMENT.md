@@ -5,7 +5,8 @@
 All three site forms now submit directly to a Cloudflare Worker
 (`https://konche-form.workers.dev`) with mailto as the automatic fallback.
 The Worker source, D1 schema and step-by-step setup live in
-`../form-worker/` (see `README-部署指南.md`). Key points:
+`../konche-platform/form-worker/` (see `README-部署指南.md`; repo-level
+handoff notes in `../konche-platform/HANDOFF.md`). Key points:
 
 - Submission flow, upload validation and admin endpoints are covered by
   `node tests/worker-smoke.mjs` (run from the project root; must pass 10/10).
