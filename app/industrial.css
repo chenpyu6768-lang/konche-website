@@ -384,7 +384,7 @@
 
 @media (max-width: 980px) {.client-logo-grid {grid-template-columns: repeat(3, minmax(0, 1fr));}.inquiry-shell {grid-template-columns: 1fr; gap: 38px;}.inquiry-intro {position: static;}
 }
-@media (max-width: 680px) {.client-logo-meta, .client-industry-heading {align-items: flex-start; flex-direction: column; gap: 6px;}.client-logo-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}.client-logo-card {height: 142px; padding: 16px;}.client-logo-card img {max-height: 110px;}.social-dock {top: auto; right: 12px; bottom: 70px; flex-direction: row; transform: none;}.social-dock a {width: 42px; height: 42px;}.social-dock span {display: none;}.inquiry-section {padding: 68px 0 76px;}.inquiry-form {grid-template-columns: 1fr; padding: 22px 18px;}.inquiry-field-wide, .inquiry-consent, .inquiry-actions, .inquiry-note {grid-column: 1;}.inquiry-actions {align-items: flex-start; flex-direction: column;}
+@media (max-width: 680px) {.client-logo-meta, .client-industry-heading {align-items: flex-start; flex-direction: column; gap: 6px;}.client-logo-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}.client-logo-card {height: 142px; padding: 16px;}.client-logo-card img {max-height: 110px;}.social-dock {top: auto; right: 12px; bottom: 84px; flex-direction: column; transform: none;}.social-dock a {width: 42px; height: 42px;}.social-dock span {display: none;}.inquiry-section {padding: 68px 0 76px;}.inquiry-form {grid-template-columns: 1fr; padding: 22px 18px;}.inquiry-field-wide, .inquiry-consent, .inquiry-actions, .inquiry-note {grid-column: 1;}.inquiry-actions {align-items: flex-start; flex-direction: column;}
 }.nav-v2 .main-nav > a, .nav-v2 .nav-category-link {font-size: 14px;}.nav-v2 .nav-category > .dropdown-menu a {font-size: 12px !important;}.hero.ind-hero-banner {min-height: 740px;
   background:
     linear-gradient(90deg,
@@ -537,7 +537,7 @@
 .premium-demo .geo-answer-links {padding-top: 18px;}
 
 /* Hairline discipline: calmer tables, no zebra, navy header rule */
-.premium-demo .detail-table-wrap {border: 1px solid #E2E8EA; border-radius: 4px; overflow: hidden;}
+.premium-demo .detail-table-wrap {border: 1px solid #E2E8EA; border-radius: 4px; overflow: auto;}
 .premium-demo .detail-table th {background: #F5F7F6; color: #071C2C; border-top: 2px solid #071C2C; letter-spacing: .14em;}
 .premium-demo .detail-table tr:nth-child(even) td {background: transparent;}
 .premium-demo .detail-table td {background: transparent; border-bottom: 1px solid #E7ECEE;}
@@ -4805,3 +4805,28 @@ body {top: 0 !important;}
   display: none !important;
   pointer-events: none !important;
 }
+
+/* 72. Mobile overflow + inquiry-submit fixes — 2026-08-27 review.
+   Long heading words (e.g. "CERTIFICATIONS" at the 48px cinema-hero size)
+   overflowed the ≤720px viewport; html{overflow-x:clip} hid the tail letters.
+   Spec tables were cropped by .detail-table-wrap overflow:hidden (fixed above). */
+@media (max-width: 720px) {
+  .premium-demo.cinema-hero .section-heading h2 {font-size: clamp(30px, 8.6vw, 40px);}
+  h1, h2, h3, h4, p, li, a, th, td {overflow-wrap: break-word;}
+}
+
+/* Honeypot field for spam bots — visually absent, present in DOM. */
+.hp-field {position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;}
+
+/* Turnstile slot inside inquiry forms. */
+.turnstile-slot {margin: 6px 0 4px; min-height: 65px;}
+
+/* Direct-submit success panel (replaces form fields after API submission). */
+.form-success-card {padding: 30px 28px; background: #fff; border: 1px solid #D5DEE1; box-shadow: 0 16px 38px rgba(7,28,44,.06); text-align: left;}
+.form-success-card .fs-check {display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 18px; background: #005C43; border-radius: 50%; color: #fff; font-size: 24px; line-height: 1;}
+.form-success-card h3 {margin: 0 0 10px; color: #071C2C; font-size: 24px; letter-spacing: -.02em;}
+.form-success-card .fs-ref {display: inline-block; margin: 0 0 14px; padding: 7px 12px; background: #EFF4F3; border: 1px solid rgba(0,92,67,.25); color: #073B2D; font-weight: 700; letter-spacing: .04em;}
+.form-success-card p {margin: 0 0 10px; color: #4A575E; font-size: 14px; line-height: 1.65;}
+.form-success-card .fs-links {display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;}
+.form-success-card .fs-links a {display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border: 1px solid rgba(22,73,55,.3); color: #164937; font-weight: 700; font-size: 13px;}
+.form-success-card .fs-links a:hover {background: #F3F8F6;}

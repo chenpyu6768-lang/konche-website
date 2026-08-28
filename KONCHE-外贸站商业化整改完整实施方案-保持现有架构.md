@@ -235,8 +235,7 @@ Reference: [short tracking id]
 建议按可执行能力写成：
 
 ```text
-Sales confirmation within 4 business hours.
-Initial engineering review within 1 business day.
+Sales response within 24 hours (China time, UTC+8).
 English and Chinese support, China Standard Time (UTC+8).
 ```
 

@@ -9,6 +9,16 @@
   const WHATSAPP_URL = "https://wa.me/8618814456813?text=Hello%20KONCHE%2C%20I%20would%20like%20to%20discuss%20a%20water%20treatment%20requirement.";
   const MAILTO_LIMIT = 1800; // mailto URLs beyond this get truncated by many clients
 
+  // ── Direct inquiry submission (Cloudflare Worker) ─────────────────────
+  // API_BASE: "" = same origin (use when the Worker is bound to the site's
+  // own domain on Cloudflare Pages). While the site runs on GitHub Pages,
+  // keep the deployed workers.dev URL. If the API is unreachable, every
+  // form silently falls back to the previous mailto: behavior.
+  // TURNSTILE_SITEKEY: "" = no captcha widget. Set it together with the
+  // Worker's TURNSTILE_SECRET_KEY, or leave both empty.
+  const API_BASE = "https://konche-form.workers.dev";
+  const TURNSTILE_SITEKEY = "";
+
   function pageIsHome() {
     const path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
     return path.endsWith("/index.html") || path.endsWith("/");
@@ -22,6 +32,160 @@
   function pageIsContact() {
     const path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
     return path.endsWith("/contact.html");
+  }
+
+  /* ── Direct submission helpers (Cloudflare Worker + mailto fallback) ── */
+
+  function newInquiryId() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "k-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+  }
+
+  // First-touch attribution, stored once, attached to every inquiry.
+  function captureAttribution() {
+    try {
+      const stored = localStorage.getItem("konche_attribution");
+      if (stored) return JSON.parse(stored);
+      const params = new URLSearchParams(window.location.search);
+      const utm = {};
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
+        const value = params.get(key);
+        if (value) utm[key] = value.slice(0, 200);
+      });
+      const data = {
+        landing_url: window.location.href.slice(0, 500),
+        landing_referrer: (document.referrer || "").slice(0, 500),
+        utm,
+        first_seen: new Date().toISOString()
+      };
+      localStorage.setItem("konche_attribution", JSON.stringify(data));
+      return data;
+    } catch {
+      return null;
+    }
+  }
+
+  let turnstileWidgets = new Map();
+
+  function mountTurnstile(form, insertBeforeEl) {
+    if (!TURNSTILE_SITEKEY || !form || form.dataset.tsInit) return null;
+    form.dataset.tsInit = "1";
+    const slot = document.createElement("div");
+    slot.className = "turnstile-slot";
+    insertBeforeEl.parentNode.insertBefore(slot, insertBeforeEl);
+    const load = window.turnstile
+      ? Promise.resolve()
+      : new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+          script.async = true;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+    load.then(() => {
+      if (window.turnstile) {
+        turnstileWidgets.set(form, window.turnstile.render(slot, {
+          sitekey: TURNSTILE_SITEKEY,
+          theme: "light"
+        }));
+      }
+    }).catch(() => { /* widget stays empty; submission falls back */ });
+    return slot;
+  }
+
+  function getTurnstileToken(form) {
+    const widgetId = turnstileWidgets.get(form);
+    if (!TURNSTILE_SITEKEY || widgetId === undefined || !window.turnstile) return null;
+    return window.turnstile.getResponse(widgetId) || null;
+  }
+
+  function resetTurnstile(form) {
+    const widgetId = turnstileWidgets.get(form);
+    if (widgetId !== undefined && window.turnstile) window.turnstile.reset(widgetId);
+  }
+
+  function setStatus(el, text, isError) {
+    if (!el) return;
+    el.textContent = text || "";
+    el.classList.toggle("is-error", Boolean(isError));
+  }
+
+  function fetchWithTimeout(url, options, ms) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), ms);
+    return fetch(url, { ...options, signal: controller.signal })
+      .finally(() => clearTimeout(timer));
+  }
+
+  // Submits through the Worker. Returns:
+  //   true     — submitted, success panel shown
+  //   "captcha"— captcha required but not completed (caller stops; no fallback)
+  //   false    — API unreachable/failed (caller falls back to mailto)
+  async function submitViaApi(form, options) {
+    const { formType, fields, file, statusEl, submitBtn } = options;
+    const inquiryId = newInquiryId();
+    const restoreButton = () => { if (submitBtn) { submitBtn.disabled = false; } };
+    if (submitBtn) submitBtn.disabled = true;
+    try {
+      let attachments = [];
+      if (file) {
+        setStatus(statusEl, `Uploading ${file.name}…`);
+        const formData = new FormData();
+        formData.append("file", file);
+        const uploadResponse = await fetchWithTimeout(`${API_BASE}/api/uploads`, { method: "POST", body: formData }, 60000);
+        const uploadData = await uploadResponse.json().catch(() => ({}));
+        if (!uploadResponse.ok || !uploadData.ok) throw new Error("upload_failed");
+        attachments.push(uploadData.id);
+      }
+      setStatus(statusEl, "Sending your inquiry…");
+      const response = await fetchWithTimeout(`${API_BASE}/api/inquiries`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          id: inquiryId,
+          form_type: formType,
+          fields,
+          captcha_token: getTurnstileToken(form),
+          attachments,
+          page_url: window.location.href.slice(0, 500),
+          referrer: (document.referrer || "").slice(0, 500),
+          attribution: captureAttribution()
+        })
+      }, 15000);
+      const data = await response.json().catch(() => ({}));
+      if (data && data.ok) {
+        showSuccessPanel(form, data.inquiry_no);
+        return true;
+      }
+      if (data && (data.error === "captcha_required" || data.error === "captcha_failed")) {
+        setStatus(statusEl, "Please complete the verification, then submit again.", true);
+        resetTurnstile(form);
+        restoreButton();
+        return "captcha";
+      }
+      throw new Error("submit_failed");
+    } catch {
+      restoreButton();
+      return false;
+    }
+  }
+
+  function showSuccessPanel(form, inquiryNo) {
+    const panel = document.createElement("div");
+    panel.className = "form-success-card";
+    panel.innerHTML = `
+      <div class="fs-check" aria-hidden="true">✓</div>
+      <h3>Inquiry received</h3>
+      <span class="fs-ref">Reference: ${inquiryNo}</span>
+      <p>We respond to complete inquiries within 24 hours (China time, UTC+8).</p>
+      <p>A copy of your inputs has been saved against this reference number. Attachments are delivered directly to our engineering team.</p>
+      <div class="fs-links">
+        <a href="${WHATSAPP_URL}" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+        <a href="mailto:${CONTACT_EMAIL}">Email ${CONTACT_EMAIL}</a>
+      </div>`;
+    form.replaceChildren(panel);
+    panel.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   function addSocialDock() {
@@ -207,12 +371,13 @@
               </label>
               <small id="inquiry-report-formats" class="inquiry-file-formats">Accepted formats: PDF, Word, Excel, JPG or PNG</small>
             </div>
+            <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <p class="inquiry-consent">By submitting this inquiry, you agree that KONCHE may use the information provided to respond to your request.</p>
             <div class="inquiry-actions">
               <button class="button button-primary" type="submit">Send Project Inquiry <span>↗</span></button>
               <p class="inquiry-status" role="status" aria-live="polite"></p>
             </div>
-            <p class="inquiry-note">Your email application will open with the inquiry details. If you selected a report, please attach it in the email before sending.</p>
+            <p class="inquiry-note">Your inquiry is sent directly to the KONCHE sales team. If direct sending is unavailable, your email application will open with the details instead.</p>
           </form>
         </div>
       </section>`;
@@ -267,6 +432,9 @@
       fileName.textContent = file.name;
     });
 
+    const submitButton = form.querySelector('button[type="submit"]');
+    mountTurnstile(form, submitButton);
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       status.textContent = "";
@@ -280,6 +448,21 @@
 
       const values = new FormData(form);
       const report = fileInput.files[0];
+      const fields = {};
+      values.forEach((value, key) => {
+        if (!(value instanceof File)) fields[key] = value;
+      });
+
+      // Direct submission first; mailto stays as the fallback.
+      const submitted = await submitViaApi(form, {
+        formType: "project-inquiry",
+        fields,
+        file: report,
+        statusEl: status,
+        submitBtn: submitButton
+      });
+      if (submitted === true || submitted === "captcha") return;
+
       const subject = `KONCHE Website Inquiry - ${values.get("company_name")}`;
       const body = [
         "KONCHE Website Project Inquiry",
@@ -310,8 +493,8 @@
         }
       }
       status.textContent = report
-        ? "Your email application is opening. Please attach the selected report before sending."
-        : "Your email application is opening with the inquiry details.";
+        ? "Direct sending was unavailable. Your email application is opening — please attach the selected report before sending."
+        : "Direct sending was unavailable. Your email application is opening with the inquiry details.";
       window.location.href = mailto;
     });
   }
@@ -413,9 +596,27 @@
   function initPartsForm() {
     const form = document.getElementById("partsForm");
     if (!form) return;
-    form.addEventListener("submit", (event) => {
+    const note = document.getElementById("partsFormNote");
+    const submitButton = form.querySelector('button[type="submit"]');
+    mountTurnstile(form, submitButton);
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const values = new FormData(form);
+      const fields = {};
+      values.forEach((value, key) => {
+        if (!(value instanceof File)) fields[key] = value;
+      });
+      const submitted = await submitViaApi(form, {
+        formType: "spare-parts",
+        fields,
+        statusEl: null,
+        submitBtn: submitButton
+      });
+      if (submitted === true) return;
+      if (submitted === "captcha") {
+        if (note) note.textContent = "Please complete the verification, then submit again.";
+        return;
+      }
       const body = [
         `Customer type: ${values.get("buyerType") || "-"}`,
         `Product category: ${values.get("category") || "-"}`,
@@ -427,14 +628,12 @@
         `Contact: ${values.get("contact") || "-"}`
       ].join("\n");
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Spare Parts Requirement - KONCHE")}&body=${encodeURIComponent(body)}`;
-      const note = document.getElementById("partsFormNote");
-      if (note) note.textContent = "Your email application is opening with the requirement details. Please send the email to complete the inquiry.";
+      if (note) note.textContent = "Direct sending was unavailable. Your email application is opening — please send the email to complete the inquiry.";
     });
   }
 
-  // Static RFQ form on contact.html (#rfqForm). Same mailto contract as the
-  // injected inquiry form: opens the visitor's email client pre-filled, with a
-  // clipboard fallback when the composed link exceeds MAILTO_LIMIT.
+  // Static RFQ form on contact.html (#rfqForm). Direct submission through the
+  // Worker first; the historical mailto contract remains as the fallback.
   function initRfqForm() {
     const form = document.getElementById("rfqForm");
     if (!form || form.dataset.rfqInit) return;
@@ -461,7 +660,9 @@
       }
       if (fileName) fileName.textContent = file.name;
     });
-    form.addEventListener("submit", (event) => {
+    const submitButton = form.querySelector(".rfq-submit");
+    mountTurnstile(form, submitButton);
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
@@ -469,6 +670,20 @@
       }
       const values = new FormData(form);
       const report = fileInput?.files[0];
+      const fields = {};
+      values.forEach((value, key) => {
+        if (!(value instanceof File)) fields[key] = value;
+      });
+
+      const submitted = await submitViaApi(form, {
+        formType: "rfq",
+        fields,
+        file: report || null,
+        statusEl: status,
+        submitBtn: submitButton
+      });
+      if (submitted === true || submitted === "captcha") return;
+
       const subject = `KONCHE Website Inquiry - ${values.get("company") || values.get("name")}`;
       const body = [
         "KONCHE Website Project Inquiry",
@@ -492,13 +707,13 @@
       if (mailto.length > MAILTO_LIMIT && navigator.clipboard?.writeText) {
         navigator.clipboard.writeText(`${subject}\n\n${body}`).then(
           () => finish(`Your inquiry is too long for an email link. It was copied to the clipboard — paste it into an email to ${CONTACT_EMAIL}.`),
-          () => { finish("Your email application is opening with the inquiry details."); window.location.href = mailto; }
+          () => { finish("Direct sending was unavailable. Your email application is opening with the inquiry details."); window.location.href = mailto; }
         );
         return;
       }
       finish(report
-        ? "Your email application is opening. Please attach the selected report before sending."
-        : "Your email application is opening with the inquiry details.");
+        ? "Direct sending was unavailable. Your email application is opening — please attach the selected report before sending."
+        : "Direct sending was unavailable. Your email application is opening with the inquiry details.");
       window.location.href = mailto;
     });
   }

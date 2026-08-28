@@ -1,5 +1,22 @@
 # KONCHE Website — Deployment & Release Guide
 
+## Inquiry form backend (added 2026-08-27)
+
+All three site forms now submit directly to a Cloudflare Worker
+(`https://konche-form.workers.dev`) with mailto as the automatic fallback.
+The Worker source, D1 schema and step-by-step setup live in
+`../form-worker/` (see `README-部署指南.md`). Key points:
+
+- Submission flow, upload validation and admin endpoints are covered by
+  `node tests/worker-smoke.mjs` (run from the project root; must pass 10/10).
+- The Worker URL is whitelisted in every page's CSP meta tag
+  (`connect-src`) and in `_headers`. If the Worker URL changes, update:
+  `API_BASE` in `app/site-enhancements.js`, the CSP meta in all 27 pages,
+  and `_headers`.
+- After deploying the Worker, verify end-to-end: submit the contact form,
+  confirm the success card with a KON-xxxxxx reference, then check
+  `/api/submissions?token=<ADMIN_TOKEN>`.
+
 This guide closes the operations-side items from the 2026-08-14 site audit
 (`outputs/.../Konche123网站问题整改清单_开发交付版_2026-08-14.xlsx`): KON-003
 (domain redirect), KON-004 (llms.txt serving), KON-001 (old-URL redirects),
