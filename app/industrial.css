@@ -4717,6 +4717,7 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
 .premium-demo.cinema-hero .hero.ind-hero-banner .hero-content {max-width: 780px; margin: 0 auto;}
 .premium-demo.cinema-hero .hero.ind-hero-banner .hero-content h1,
 .premium-demo.cinema-hero .hero.ind-hero-banner h1 .hero-green {color: #fff; text-shadow: 0 2px 24px rgba(6, 24, 38, .55);}
+.premium-demo.cinema-hero .hero.ind-hero-banner h1 .hero-green {display: block; margin-top: 16px; font-size: 16.5px; font-weight: 650; line-height: 1.55; letter-spacing: .04em;}
 .premium-demo.cinema-hero .hero.ind-hero-banner .hero-anchor {color: #cfe0ee; justify-content: center;}
 .premium-demo.cinema-hero .hero.ind-hero-banner .hero-description {color: rgba(255, 255, 255, .92); margin-left: auto; margin-right: auto;}
 .premium-demo.cinema-hero .hero.ind-hero-banner .hero-actions {justify-content: center;}
@@ -4767,6 +4768,9 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
 .lang-switch.is-open .lang-menu {display: block;}
 .lang-menu button {display: block; width: 100%; padding: 9px 12px; border: 0; border-radius: 5px; background: transparent; color: #223836; font: inherit; font-size: 13px; text-align: left; cursor: pointer;}
 .lang-menu button:hover {background: rgba(0, 92, 67, .08); color: #005C43;}
+.lang-status {margin: 2px 4px 6px; padding: 8px 9px; border-radius: 5px; background: rgba(0, 92, 67, .07); color: #4f5f6b; font-size: 11.5px; line-height: 1.45;}
+.lang-status[data-state="error"] {background: rgba(180, 68, 45, .08); color: #8f3b2b;}
+.lang-status[hidden] {display: none;}
 body.translate-arabic {direction: rtl;}
 
 /* 71b. Language switcher as floating pill (bottom-right) — 2026-08-27 */
@@ -4784,10 +4788,15 @@ body:not(.premium-demo) .lang-btn {color: #223836;}
 .site-header.nav-v2 .header-shell {padding-left: 168px;}
 .lang-switch {position: absolute; left: 0; top: 50%; transform: translateY(-50%); margin: 0;}
 .lang-menu {top: calc(100% + 8px); bottom: auto; left: 0; right: auto;}
-@media (max-width: 1020px) {
+@media (max-width: 1180px) {
   .site-header.nav-v2 .header-shell {padding-left: 0;}
-  .lang-switch {position: fixed; left: auto; top: auto; right: 16px; bottom: 16px; transform: none;}
-  .lang-menu {top: auto; bottom: calc(100% + 8px); left: auto; right: 0;}
+  .lang-switch {position: relative; left: auto; top: auto; right: auto; bottom: auto; z-index: 310; flex: 0 0 auto; order: 0; transform: none;}
+  .lang-btn {justify-content: center; width: 44px; height: 44px; padding: 0;}
+  .lang-current, .lang-caret {display: none;}
+  .lang-menu {position: fixed; top: 80px; right: 16px; bottom: auto; left: 16px; width: auto; min-width: 0; max-height: calc(100vh - 96px); max-height: calc(100dvh - 96px);}
+}
+@media (max-width: 640px) {
+  .lang-menu {top: 74px; max-height: calc(100vh - 90px); max-height: calc(100dvh - 90px);}
 }
 
 /* 71e. Suppress Google Translate's own chrome (banner/menu frames) — custom switcher only — 2026-08-27 */
