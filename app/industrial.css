@@ -5001,7 +5001,19 @@ body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
    .site-header prefix because legacy border:0 / active-block rules sit
    elsewhere in the cascade. */
 @media (min-width: 1181px) {
-  .site-header.nav-v2 .main-nav {gap: 0;}
+  /* owner 2026-08-30: distribute the 7 top-level items evenly — grid forces
+     7 equal columns regardless of the flex rules elsewhere in the cascade */
+  .site-header.nav-v2 .main-nav {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+  .site-header.nav-v2 .main-nav > a,
+  .site-header.nav-v2 .main-nav > .nav-category {justify-self: stretch;}
+  .site-header.nav-v2 .main-nav > .nav-category {display: flex; align-items: center; justify-content: center; gap: 6px;}
+  .site-header.nav-v2 .main-nav > .nav-category .nav-submenu-toggle {height: auto;}
   .site-header.nav-v2 .main-nav > * + * {border-left: 1px solid rgba(8, 27, 51, .16);}
   .site-header.nav-v2 .main-nav > * + *::before {content: none;}
   .site-header.nav-v2 .main-nav > a,
