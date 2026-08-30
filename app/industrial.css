@@ -4839,3 +4839,171 @@ body {top: 0 !important;}
 .form-success-card .fs-links {display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;}
 .form-success-card .fs-links a {display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border: 1px solid rgba(22,73,55,.3); color: #164937; font-weight: 700; font-size: 13px;}
 .form-success-card .fs-links a:hover {background: #F3F8F6;}
+
+/* ============================================================
+   §HOME-V3 · 2026-08-30 · Homepage hero redesign
+   Blurred + darkened reservoir scenery, 4-layer left-aligned
+   message (vision / headline / sub / trust badges), single
+   orange CTA pinned to the banner's bottom-right.
+   ============================================================ */
+.hero-v3.hero.ind-hero-banner,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 760px;
+  background: none;
+  background-color: #08293C;
+}
+.hero-v3.hero.ind-hero-banner::before,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: -48px;
+  z-index: 0;
+  background: url("images/scenery/reservoir-intake-hero.jpg") center 42% / cover no-repeat;
+  filter: blur(4px) brightness(.52) saturate(.9);
+  transform: scale(1.05);
+}
+.hero-v3.hero.ind-hero-banner::after,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(94deg,
+    rgba(6, 24, 38, .82) 0%,
+    rgba(7, 33, 50, .62) 32%,
+    rgba(9, 47, 68, .38) 60%,
+    rgba(11, 56, 80, .18) 100%);
+}
+.hero-v3.hero.ind-hero-banner .hero-inner,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-inner {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 760px;
+  align-items: center;
+}
+.hero-v3.hero.ind-hero-banner .hero-content,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
+  max-width: 780px;
+  padding: 40px 0 64px;
+}
+.hero-v3 .hero-vision {
+  margin: 0 0 34px;
+  color: rgba(255, 255, 255, .92);
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1.75;
+}
+.hero-v3.hero.ind-hero-banner h1,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner h1 {
+  margin: 0 0 26px;
+  max-width: 720px;
+  color: #fff;
+  font-size: clamp(40px, 4.9vw, 64px);
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  line-height: 1.22;
+  text-shadow: 0 0 30px rgba(255, 255, 255, .32), 0 2px 16px rgba(4, 18, 28, .5);
+}
+.hero-v3 .hero-sub {
+  margin: 0 0 48px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, .88);
+  font-size: clamp(15px, 1.35vw, 19px);
+  font-weight: 400;
+  line-height: 1.75;
+}
+.hero-v3 .hero-badges {display: flex; flex-wrap: wrap; align-items: center; gap: 12px 10px; margin-bottom: 34px;}
+.hero-v3 .hero-badge-group {display: flex; flex-wrap: wrap; align-items: center; gap: 8px;}
+.hero-v3 .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 15px;
+  background: #fff;
+  border: 1px solid #34A688;
+  border-radius: 999px;
+  color: #10303C;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+.hero-v3 .hero-quote-corner {
+  display: inline-flex;
+  gap: 12px;
+  padding: 16px 32px;
+  background: #005C43;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(4, 18, 28, .3);
+}
+.hero-v3 .hero-quote-corner:hover {background: #005C43; filter: brightness(.85); color: #fff; transform: translateY(-2px);}
+@media (max-width: 720px) {
+  .hero-v3.hero.ind-hero-banner,
+  body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner {min-height: 620px;}
+  .hero-v3.hero.ind-hero-banner::before {background-position: 62% 42%; filter: blur(3.5px) brightness(.5) saturate(.9);}
+  .hero-v3.hero.ind-hero-banner .hero-inner,
+  body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-inner {display: block; min-height: 620px; padding-top: 128px;}
+  .hero-v3.hero.ind-hero-banner .hero-content,
+  body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {max-width: 100%; padding: 0 0 56px;}
+  .hero-v3.hero.ind-hero-banner h1 {font-size: clamp(34px, 9.6vw, 46px);}
+  .hero-v3 .hero-sub {margin-bottom: 36px;}
+  .hero-v3 .hero-badges {margin-bottom: 30px;}
+  .hero-v3 .hero-badge {padding: 6px 12px; font-size: 11.5px;}
+}
+
+/* HOME-V3 fix: the theme centers hero content; this banner requires a
+   left-aligned text block (justify-items inherits into grid children). */
+.hero-v3.hero.ind-hero-banner .hero-inner,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-inner {
+  justify-items: start;
+  text-align: left;
+}
+.hero-v3.hero.ind-hero-banner .hero-content,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
+  text-align: left;
+}
+
+/* 64. FIX 2026-08-30: PRODUCT CAPABILITY buyer-card grids must collapse on
+   small screens — the later 3-column .premium-demo rules (§61) were
+   overriding the early responsive media queries on product pages. */
+@media (max-width: 980px) {
+  .premium-demo .buyer-card-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
+}
+@media (max-width: 720px) {
+  .premium-demo .buyer-card-grid,
+  .buyer-card-grid {grid-template-columns: minmax(0, 1fr);}
+}
+
+/* 65. Certified Manufacturing — compact certificate gallery (home + about). */
+.cert-gallery {display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 26px;}
+.cert-thumb {margin: 0; padding: 10px 10px 9px; background: #fff; border: 1px solid rgba(8, 27, 51, .12);}
+.cert-thumb img {display: block; width: 100%; height: 132px; object-fit: contain;}
+.cert-thumb figcaption {padding-top: 9px; color: #5f6b7e; font-size: 11px; letter-spacing: .04em; text-align: center;}
+@media (max-width: 900px) {
+  .cert-gallery {grid-template-columns: repeat(2, minmax(0, 1fr));}
+}
+
+/* 66. 2026-08-30 (rev 2) · Desktop nav cells (owner pick "A"): full-height
+   hairline separators + light brand-green hover/current tint, roomy band
+   >=1181px. Replaces the §32/§34 short gradient ticks there (too faint to
+   read as cell boundaries). 780-1180px stays on the §30/hamburger drawer
+   design and <780px drawer keeps its own rules — no changes there. */
+@media (min-width: 1181px) {
+  .nav-v2 .main-nav {gap: 0;}
+  .nav-v2 .main-nav > * + * {border-left: 1px solid rgba(8, 27, 51, .14);}
+  .nav-v2 .main-nav > * + *::before {content: none;}
+  .nav-v2 .main-nav > a,
+  .nav-v2 .nav-category-link {padding-left: clamp(6px, 0.85vw, 12px); padding-right: clamp(6px, 0.85vw, 12px);}
+  .nav-v2 .main-nav > a:hover,
+  .nav-v2 .main-nav > .nav-category:hover {background: rgba(0, 92, 67, .06);}
+  .nav-v2 .main-nav > a.active {background: rgba(0, 92, 67, .10);}
+}

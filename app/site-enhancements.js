@@ -16,7 +16,7 @@
   // form silently falls back to the previous mailto: behavior.
   // TURNSTILE_SITEKEY: "" = no captcha widget. Set it together with the
   // Worker's TURNSTILE_SECRET_KEY, or leave both empty.
-  const API_BASE = "https://konche-form.workers.dev";
+  const API_BASE = "https://konche-form.chenpyu6768.workers.dev";
   const TURNSTILE_SITEKEY = "";
 
   function pageIsHome() {
@@ -217,11 +217,15 @@
     const grid = document.querySelector(".client-logo-grid");
     if (!grid) return;
     const cards = Array.from(grid.children);
-    if (cards.length < 2) return;
-    // Deterministic daily rotation: same order within a day (stable CLS and
+    // First two cards (BYD, Huawei) stay pinned; the rest keep the
+    // deterministic daily rotation: same order within a day (stable CLS and
     // testable), fresh order each following day.
-    const offset = Math.floor(Date.now() / 86400000) % cards.length;
-    cards.forEach((_, i) => grid.appendChild(cards[(i + offset) % cards.length]));
+    if (cards.length < 4) return;
+    const pinned = cards.slice(0, 2);
+    const rest = cards.slice(2);
+    const offset = Math.floor(Date.now() / 86400000) % rest.length;
+    pinned.concat(rest.slice(offset), rest.slice(0, offset))
+      .forEach((card) => grid.appendChild(card));
   }
 
   function initServiceCarousel() {
