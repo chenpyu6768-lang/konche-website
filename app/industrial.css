@@ -4839,3 +4839,138 @@ body {top: 0 !important;}
 .form-success-card .fs-links {display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;}
 .form-success-card .fs-links a {display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border: 1px solid rgba(22,73,55,.3); color: #164937; font-weight: 700; font-size: 13px;}
 .form-success-card .fs-links a:hover {background: #F3F8F6;}
+
+/* ============================================================
+   §HOME-V3 · 2026-08-30 · Homepage hero redesign
+   Blurred + darkened reservoir scenery, 4-layer left-aligned
+   message (vision / headline / sub / trust badges), single
+   orange CTA pinned to the banner's bottom-right.
+   ============================================================ */
+.hero-v3.hero.ind-hero-banner,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 760px;
+  background: none;
+  background-color: #08293C;
+}
+.hero-v3.hero.ind-hero-banner::before,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: -48px;
+  z-index: 0;
+  background: url("images/scenery/reservoir-intake-hero.jpg") center 42% / cover no-repeat;
+  filter: blur(7px) brightness(.5) saturate(.88);
+  transform: scale(1.05);
+}
+.hero-v3.hero.ind-hero-banner::after,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(94deg,
+    rgba(6, 24, 38, .82) 0%,
+    rgba(7, 33, 50, .62) 32%,
+    rgba(9, 47, 68, .38) 60%,
+    rgba(11, 56, 80, .18) 100%);
+}
+.hero-v3.hero.ind-hero-banner .hero-inner,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-inner {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 760px;
+  align-items: center;
+}
+.hero-v3.hero.ind-hero-banner .hero-content,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
+  max-width: 780px;
+  padding: 48px 0 130px;
+}
+.hero-v3 .hero-vision {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, .92);
+  font-size: clamp(16px, 1.4vw, 19px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1.75;
+}
+.hero-v3.hero.ind-hero-banner h1,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner h1 {
+  margin: 0 0 22px;
+  max-width: 720px;
+  color: #fff;
+  font-size: clamp(40px, 4.9vw, 64px);
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  line-height: 1.06;
+  text-shadow: 0 0 30px rgba(255, 255, 255, .32), 0 2px 16px rgba(4, 18, 28, .5);
+}
+.hero-v3 .hero-sub {
+  margin: 0 0 32px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, .88);
+  font-size: clamp(15px, 1.35vw, 19px);
+  font-weight: 400;
+  line-height: 1.75;
+}
+.hero-v3 .hero-badges {display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px;}
+.hero-v3 .hero-badge-group {display: flex; flex-wrap: wrap; align-items: center; gap: 8px;}
+.hero-v3 .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 15px;
+  background: #fff;
+  border: 1px solid #34A688;
+  border-radius: 999px;
+  color: #10303C;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+.hero-v3 .hero-quote-corner {
+  position: absolute;
+  right: 0;
+  bottom: 42px;
+  z-index: 3;
+  gap: 12px;
+  padding: 16px 30px;
+  background: #E8552F;
+  border: 0;
+  border-radius: 8px;
+  color: #26120A;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(4, 18, 28, .35);
+}
+.hero-v3 .hero-quote-corner:hover {background: #F0603A; color: #26120A; transform: translateY(-2px);}
+@media (max-width: 720px) {
+  .hero-v3.hero.ind-hero-banner,
+  body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner {min-height: 620px;}
+  .hero-v3.hero.ind-hero-banner::before {background-position: 62% 42%; filter: blur(6px) brightness(.48) saturate(.88);}
+  .hero-v3.hero.ind-hero-banner .hero-inner,
+  body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-inner {display: block; min-height: 620px; padding-top: 128px;}
+  .hero-v3.hero.ind-hero-banner .hero-content,
+  body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {max-width: 100%; padding: 0 0 44px;}
+  .hero-v3.hero.ind-hero-banner h1 {font-size: clamp(34px, 9.6vw, 46px);}
+  .hero-v3 .hero-sub {margin-bottom: 26px;}
+  .hero-v3 .hero-badge {padding: 6px 12px; font-size: 11.5px;}
+  .hero-v3 .hero-quote-corner {position: static; margin: 0 0 46px;}
+}
+
+/* HOME-V3 fix: the theme centers hero content; this banner requires a
+   left-aligned text block (justify-items inherits into grid children). */
+.hero-v3.hero.ind-hero-banner .hero-inner,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-inner {
+  justify-items: start;
+  text-align: left;
+}
+.hero-v3.hero.ind-hero-banner .hero-content,
+body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
+  text-align: left;
+}

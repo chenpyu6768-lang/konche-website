@@ -217,11 +217,15 @@
     const grid = document.querySelector(".client-logo-grid");
     if (!grid) return;
     const cards = Array.from(grid.children);
-    if (cards.length < 2) return;
-    // Deterministic daily rotation: same order within a day (stable CLS and
+    // First two cards (BYD, Huawei) stay pinned; the rest keep the
+    // deterministic daily rotation: same order within a day (stable CLS and
     // testable), fresh order each following day.
-    const offset = Math.floor(Date.now() / 86400000) % cards.length;
-    cards.forEach((_, i) => grid.appendChild(cards[(i + offset) % cards.length]));
+    if (cards.length < 4) return;
+    const pinned = cards.slice(0, 2);
+    const rest = cards.slice(2);
+    const offset = Math.floor(Date.now() / 86400000) % rest.length;
+    pinned.concat(rest.slice(offset), rest.slice(0, offset))
+      .forEach((card) => grid.appendChild(card));
   }
 
   function initServiceCarousel() {
