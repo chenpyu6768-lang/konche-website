@@ -4991,3 +4991,19 @@ body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
 @media (max-width: 900px) {
   .cert-gallery {grid-template-columns: repeat(2, minmax(0, 1fr));}
 }
+
+/* 66. 2026-08-30 (rev 2) · Desktop nav cells (owner pick "A"): full-height
+   hairline separators + light brand-green hover/current tint, roomy band
+   >=1181px. Replaces the §32/§34 short gradient ticks there (too faint to
+   read as cell boundaries). 780-1180px stays on the §30/hamburger drawer
+   design and <780px drawer keeps its own rules — no changes there. */
+@media (min-width: 1181px) {
+  .nav-v2 .main-nav {gap: 0;}
+  .nav-v2 .main-nav > * + * {border-left: 1px solid rgba(8, 27, 51, .14);}
+  .nav-v2 .main-nav > * + *::before {content: none;}
+  .nav-v2 .main-nav > a,
+  .nav-v2 .nav-category-link {padding-left: clamp(6px, 0.85vw, 12px); padding-right: clamp(6px, 0.85vw, 12px);}
+  .nav-v2 .main-nav > a:hover,
+  .nav-v2 .main-nav > .nav-category:hover {background: rgba(0, 92, 67, .06);}
+  .nav-v2 .main-nav > a.active {background: rgba(0, 92, 67, .10);}
+}
