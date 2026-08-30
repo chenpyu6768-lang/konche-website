@@ -4992,18 +4992,71 @@ body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
   .cert-gallery {grid-template-columns: repeat(2, minmax(0, 1fr));}
 }
 
-/* 66. 2026-08-30 (rev 2) · Desktop nav cells (owner pick "A"): full-height
-   hairline separators + light brand-green hover/current tint, roomy band
-   >=1181px. Replaces the §32/§34 short gradient ticks there (too faint to
-   read as cell boundaries). 780-1180px stays on the §30/hamburger drawer
-   design and <780px drawer keeps its own rules — no changes there. */
+/* 66. 2026-08-30 (rev 3, owner spec) · Desktop nav: one full-height hairline
+   between every adjacent pair of top-level items (none on the outer edges),
+   current page = transparent bg + normal label + 2px brand-green bottom bar,
+   hover = light tint + green label only. Scoped >=1181px; the 780-1180
+   hamburger drawer and <=779px drawer get horizontal rules and a green
+   left-edge marker for the current item. Specificity is raised with the
+   .site-header prefix because legacy border:0 / active-block rules sit
+   elsewhere in the cascade. */
 @media (min-width: 1181px) {
-  .nav-v2 .main-nav {gap: 0;}
-  .nav-v2 .main-nav > * + * {border-left: 1px solid rgba(8, 27, 51, .14);}
-  .nav-v2 .main-nav > * + *::before {content: none;}
-  .nav-v2 .main-nav > a,
-  .nav-v2 .nav-category-link {padding-left: clamp(6px, 0.85vw, 12px); padding-right: clamp(6px, 0.85vw, 12px);}
-  .nav-v2 .main-nav > a:hover,
-  .nav-v2 .main-nav > .nav-category:hover {background: rgba(0, 92, 67, .06);}
-  .nav-v2 .main-nav > a.active {background: rgba(0, 92, 67, .10);}
+  .site-header.nav-v2 .main-nav {gap: 0;}
+  .site-header.nav-v2 .main-nav > * + * {border-left: 1px solid rgba(8, 27, 51, .16);}
+  .site-header.nav-v2 .main-nav > * + *::before {content: none;}
+  .site-header.nav-v2 .main-nav > a,
+  .site-header.nav-v2 .main-nav > .nav-category .nav-category-link {padding-left: clamp(6px, 0.85vw, 12px); padding-right: clamp(6px, 0.85vw, 12px);}
+
+  /* hover: light tint on the cell, green label, no underline bar */
+  .site-header.nav-v2 .main-nav > a:hover,
+  .site-header.nav-v2 .main-nav > a:focus-visible,
+  .site-header.nav-v2 .main-nav > .nav-category:hover,
+  .site-header.nav-v2 .main-nav > .nav-category:focus-within {background: rgba(0, 92, 67, .05);}
+  .site-header.nav-v2 .main-nav > .nav-category:hover > .nav-category-link,
+  .site-header.nav-v2 .main-nav > .nav-category:focus-within > .nav-category-link {background: transparent; box-shadow: none; border-radius: 0; color: #005C43;}
+  .site-header.nav-v2 .main-nav > a:hover::after,
+  .site-header.nav-v2 .nav-category-link:hover::after {width: 0;}
+
+  /* current page: transparent bg, normal label, 2px green bottom bar */
+  .site-header.nav-v2 .main-nav > a.active,
+  .site-header.nav-v2 .nav-category-link.active,
+  .site-header.nav-v2 .nav-category:has(.dropdown-group-link.active) .nav-category-link {
+    background: transparent;
+    color: #3A464D !important;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: clamp(6px, 0.85vw, 12px);
+    padding-right: clamp(6px, 0.85vw, 12px);
+  }
+  .site-header.nav-v2 .main-nav > a.active:hover {background: rgba(0, 92, 67, .05); color: #3A464D; box-shadow: none;}
+  .site-header.nav-v2 .main-nav > a.active::after,
+  .site-header.nav-v2 .nav-category-link.active::after {
+    content: "" !important;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 0;
+    background: #005C43;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 67. Drawer (hamburger band 780-1180 and mobile <=779): horizontal separators
+   between items; current item keeps a 3px brand-green left edge marker and a
+   normal label — no filled block. */
+@media (max-width: 1180px) {
+  .site-header.nav-v2 .main-nav > * + * {border-top: 1px solid rgba(8, 27, 51, .08);}
+  .site-header.nav-v2 .main-nav > a,
+  .site-header.nav-v2 .main-nav > .nav-category > .nav-category-link {border-radius: 0; box-shadow: none;}
+  .site-header.nav-v2 .main-nav > a.active,
+  .site-header.nav-v2 .main-nav .nav-category-link.active {
+    background: transparent;
+    color: #3A464D !important;
+    box-shadow: none;
+    border-left: 3px solid #005C43;
+  }
+  .site-header.nav-v2 .main-nav > a.active:hover {background: rgba(0, 92, 67, .05);}
 }
