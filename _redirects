@@ -1,8 +1,8 @@
-# Permanent redirects for merged product pages (Netlify/_redirects syntax).
-# On nginx, mirror these as return 301 rules.
-/products/single-stage-ro.html    /products/single-double-stage-ro.html   301
-/products/double-stage-ro.html    /products/single-double-stage-ro.html   301
-/products/laboratory-ultrapure-water-equipment.html  /products/laboratory-ultrapure-water-system.html 301
-/products/edi-ultrapure-water-system.html            /products/industrial-ultrapure-water-system.html 301
-/products/pharmaceutical-purified-water-system.html  /products/industrial-ultrapure-water-system.html 301
-/products/deionized-water-system.html               /products/industrial-ultrapure-water-system.html 301
+# Permanent, method-preserving redirects for merged product pages.
+# Each legacy .html URL goes directly to the final suffixless canonical URL.
+/products/single-stage-ro.html    /products/single-double-stage-ro   308
+/products/double-stage-ro.html    /products/single-double-stage-ro   308
+/products/laboratory-ultrapure-water-equipment.html  /products/laboratory-ultrapure-water-system 308
+/products/edi-ultrapure-water-system.html            /products/industrial-ultrapure-water-system 308
+/products/pharmaceutical-purified-water-system.html  /products/industrial-ultrapure-water-system 308
+/products/deionized-water-system.html               /products/industrial-ultrapure-water-system 308

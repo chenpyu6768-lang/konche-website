@@ -25,24 +25,19 @@ KON-008 (release process), KON-021 (search-platform submission).
 
 ## Release package contents
 
-- 29 HTML pages: index, about, contact, privacy, 404, and 25 product/solution pages.
-- 28 indexable pages (404.html is noindex and excluded from the sitemap).
+- 33 physical HTML files: 26 indexable pages, six noindex legacy stubs, and 404.html.
+- Public canonical URLs are suffixless. Keep the physical `.html` files because the
+  web server resolves clean requests to them and redirects legacy `.html` requests.
 - `app/` styles, fonts, logo and the 1200×630 Open Graph image.
-- `robots.txt`, `sitemap.xml` (28 URLs), `llms.txt`, `llms-full.txt`.
-- `tools/` — Node validation suite (no dependencies, Node ≥ 18):
-  - `node tools/validate_geo.mjs` — local gates: metadata, canonical, JSON-LD,
-    FAQ-schema-visible parity, sitemap↔page set, lastmod↔dateModified, links.
-  - `node tools/geo_audit.mjs` — content-quality and citability heuristics.
-  - `node tools/deploy_check.mjs https://www.konchewater.com` — post-deploy live checks.
-- Python equivalents (`geo_enhance.py`, `validate_geo.py`) remain for reference;
-  the Node tools are authoritative because the delivery machine has no Python.
+- `robots.txt`, `sitemap.xml` (26 clean URLs), `llms.txt`, `llms-full.txt`.
+- `tools/validate-clean-urls.mjs` — dependency-free Node validation (Node ≥ 18).
 
 ## Pre-deploy checklist
 
-1. `node tools/validate_geo.mjs` exits 0 (no errors).
-2. `node tools/geo_audit.mjs` shows no filler/AI-pattern flags.
-3. If any page content changed after the last enhancement run, re-run
-   `node tools/geo_enhance_v2.mjs` (idempotent), then re-validate.
+1. Run `node tools/validate-clean-urls.mjs`; it must exit 0.
+2. Confirm the release only changes URL/SEO signals unless page-content changes
+   were separately approved.
+3. Keep all physical `.html` files and the server-side `.html` compatibility redirects.
 4. Record the release version and date in `VERSION.md` before uploading.
 
 ## Nginx configuration (KON-003, KON-004, KON-001)
@@ -80,21 +75,34 @@ server {
 
   # KON-001: old article URLs must not 404 silently. One-to-one 301s to the
   # current equivalents (adjust the right-hand side if /tech/ pages change).
-  location ~ ^/news/article-00(1|2|3|4|5|6|7)\.html$ { return 301 /tech/article-00$1.html; }
-  location ~ ^/news/article-00(8|9)\.html$           { return 301 /faq/article-00$1.html; }
-  location ~ ^/news/article-01(0|1|2)\.html$         { return 301 /faq/article-00$1.html; }
+  # Keep these regex locations before the general .html rule below.
+  location ~ ^/news/article-00(1|2|3|4|5|6|7)\.html$ { return 301 /tech/article-00$1; }
+  location ~ ^/news/article-00(8|9)\.html$           { return 301 /faq/article-00$1; }
+  location ~ ^/news/article-01(0|1|2)\.html$         { return 301 /faq/article-00$1; }
   # If a /tech/ or /faq/ target itself does not exist yet, temporarily redirect
   # to the homepage Knowledge section instead of leaving a 404 in the sitemap.
 
-  # Long-lived caching for assets; short for HTML.
+  # Known legacy aliases redirect directly to their final clean URL.
+  location = /products/single-stage-ro.html { return 308 /products/single-double-stage-ro; }
+  location = /products/double-stage-ro.html { return 308 /products/single-double-stage-ro; }
+  location = /products/laboratory-ultrapure-water-equipment.html { return 308 /products/laboratory-ultrapure-water-system; }
+  location = /products/edi-ultrapure-water-system.html { return 308 /products/industrial-ultrapure-water-system; }
+  location = /products/pharmaceutical-purified-water-system.html { return 308 /products/industrial-ultrapure-water-system; }
+  location = /products/deionized-water-system.html { return 308 /products/industrial-ultrapure-water-system; }
+
+  # One canonical public URL: legacy .html requests make one hop to suffixless.
+  location = /index.html { return 308 /; }
+  location ~ ^(.+)\.html$ { return 308 $1; }
+
+  # Long-lived caching for assets.
   location /app/ { add_header Cache-Control "public, max-age=31536000, immutable"; }
-  location ~ \.html$ { add_header Cache-Control "public, max-age=3600"; }
 
   gzip on;
   gzip_types text/plain text/css application/xml application/json image/svg+xml;
 
-  # History fallback must NOT swallow the exact-match locations above.
-  location / { try_files $uri $uri/ =404; }
+  # Resolve a clean public URL to its physical .html file without exposing it.
+  # Exact and regex redirect locations above take precedence.
+  location / { try_files $uri $uri.html $uri/ =404; }
 
   add_header X-Content-Type-Options nosniff;
 }
@@ -105,9 +113,10 @@ over HTTPS (HSTS can be enabled after both hosts serve TLS correctly).
 
 ## Post-deploy verification (KON-008)
 
-1. Run `node tools/deploy_check.mjs https://www.konchewater.com`.
-   All checks must pass: llms content types, 28-URL sitemap with all-200,
-   sample-page canonical/OG/JSON-LD integrity, host convergence, old /news/ handling.
+1. Run `node tools/validate-clean-urls.mjs https://www.konchewater.com`.
+   All checks must pass: 26 clean sitemap URLs return 200; canonical, Open Graph,
+   JSON-LD and internal links use clean URLs; each legacy `.html` URL makes one
+   308 hop to its matching clean URL; and no retired-host reference remains.
 2. Spot-check in a browser: homepage FAQ accordion, a product page's
    "On this page" TOC, and the "Related systems" cards.
 3. Purge CDN/page caches for `/`, `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt`.

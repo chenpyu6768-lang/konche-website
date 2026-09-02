@@ -41,7 +41,7 @@ corresponding product page.
 
 ## Domain assumption
 
-The canonical and sitemap domain follows `VERSION.md`, which identifies `https://www.konchewater.com/index.html` as the official source. If the English site will launch on another hostname or subdirectory, change `BASE_URL` in `tools/geo_enhance.py`, then rerun the enhancer and regenerate `sitemap.xml`, `llms.txt` and `llms-full.txt` before release.
+The canonical and sitemap domain follows `VERSION.md`, which identifies `https://www.konchewater.com/` as the official source. If the English site will launch on another hostname or subdirectory, change `BASE_URL` in `tools/geo_enhance.py`, then rerun the enhancer and regenerate `sitemap.xml`, `llms.txt` and `llms-full.txt` before release.
 
 
 ## Owner-confirmed typical-value set — 2026-08-20 (pass 25 merge, recorded pass 26 follow-up)
