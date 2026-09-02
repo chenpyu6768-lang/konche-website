@@ -1,5 +1,15 @@
 # Konche Water Treatment Technology Website
 
+## 2026-09-02 (b) - GA4 deploy, product-schema fix, nav label wrap (PR #4)
+
+- Deployed GA4 Google tag G-KFKLZRQYF0 to all 33 pages via tools/add-gtag.mjs.
+- Whitelisted googletagmanager.com / *.google-analytics.com / analytics.google.com in the page meta CSP (27 pages) and _headers so the tag and its hits are not blocked.
+- Added the required image field to the Product node on the 6 single-product pages; ozone uses the OG image as placeholder until a product photo is supplied.
+- Removed the Product node (and dangling WebPage.mainEntity) from the 3 category pages so invalid GSC product-snippet items clear after recrawl.
+- Wrapped the Project Supply Support nav label per word to stop overflow in the equal-width nav grid.
+- Verified: validate-clean-urls.mjs passes locally and against production; 26 JSON-LD blocks parse; exactly 6 Product nodes remain.
+
+
 ## 2026-09-02 - Clean public URL signal alignment
 
 - Standardized canonical, Open Graph, JSON-LD, breadcrumb, internal-link,
