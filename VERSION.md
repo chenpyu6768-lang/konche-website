@@ -1,5 +1,14 @@
 # Konche Water Treatment Technology Website
 
+## 2026-09-02 - Clean public URL signal alignment
+
+- Standardized canonical, Open Graph, JSON-LD, breadcrumb, internal-link,
+  sitemap and AI-index URLs on the suffixless public URL format.
+- Retained all physical `.html` files and legacy `.html` compatibility redirects;
+  merged-page aliases now redirect directly to their final clean canonical URL.
+- Added `tools/validate-clean-urls.mjs` for static release checks and optional
+  post-deployment HTTP verification against `https://www.konchewater.com`.
+
 ## 2026-08-26 - Balanced buyer cards and shared landscape CTA banner
 
 - Balanced buyer-route card grids by item count: even totals use equal rows, while odd totals place one additional card in the first row and center the shorter second row on desktop.
@@ -130,7 +139,7 @@
 - Version name: 框架+产品信息补充
 - Snapshot date: 2026-08-11
 - Language: English
-- Source: Official Chinese website, https://www.konchewater.com/index.html
+- Source: Official Chinese website, https://www.konchewater.com/
 
 ## Included materials
 

@@ -21,17 +21,17 @@
 
   function pageIsHome() {
     const path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
-    return path.endsWith("/index.html") || path.endsWith("/");
+    return path === "/" || path.endsWith("/index") || path.endsWith("/index.html");
   }
 
   function pageIsProductOrSolution() {
     const path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
-    return path.includes("/products/") && path.endsWith(".html");
+    return path.includes("/products/") && !path.endsWith("/");
   }
 
   function pageIsContact() {
     const path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
-    return path.endsWith("/contact.html");
+    return path.endsWith("/contact") || path.endsWith("/contact.html");
   }
 
   /* ── Direct submission helpers (Cloudflare Worker + mailto fallback) ── */
@@ -723,13 +723,13 @@
   }
 
   function addProjectScopeStrip() {
-    const page = window.location.pathname.split("/").pop() || "";
+    const page = (window.location.pathname.split("/").pop() || "").replace(/\.html$/, "");
     const excluded = new Set([
-      "industry-solutions.html",
-      "spare-parts.html",
-      "spare-parts-sourcing-service.html",
-      "general-water-treatment-consumables.html",
-      "uv-disinfection-consumables.html"
+      "industry-solutions",
+      "spare-parts",
+      "spare-parts-sourcing-service",
+      "general-water-treatment-consumables",
+      "uv-disinfection-consumables"
     ]);
     if (!window.location.pathname.includes("/products/") || excluded.has(page)) return;
     const hero = document.querySelector(".product-hero");
