@@ -156,6 +156,12 @@
       const data = await response.json().catch(() => ({}));
       if (data && data.ok) {
         showSuccessPanel(form, data.inquiry_no);
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            form_name: formType,
+            page_location: window.location.href.slice(0, 500)
+          });
+        }
         return true;
       }
       if (data && (data.error === "captcha_required" || data.error === "captcha_failed")) {
