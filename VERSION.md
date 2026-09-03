@@ -1,5 +1,19 @@
 # Konche Water Treatment Technology Website
 
+## 2026-09-03 - Solutions: country/market section + Philippines refilling-station RO guide (PR #7)
+
+- Added a "Solutions by Country & Market" grouping to products/industry-solutions: the seven industry
+  paths stay unchanged; a distinct market card (amber accent) links to the first country guide.
+- New page /markets/philippines-water-refilling-station-ro-system: plain-language RO equipment guide
+  for Philippine water-refilling-station owners. Covers municipal vs deep-well configuration, GPD
+  sizing (2-2.5x daily containers), PNSDW-target wording (target statement, not certification),
+  indicative market investment ranges (attributed to published PH supplier listings, not KONCHE
+  quotes), maintenance schedule table, import-vs-local buying guidance and FAQPage schema.
+  Includes an explicit no-income-guarantee disclaimer; GA4 gtag, CSP meta and canonical follow the
+  existing product-page pattern.
+- sitemap.xml: added the market guide URL (now 27 clean URLs), refreshed industry-solutions lastmod.
+- llms.txt / llms-full.txt: added a market-guides section and corrected the application-groups count.
+
 ## 2026-09-02 (b) - GA4 deploy, product-schema fix, nav label wrap (PR #4)
 
 - Deployed GA4 Google tag G-KFKLZRQYF0 to all 33 pages via tools/add-gtag.mjs.

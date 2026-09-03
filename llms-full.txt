@@ -70,9 +70,10 @@ Official pages:
 
 ## Application routes
 
-The solutions page covers six application groups: industrial pure and ultrapure water; seawater and brackish-water desalination; centralized drinking water; food and beverage process water; industrial UF pretreatment; and laboratory water. Each route is an initial decision aid, not a final process guarantee.
+The solutions page covers seven industry groups: industrial pure and ultrapure water; electronics-grade ultrapure water; seawater and brackish-water desalination; centralized drinking water; food and beverage process water; industrial UF pretreatment; and laboratory water. Each route is an initial decision aid, not a final process guarantee. A second grouping, market guides by country, opens with a Philippines water-refilling-station RO equipment guide written for local station owners: water-source configuration (municipal vs deep well), GPD sizing, indicative investment, maintenance and permits, with no income guarantees.
 
 - https://www.konchewater.com/products/industry-solutions
+- https://www.konchewater.com/markets/philippines-water-refilling-station-ro-system
 
 ## Direct answers and comparison guides
 

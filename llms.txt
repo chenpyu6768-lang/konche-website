@@ -10,6 +10,10 @@
 - [Equipment & OEM capability](https://www.konchewater.com/equipment-oem): Standard equipment routes, configurable systems and private-label supply scope for distributors and OEM buyers.
 - [Project & EPC support](https://www.konchewater.com/project-support): Engineering support scope, selected project equipment, reference projects and the four-step enquiry path.
 - [Industrial water treatment solutions](https://www.konchewater.com/products/industry-solutions): Application-led process directions for seven common industrial and commercial water duties.
+
+## Market-specific solution guides
+
+- [Water refilling station RO systems — Philippines](https://www.konchewater.com/markets/philippines-water-refilling-station-ro-system): Plain-language RO equipment guide for Philippine water refilling stations — municipal vs deep-well configuration, GPD sizing by daily containers, indicative investment, maintenance costs and permits (PNSDW/DOH/LGU). No income guarantees are made.
 - [Privacy policy](https://www.konchewater.com/privacy): How KONCHE handles inquiry details, technical and usage data, cookies, storage, security and privacy rights.
 - [Website terms of use](https://www.konchewater.com/terms-of-use): Terms governing access to the KONCHE website and its project-inquiry channels.
 
