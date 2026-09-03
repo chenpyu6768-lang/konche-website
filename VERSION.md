@@ -3,14 +3,15 @@
 ## 2026-09-03 - Solutions: country/market section + Philippines refilling-station RO guide (PR #7)
 
 - Added a "Solutions by Country & Market" grouping to products/industry-solutions: the seven industry
-  paths stay unchanged; a distinct market card (amber accent) links to the first country guide.
-- New page /markets/philippines-water-refilling-station-ro-system: plain-language RO equipment guide
-  for Philippine water-refilling-station owners. Covers municipal vs deep-well configuration, GPD
-  sizing (2-2.5x daily containers), PNSDW-target wording (target statement, not certification),
-  indicative market investment ranges (attributed to published PH supplier listings, not KONCHE
-  quotes), maintenance schedule table, import-vs-local buying guidance and FAQPage schema.
-  Includes an explicit no-income-guarantee disclaimer; GA4 gtag, CSP meta and canonical follow the
-  existing product-page pattern.
+  paths stay unchanged; section headings simplified (eyebrow text promoted into the H2); one amber
+  market card (vertically centered) links to the first country guide.
+- New page /markets/philippines-water-refilling-station-ro-system: concise, plain-language RO
+  equipment guide for Philippine water-refilling-station owners. Scope deliberately narrow —
+  five-step workflow, selection by water source (municipal vs deep well) and GPD sizing by daily
+  containers, maintenance cost table, capability card grid and FAQ (3 questions, FAQPage schema).
+  No station-setup, investment, permits or import-vs-local content; no income guarantees. Purpose:
+  article readers land here, see KONCHE's capability, and inquire. GA4 gtag, CSP meta and canonical
+  follow the existing product-page pattern.
 - sitemap.xml: added the market guide URL (now 27 clean URLs), refreshed industry-solutions lastmod.
 - llms.txt / llms-full.txt: added a market-guides section and corrected the application-groups count.
 

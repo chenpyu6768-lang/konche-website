@@ -13,7 +13,7 @@
 
 ## Market-specific solution guides
 
-- [Water refilling station RO systems — Philippines](https://www.konchewater.com/markets/philippines-water-refilling-station-ro-system): Plain-language RO equipment guide for Philippine water refilling stations — municipal vs deep-well configuration, GPD sizing by daily containers, indicative investment, maintenance costs and permits (PNSDW/DOH/LGU). No income guarantees are made.
+- [Water refilling station RO systems — Philippines](https://www.konchewater.com/markets/philippines-water-refilling-station-ro-system): Plain-language RO equipment guide for Philippine water refilling stations — how the plant works, water-source and GPD selection, and maintenance costs. No income guarantees are made.
 - [Privacy policy](https://www.konchewater.com/privacy): How KONCHE handles inquiry details, technical and usage data, cookies, storage, security and privacy rights.
 - [Website terms of use](https://www.konchewater.com/terms-of-use): Terms governing access to the KONCHE website and its project-inquiry channels.
 
