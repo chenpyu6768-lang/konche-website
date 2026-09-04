@@ -19,7 +19,6 @@
 
 ## Reverse osmosis and water reuse
 
-- [Reverse osmosis systems](https://www.konchewater.com/products/ro-reverse-osmosis-system): Single-pass and double-pass RO selection, configuration, applications and a stage-comparison guide.
 - [Single-stage RO](https://www.konchewater.com/products/single-double-stage-ro): General industrial purified-water process, components, reference data, selection and maintenance.
 - [Double-stage RO](https://www.konchewater.com/products/single-double-stage-ro): Two-pass RO process for lower-conductivity water, including reference models and selection factors.
 - [Drinking-water purification](https://www.konchewater.com/products/drinking-water-system): Centralized treatment for communities, camps, schools, hotels and commercial projects.

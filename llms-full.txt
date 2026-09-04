@@ -22,7 +22,6 @@ KONCHE presents single-stage RO for general industrial purified-water duties and
 
 Official pages:
 
-- https://www.konchewater.com/products/ro-reverse-osmosis-system
 - https://www.konchewater.com/products/single-double-stage-ro
 - https://www.konchewater.com/products/drinking-water-system
 
@@ -81,7 +80,6 @@ Every product and solution page uses a two-layer answer architecture. The "Quick
 
 Three category pages publish same-caliber technology comparison tables. Each table compares the options on identical dimensions, states the limitations of every option, and ends with conditional decision guidance:
 
-- Single stage vs double stage RO (desalination, conductivity, capacity, recovery, applications, limitations, selection): https://www.konchewater.com/products/ro-reverse-osmosis-system#technology-comparison
 - Low-pressure UV vs medium-pressure UV vs TOC UV vs ozone (output, power class, typical flow, documented performance, best duty, limitations): https://www.konchewater.com/products/uv-water-sterilizer#technology-comparison
 - Ultrafiltration vs reverse osmosis membrane roles (what each removes, ratings, capacity, role, limitations): https://www.konchewater.com/products/uf-ultrafiltration-system#technology-comparison
 

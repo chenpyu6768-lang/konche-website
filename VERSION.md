@@ -1,5 +1,26 @@
 # Konche Water Treatment Technology Website
 
+## 2026-09-04 - Commercial hardening: workshop hero, promise strips, buyer-language solutions (local, not yet pushed)
+
+- Homepage hero rebuilt (hero-v4): sharp cool-graded workshop photo (app/images/home/showcase/edi-ultrapure-workshop.webp)
+  replaces the blurred reservoir scenery; H1 changed to owner-approved variant A (Water Treatment Systems Built,
+  Welded & Tested in Our Own Factory); new 6-chip purchase-promise strip; capacity wording set to 0.25-50 m3/h.
+- New 2x2 equipment showcase band under the hero with nameplate-style tags linking to product pages
+  (50T RO+EDI / 0.5T drinking water / 0.5T RO unit / pretreatment filter; webp converted via ffmpeg, <210KB each).
+- Promise strips (chips + warranty/config fine print) inserted after the product subtitle on all 18 real product
+  pages; chips derived per page from that page's CORE BENEFITS / working-principle modules; CSS v bumped to
+  20260904-1 on edited pages only.
+- industry-solutions: 7 industry pain lists rewritten in buyer-loss language, each followed by a new
+  How KONCHE Responds module naming concrete means (Dow/Hydranautics membranes, 316L, PLC, PNSDW-target
+  configuration, PVDF UF); new Start From Who You Are buyer-type section (wholesalers/OEM vs plant owners/EPCs).
+- Capacity claim fix: all 0.5-100 m3/h occurrences on industrial-ultrapure and electronic-grade pages replaced
+  with 0.25-50 m3/h per owner (12 occurrences); other category ranges left and flagged in GEO-FACT-CHECK.md.
+- Repairs: dead hero-ultrapure-banner-v2.png CSS references repointed to the existing webp.
+- Registry: owner-confirmed commitments (1-yr whole-machine warranty excl. consumables, 72-hr spare-parts
+  dispatch, 24-hr response, OEM/ODM, PLC auto-run, easy assembly, brand-component configuration) recorded in
+  GEO-FACT-CHECK.md. sitemap lastmod set to 2026-09-04 on the 18 changed URLs.
+- Batch script: _commercial_hardening_2026-09-04.mjs (workspace parent dir). NOT yet merged/pushed.
+
 ## 2026-09-03 - Solutions: country/market section + Philippines refilling-station RO guide (PR #7)
 
 - Added a "Solutions by Country & Market" grouping to products/industry-solutions: the seven industry

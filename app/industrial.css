@@ -393,7 +393,7 @@
       rgba(245, 247, 246, .78) 39%,
       rgba(245, 247, 246, .18) 58%,
       rgba(245, 247, 246, 0) 72%),
-    url("images/products/hero-ultrapure-banner-v2.png") center center / cover no-repeat;}.hero.ind-hero-banner .hero-grid {display: none;}.hero.ind-hero-banner .hero-inner {min-height: 740px;
+    url("images/products/hero-ultrapure-banner.webp") center center / cover no-repeat;}.hero.ind-hero-banner .hero-grid {display: none;}.hero.ind-hero-banner .hero-inner {min-height: 740px;
   padding-top: 154px;
   padding-bottom: 64px;
   align-items: center;}.hero.ind-hero-banner .hero-content {max-width: 610px;
@@ -443,7 +443,7 @@
         rgba(245, 247, 246, .96) 48%,
         rgba(245, 247, 246, .58) 73%,
         rgba(245, 247, 246, .15) 100%),
-      url("images/products/hero-ultrapure-banner-v2.png") 69% center / cover no-repeat;}.hero.ind-hero-banner .hero-inner {min-height: 760px;
+      url("images/products/hero-ultrapure-banner.webp") 69% center / cover no-repeat;}.hero.ind-hero-banner .hero-inner {min-height: 760px;
     padding-top: 118px;
     padding-bottom: 54px;}.hero.ind-hero-banner .hero-content {max-width: 100%; padding: 24px 0 68px;}.hero.ind-hero-banner h1 {font-size: clamp(36px, 10.5vw, 48px);}.hero.ind-hero-banner .hero-trust {gap: 10px 16px;}.certificate-card {display: block;}.certificate-placeholder {min-height: 280px;}.certificate-card h3 {margin: 20px 4px 8px;}.certificate-card p {margin: 0 4px;}
 }.product-breadcrumb {position: static;
@@ -658,7 +658,7 @@
       rgba(7, 28, 44, .84) 34%,
       rgba(7, 28, 44, .55) 62%,
       rgba(7, 28, 44, .24) 100%),
-    url("images/products/hero-ultrapure-banner-v2.png") center center / cover no-repeat;
+    url("images/products/hero-ultrapure-banner.webp") center center / cover no-repeat;
 }
 .premium-demo.cinema-hero .hero-content h1 {color: #fff; text-shadow: 0 2px 28px rgba(7, 28, 44, .38);}
 .premium-demo.cinema-hero .hero.ind-hero-banner h1 .hero-green {color: #57D98F;}
@@ -700,7 +700,7 @@
     min-height: 640px;
     background:
       linear-gradient(180deg, rgba(7, 28, 44, .9) 0%, rgba(7, 28, 44, .78) 55%, rgba(7, 28, 44, .55) 100%),
-      url("images/products/hero-ultrapure-banner-v2.png") center center / cover no-repeat;
+      url("images/products/hero-ultrapure-banner.webp") center center / cover no-repeat;
   }
   .premium-demo .solution-module {padding: 28px 22px;}
 }
@@ -5072,3 +5072,229 @@ body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner .hero-content {
   }
   .site-header.nav-v2 .main-nav > a.active:hover {background: rgba(0, 92, 67, .05);}
 }
+
+/* ============================================================
+   §HERO-V4 · 2026-09-04 · Commercial hardening pass
+   Workshop-photo hero (sharp, cool-graded) + purchase-promise
+   strip + 2x2 equipment showcase band with nameplate tags.
+   ============================================================ */
+.hero-v4.hero.ind-hero-banner,
+body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner {
+  min-height: 700px;
+  background: none;
+  background-color: #08293C;
+}
+.hero-v4.hero.ind-hero-banner::before,
+body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("images/home/showcase/edi-ultrapure-workshop.webp") right center / cover no-repeat;
+  filter: saturate(.85) contrast(1.03) brightness(.94);
+}
+.hero-v4.hero.ind-hero-banner::after,
+body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 41, 60, .30) 0%, rgba(8, 41, 60, 0) 24%, rgba(8, 41, 60, .16) 60%, #08293C 100%),
+    linear-gradient(92deg, rgba(6, 24, 38, .88) 0%, rgba(7, 33, 50, .70) 34%, rgba(9, 47, 68, .34) 62%, rgba(11, 56, 80, .12) 100%);
+}
+.hero-v4.hero.ind-hero-banner .hero-inner,
+body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner .hero-inner {
+  min-height: 700px;
+  position: relative;
+  z-index: 1;
+}
+.hero-v4.hero.ind-hero-banner .hero-content,
+body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner .hero-content { max-width: 900px; }
+.hero-v4 .hero-vision, .hero-v4 .hero-sub { max-width: 700px; }
+.hero-v4.hero.ind-hero-banner h1 { max-width: 780px; }
+.hero-v4 .hero-vision { color: rgba(255, 255, 255, .82); font-size: clamp(14px, 1.2vw, 17px); font-weight: 700; letter-spacing: .10em; text-transform: uppercase; }
+.hero-promise-strip { list-style: none; display: flex; flex-wrap: wrap; justify-content: space-between; align-content: flex-start; gap: 10px; margin: 26px 0 0; padding: 0; }
+.hero-promise-strip li {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, .30);
+  background: rgba(8, 41, 60, .55);
+  color: #fff;
+  font-size: 13.5px; font-weight: 650; letter-spacing: .02em;
+  white-space: nowrap;
+}
+.hero-promise-strip svg { width: 14px; height: 14px; flex: none; fill: none; stroke: #57D98F; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+.hero-showcase { background: #08293C; padding: 10px 0 66px; }
+.hero-showcase .showcase-eyebrow { margin: 0 0 18px; color: rgba(255, 255, 255, .62); font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+.showcase-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.showcase-cell { position: relative; display: block; overflow: hidden; border: 1px solid rgba(255, 255, 255, .16); background: #0B2136; }
+.showcase-cell figure { margin: 0; }
+.showcase-cell img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s ease; }
+.showcase-cell:hover img, .showcase-cell:focus-visible img { transform: scale(1.035); }
+.showcase-tag {
+  position: absolute; top: 0; left: 0; max-width: calc(100% - 24px);
+  padding: 9px 14px;
+  background: rgba(8, 41, 60, .92);
+  color: #fff;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; line-height: 1.4;
+  border-right: 1px solid rgba(255, 255, 255, .16);
+  border-bottom: 1px solid rgba(255, 255, 255, .16);
+}
+.showcase-cell::after {
+  content: "EXPLORE \2197";
+  position: absolute; right: 12px; bottom: 10px;
+  padding: 6px 11px;
+  background: rgba(8, 41, 60, .92);
+  color: #57D98F;
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  border: 1px solid rgba(87, 217, 143, .35);
+  opacity: 0; transform: translateY(4px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.showcase-cell:hover::after, .showcase-cell:focus-visible::after { opacity: 1; transform: translateY(0); }
+@media (max-width: 1180px) {
+  .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .hero-v4.hero.ind-hero-banner { min-height: 620px; }
+  .hero-v4.hero.ind-hero-banner::before { background-position: center 42%; }
+  .hero-v4.hero.ind-hero-banner::after {
+    background:
+      linear-gradient(180deg, rgba(8, 41, 60, .58) 0%, rgba(8, 41, 60, .80) 52%, rgba(8, 41, 60, .94) 78%, #08293C 100%);
+  }
+  .hero-v4.hero.ind-hero-banner .hero-inner { min-height: 620px; }
+  .hero-promise-strip li { font-size: 12.5px; padding: 8px 11px; }
+  .hero-showcase { padding-bottom: 48px; }
+  .showcase-grid { grid-template-columns: 1fr; }
+}
+
+/* Light-background promise strip for product pages (same chips). */
+.promise-strip { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; }
+.promise-strip li {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 13px;
+  background: #fff;
+  border: 1px solid #C9D6DB;
+  color: #123A50;
+  font-size: 13px; font-weight: 700; letter-spacing: .02em;
+  white-space: nowrap;
+}
+.promise-strip svg { width: 13px; height: 13px; flex: none; fill: none; stroke: #005C43; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.promise-note { margin: 10px 0 0; max-width: 640px; color: #6d7f89; font-size: 11.5px; line-height: 1.55; }
+@media (max-width: 720px) {
+  .promise-strip li { font-size: 12px; padding: 7px 10px; }
+}
+
+/* Buyer-type cards on the solutions page. */
+.audience-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 30px 0 8px; }
+.audience-split .audience-card { display: block; }
+@media (max-width: 860px) { .audience-split { grid-template-columns: 1fr; } }
+
+/* Pain -> response module inside each solution block. */
+.solution-module.solution-response ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.solution-module.solution-response li { padding-left: 16px; position: relative; color: #33454e; line-height: 1.6; font-size: 14px; }
+.solution-module.solution-response li::before { content: ""; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; background: #005C43; }
+.solution-module.solution-response li strong { color: #123A50; }
+
+/* QTA key-fact tags in product hero (2026-09-04 rev C):
+   QUICK TECHNICAL ANSWER content distilled into scannable tags. */
+.qta-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; }
+.qta-tags li {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 12px;
+  background: #F0F5F4;
+  border: 1px solid #D5DEE1;
+  color: #123A50;
+  font-size: 12.5px; font-weight: 600; letter-spacing: .01em;
+}
+.qta-tags li::before { content: ""; width: 6px; height: 6px; background: #005C43; flex: none; }
+@media (max-width: 720px) {
+  .qta-tags li { font-size: 11.5px; padding: 6px 10px; }
+}
+
+/* hero-v4: keep clear vertical rhythm between promise strip / CTA / badge row
+   (badges moved below the CTA on 2026-09-04, their old margin-bottom no longer applies). */
+.hero-v4 .hero-quote-corner { margin-top: 30px; }
+.hero-v4 .hero-badges { margin: 22px 0 0; }
+
+/* Craft & process image showcase (2026-09-04 rev D): replaces the old
+   QUICK TECHNICAL ANSWER block on the three diagram pages. */
+.craft-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.craft-cell { margin: 0; overflow: hidden; border: 1px solid #D5DEE1; background: #fff; }
+.craft-cell img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s ease; }
+.craft-cell:hover img { transform: scale(1.03); }
+.craft-cell-diagram img { object-fit: contain; background: #fff; padding: 10px; }
+@media (max-width: 1100px) { .craft-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .craft-gallery-grid { grid-template-columns: 1fr; } }
+
+/* Dual hero visual: two photos side by side (drinking-water-system, 2026-09-04 rev D). */
+.product-hero-dual { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: stretch; }
+.product-hero-dual .ind-photo-frame, .product-hero-dual .ind-photo-frame.ind-cover { height: auto; aspect-ratio: 3 / 4; }
+.product-hero-dual .ind-photo-frame img { height: 100%; }
+
+/* Stacked product hero (drinking-water-system, 2026-09-04 rev F):
+   headline full-width, text in two columns, dual photos in a full-width row below. */
+.product-hero-stacked .product-hero-inner { display: block; }
+.product-hero-stacked .product-hero-head h1 { margin: 0 0 12px; }
+.product-hero-stacked .product-hero-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 56px; margin-top: 30px; align-items: start; }
+.product-hero-stacked .product-hero-col .button-primary { margin-top: 24px; }
+.product-hero-stacked .product-hero-visual { margin-top: 38px; }
+.product-hero-stacked .product-hero-dual { margin: 0; }
+.product-hero-stacked .product-hero-dual .ind-photo-frame, .product-hero-stacked .product-hero-dual .ind-photo-frame.ind-cover { aspect-ratio: 4 / 3; height: auto; }
+@media (max-width: 900px) { .product-hero-stacked .product-hero-columns { grid-template-columns: 1fr; gap: 28px; } }
+
+/* UV line-detail modules on uv-water-sterilizer (2026-09-04 rev G). */
+.uv-cat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.uv-cat-card { margin: 0; border: 1px solid #D5DEE1; background: #fff; overflow: hidden; }
+.uv-cat-card img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.uv-cat-card figcaption { padding: 14px 16px 18px; }
+.uv-cat-card strong { display: block; margin-bottom: 5px; font-size: 15.5px; color: #123A50; }
+.uv-cat-card small { color: #5c6f78; font-size: 13px; line-height: 1.5; display: block; }
+.uv-comp-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.uv-comp-card { border: 1px solid #D5DEE1; background: #fff; padding: 16px 18px 18px; }
+.uv-comp-card h3 { margin: 0 0 6px; font-size: 15px; color: #123A50; }
+.uv-comp-card p { margin: 0; color: #5c6f78; font-size: 13.5px; line-height: 1.55; }
+.uv-note { margin: 14px 2px 0; color: #6d7f89; font-size: 12.5px; line-height: 1.6; }
+.uv-table-title { margin: 22px 0 10px; font-size: 15px; color: #123A50; }
+.uv-chip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.uv-chip-grid span { padding: 10px 16px; border: 1px solid #C9D6DB; background: #F0F5F4; color: #123A50; font-size: 13.5px; font-weight: 600; }
+.uv-case-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.uv-case-card { margin: 0; border: 1px solid #D5DEE1; background: #fff; overflow: hidden; }
+.uv-case-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.uv-case-card figcaption { padding: 12px 14px 16px; font-size: 13.5px; color: #33454e; line-height: 1.55; }
+.uv-case-card strong { color: #123A50; }
+.uv-factory-strip { margin: 0; border: 1px solid #D5DEE1; max-width: 960px; }
+.uv-factory-strip img { display: block; width: 100%; }
+@media (max-width: 1100px) { .uv-cat-grid, .uv-comp-grid, .uv-case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .uv-cat-grid, .uv-comp-grid, .uv-case-grid { grid-template-columns: 1fr; } }
+
+/* aspect-ratio fix: HTML height attribute would override aspect-ratio unless height is auto. */
+.uv-cat-card img, .uv-case-card img, .craft-cell img, .showcase-cell img { height: auto; }
+
+/* UV hub rev H: photo component cards, factory gallery, 2-col case grid. */
+.uv-comp-card.uv-comp-photo { padding: 0 0 18px; }
+.uv-comp-card.uv-comp-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.uv-comp-card.uv-comp-photo h3 { margin: 14px 18px 6px; }
+.uv-comp-card.uv-comp-photo p { margin: 0 18px; }
+.uv-factory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.uv-factory-card { margin: 0; border: 1px solid #D5DEE1; overflow: hidden; }
+.uv-factory-card img { display: block; width: 100%; height: auto; }
+.uv-case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.uv-case-card img { height: auto; aspect-ratio: 16 / 10; }
+@media (max-width: 900px) { .uv-factory-grid { grid-template-columns: 1fr; } .uv-case-grid { grid-template-columns: 1fr; } }
+
+/* Hero v2 (2026-09-04 rev K2): classic left-copy / right-photos + full-width spec band. */
+.product-hero-v2 .product-hero-dual { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.product-hero-v2 .product-hero-dual .ind-photo-frame, .product-hero-v2 .product-hero-dual .ind-photo-frame.ind-cover { height: auto; aspect-ratio: 3 / 2; }
+.product-hero-v2 .product-hero-copy .promise-strip { margin-top: 24px; }
+.product-hero-v2 .product-hero-copy .promise-note { margin-top: 12px; }
+.product-hero-v2 .product-hero-copy .button-primary { margin-top: 26px; }
+.spec-band { background: #EEF1F2; border-top: 1px solid #D5DEE1; border-bottom: 1px solid #D5DEE1; padding: 26px 0; }
+.spec-band-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 40px; }
+.spec-band .ind-params { margin: 0; }
+.spec-band .qta-tags { margin: 0; }
+
+/* hero v2: narrower photo column, hugged right, so long one-line H1s clear it. */
+.product-hero-v2 .product-hero-visual { width: 100%; max-width: 470px; justify-self: end; margin-left: auto; }

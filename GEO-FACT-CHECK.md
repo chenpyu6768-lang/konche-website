@@ -66,3 +66,57 @@ maintenance level).
 
 If datasheets or test reports later contradict any row, update the pages and this
 table in the same pass.
+
+## Owner-confirmed commercial commitments — 2026-09-04 (hero + promise-strip pass)
+
+Registered for the homepage hero promise strip and the per-product-page promise strips.
+Each value below was confirmed by the owner on 2026-09-04; pages present them as
+commitments, with the configuration caveats shown in the on-page promise-note line.
+
+| Value | Scope | Status |
+|---|---|---|
+| 1-Year Warranty | Whole machine from shipment; membranes, UV lamps, cartridges, resin and other consumables excluded | Owner-confirmed 2026-09-04 |
+| 72-Hr Spare-Parts Dispatch | Spare parts dispatched within 72 hours; shipping origin intentionally not stated | Owner-confirmed 2026-09-04 |
+| 24-Hr Response | Reply to inquiries within 24 hours | Owner-confirmed 2026-09-04 |
+| OEM / ODM | Standard models resellable under buyer's brand (already claimed on equipment-oem page) | Owner-confirmed 2026-09-04 |
+| PLC Auto-Run | PLC automatic operation; offered where the application calls for it | Owner-confirmed 2026-09-04 |
+| Easy Assembly | Qualitative assembly-friendliness claim (no percentage) | Owner-confirmed 2026-09-04 |
+| First-tier brand components (e.g., Dow, Hydranautics membranes) | Named as examples; actual brands configured per feed-water scenario and quality target | Owner-confirmed 2026-09-04 |
+| System capacity 0.25–50 m³/h (t/h) | Company-wide RO/UPW range; supersedes the earlier 0.5–100 m³/h figure. NOTE: category pages still carry their own documented ranges (RO 0.25–500, UF 1–200, containerized 5–500, UV 0.5–300 m³/h) — pending owner confirmation whether those exceed the 50 m³/h ceiling | Owner-confirmed 2026-09-04, sub-ranges flagged |
+
+## Update — 2026-09-04 (b): capacity blanket ruling + hero strip revision
+
+- Owner instruction: ALL advertised water-treatment capacity ranges are now 0.25–50 m³/h (t/h);
+  1 t/h = 1 m³/h for water, site keeps the m³/h unit. Range claims replaced on RO, UPW/EDI/DI,
+  containerized, UF, UV (hub/low-pressure/medium-pressure), TOC, ozone, drinking-water and the
+  Philippines market page. Laboratory page untouched (L/h benchtop units, different product class).
+- Model-table rows above 50 m³/h removed so tables cannot contradict the blanket range:
+  KCEDI-100, KCDI-100, KC-UPW-100, KC-UF-50/100, KC-UF-200, KC-UV-20/60, KC-UV-100+,
+  KC-MUV-4K, KC-MUV-10K, KC-MUV-20K, KCIW-200, KCIW-500. Model-range header strings updated
+  (e.g. "KCEDI-0.5 to KCEDI-30"). Restore from git history if any of these models are real offers.
+- Homepage hero promise strip: "PLC Auto-Run" chip removed per owner (now 5 chips, evenly spread).
+  PLC Auto-Run chips remain on product pages where the page's own CORE BENEFITS table documents
+  PLC control; each strip's fine print states control configuration is matched to the scenario.
+- Homepage "Served 10,000+ Clients Worldwide" badge: owner confirms the figure is real (2026-09-04);
+  keep as-is.
+
+## Update — 2026-09-04 (c): model rows restored, homepage H1 reverted, QTA → hero tags
+
+- Owner decision: the twelve >50 m³/h model rows removed earlier the same day are restored — the
+  0.25–50 m³/h ruling applies to headline capacity-range claims, not to the model catalog.
+- Homepage H1 set back to "30-Year-Experienced Water-Treatment Solution Provider" (owner instruction;
+  the "30-year" phrasing was owner-approved 2026-09-02; conservative alternative remains "Since 1997").
+- Product-page QUICK TECHNICAL ANSWER sections: key facts distilled into hero tags; sections removed
+  where they duplicated hero content (15 pages); the three diagram-bearing sections keep their figure.
+  GEO note: product pages no longer carry a separate direct-answer block — the hero intro paragraph
+  plus tags now serve that role; monitor AI-citation behavior at the next GEO review.
+
+## Update — 2026-09-04 (g): UV capacity supersedes blanket for the UV category
+
+- Owner ruling on the UV hub page: single-unit treatment capacity is 4.5–600 t/h (KCF series).
+  uv-water-sterilizer.html now shows 4.5–600 m³/h (hero params, capability text, comparison table).
+  The 2026-09-04 (b) blanket 0.25–50 m³/h remains for other categories; UV sub-pages
+  (low/medium-pressure, TOC, ozone) still read 0.25–50 pending owner alignment decision.
+- KCF model/specification tables translated from the owner's CN site (konche.com id=90): KCF-80W…7200W.
+- Engineering cases named are owner-published references on the CN site (Dongguan International Trade
+  Center; municipal projects). Ping An Finance Center photo unavailable (dead mirror host) — not used.
