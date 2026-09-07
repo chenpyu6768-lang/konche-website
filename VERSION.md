@@ -1,5 +1,13 @@
 # Konche Water Treatment Technology Website
 
+## 2026-09-04 - First published article: WRS business guide (articles/water-refilling-station-business)
+
+- Published the T6 campaign guide at /articles/water-refilling-station-business (Brief 001 / Draft 001): owner-reported capital-income-cost tables, water-source configuration, GPD/LPH sizing mapped to the 500/1000 LPH systems, PNSDW 2017 permit path with official links, import-vs-local comparison and six supplier checks.
+- Internal links per owner confirmation: 1000 LPH, 500 LPH, single-double-stage-ro, markets page, drinking-water-system, uv-water-sterilizer (via equipment section), contact.
+- Scope wording per owner confirmation: rinsing/filling equipment described but not supplied; 1-year whole-machine warranty with consumables excluded; first-tier membranes (Dow, Hydranautics) per feed water; English operation manual (no remote commissioning claim); KONCHE-published-content disclaimer added to sources block.
+- resources.html article card added to the engineering-articles grid; markets page reciprocal link; sitemap + llms.txt entries.
+
+
 ## 2026-09-04 (b) - WRS standard products: standalone pages + slim market guide (PR #8)
 
 - Split the two water-refilling-station systems into standalone product pages:
