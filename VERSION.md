@@ -1,5 +1,22 @@
 # Konche Water Treatment Technology Website
 
+## 2026-09-04 (b) - WRS standard products: standalone pages + slim market guide (PR #8)
+
+- Split the two water-refilling-station systems into standalone product pages:
+  /products/1000-lph-community-ro-system and /products/500-lph-compact-ro-system
+  (process train, key features, capacity math, maintenance intervals, Product schema
+  with image; earlier image-swap commits 50b7e95/66c8cb3/0710c62 folded into this scope).
+- RO category page (single-double-stage-ro): new "Standard Configurations" section with
+  two photo cards linking to the system pages.
+- Philippines market guide slimmed to its purpose (prove market understanding, route to
+  products, collect inquiries): product cards reduced to name + photo + capacity line +
+  View System / Get a Quote actions; maintenance, FAQ and capability-grid sections moved
+  to the product pages. Also covers the round-3 revisions pushed to main (befacee):
+  reader-facing H2s without eyebrows, how-it-works module removed.
+- Images renamed to product naming (1000lph-community-ro-system.webp 76KB,
+  500lph-compact-ro-system.webp 44KB).
+- sitemap 26 -> 28 clean URLs; llms.txt / llms-full.txt updated to match.
+
 ## 2026-09-04 - Commercial hardening: workshop hero, promise strips, buyer-language solutions (local, not yet pushed)
 
 - Homepage hero rebuilt (hero-v4): sharp cool-graded workshop photo (app/images/home/showcase/edi-ultrapure-workshop.webp)

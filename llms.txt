@@ -13,7 +13,9 @@
 
 ## Market-specific solution guides
 
-- [Water refilling station RO systems — Philippines](https://www.konchewater.com/markets/philippines-water-refilling-station-ro-system): Plain-language RO equipment guide for Philippine water refilling stations — two ready configurations (500 LPH compact and 1,000 LPH community systems), water-source and GPD selection, and maintenance costs. No income guarantees are made.
+- [Water refilling station RO systems — Philippines](https://www.konchewater.com/markets/philippines-water-refilling-station-ro-system): Market guide proving KONCHE understands Philippine water refilling stations — municipal vs deep-well selection, GPD sizing by daily containers, and the two standard systems (links to their product pages). No income guarantees are made.
+- [1,000 LPH Community RO Water Refilling System](https://www.konchewater.com/products/1000-lph-community-ro-system): Standard configuration for refilling stations, schools, restaurants and small communities on groundwater or deep-well water; process train, features, capacity and maintenance intervals.
+- [500 LPH Compact RO Drinking Water System](https://www.konchewater.com/products/500-lph-compact-ro-system): Compact 0.5 m³/h RO drinking-water system for tight installation spaces; multi-stage pretreatment, groundwater options, PLC control and maintenance intervals.
 - [Privacy policy](https://www.konchewater.com/privacy): How KONCHE handles inquiry details, technical and usage data, cookies, storage, security and privacy rights.
 - [Website terms of use](https://www.konchewater.com/terms-of-use): Terms governing access to the KONCHE website and its project-inquiry channels.
 
