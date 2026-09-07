@@ -1,5 +1,12 @@
 # Konche Water Treatment Technology Website
 
+## v2.1.0 - 2026-09-07 - English management-system certificates
+
+- Published the current English ISO 9001, ISO 14001 and ISO 45001 certificate scans in the homepage Certified Manufacturing module.
+- Added the same full-size certificate links, certificate numbers and validity dates to About KONCHE > Certifications.
+- Preserved the existing patent, hygiene and business-recognition gallery as a separate supporting-credentials group.
+- Exported optimized WebP certificate assets from the supplied six-page QES source PDF; the original PDF remains unchanged.
+
 ## 2026-09-04 - First published article: WRS business guide (articles/water-refilling-station-business)
 
 - Published the T6 campaign guide at /articles/water-refilling-station-business (Brief 001 / Draft 001): owner-reported capital-income-cost tables, water-source configuration, GPD/LPH sizing mapped to the 500/1000 LPH systems, PNSDW 2017 permit path with official links, import-vs-local comparison and six supplier checks.
@@ -69,7 +76,6 @@
 - Removed the Product node (and dangling WebPage.mainEntity) from the 3 category pages so invalid GSC product-snippet items clear after recrawl.
 - Wrapped the Project Supply Support nav label per word to stop overflow in the equal-width nav grid.
 - Verified: validate-clean-urls.mjs passes locally and against production; 26 JSON-LD blocks parse; exactly 6 Product nodes remain.
-
 
 ## 2026-09-02 - Clean public URL signal alignment
 

@@ -16,13 +16,24 @@ This checklist separates implemented, low-risk technical improvements from claim
 
 | Visible claim | Current location | Evidence needed |
 |---|---|---|
-| ISO 9001 | Homepage hero | Current certificate, legal entity name, certificate number and validity period |
 | 100+ projects delivered | Homepage statistics | Internal project register with inclusion rule and last verified date |
 | 10+ countries and industries served | Homepage statistics | Project/customer country register and wording decision |
 | Specific semiconductor project values and three-year operation | Homepage project carousel | Approved case sheet, commissioning report and permission to publish |
 | Nearly 30 years / since 1997 | Multiple pages | Business-registration or official company-history record |
 | Phone, email and street address | Footers and contact page | Final publication approval and mailbox/phone ownership check |
 | Product performance ranges | Detailed product pages | Approved datasheet, test basis, feed-water assumptions and guarantee boundary |
+
+## Management-system certificate evidence - 2026-09-07
+
+The supplied QES certificate PDF provides current English scans for the legal entity
+`Konche(Shenzhen)water treatment technology co.,LTD`. The homepage and About KONCHE
+certificate modules now publish the scans and the following document facts:
+
+| Standard | Certificate number | Issue date | Expiry date | Certified scope |
+|---|---|---|---|---|
+| ISO 9001:2015 | 46626Q01822R053 | September 4, 2026 | September 3, 2029 | Sales of Water Purification Equipment |
+| ISO 14001:2015 | 46626E01823R053 | September 4, 2026 | September 3, 2029 | Environmental Management Activities Related to the Sales of Water Purification Equipment |
+| ISO 45001:2018 | 46626S01824R053 | September 4, 2026 | September 3, 2029 | Occupational Health and Safety Management Activities Related to the Sales of Water Purification Equipment |
 
 Update — 2026-08-15: the homepage "1,000+ customers" figure was removed together with
 the client-logo placeholder wall (replaced by an industries-served grid whose labels
