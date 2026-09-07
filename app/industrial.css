@@ -5288,6 +5288,7 @@ body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner .hero-content { max-
 /* Hero v2 (2026-09-04 rev K2): classic left-copy / right-photos + full-width spec band. */
 .product-hero-v2 .product-hero-dual { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .product-hero-v2 .product-hero-dual .ind-photo-frame, .product-hero-v2 .product-hero-dual .ind-photo-frame.ind-cover { height: auto; aspect-ratio: 3 / 2; }
+.product-hero-v2 .product-hero-visual { height: auto; }
 .product-hero-v2 .product-hero-copy .promise-strip { margin-top: 24px; }
 .product-hero-v2 .product-hero-copy .promise-note { margin-top: 12px; }
 .product-hero-v2 .product-hero-copy .button-primary { margin-top: 26px; }
@@ -5298,3 +5299,14 @@ body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner .hero-content { max-
 
 /* hero v2: narrower photo column, hugged right, so long one-line H1s clear it. */
 .product-hero-v2 .product-hero-visual { width: 100%; max-width: 470px; justify-self: end; margin-left: auto; }
+
+
+/* Responsive hardening for cards-N grids (2026-09-04): guarantee collapse on narrow screens */
+@media (max-width: 900px) {
+  .detail-card-grid.cards-4, .detail-card-grid.cards-5, .detail-card-grid.cards-7 {grid-template-columns: repeat(2, minmax(0, 1fr));}
+  .detail-card-grid.cards-4 > .detail-card, .detail-card-grid.cards-5 > .detail-card, .detail-card-grid.cards-7 > .detail-card {grid-column: auto;}
+}
+@media (max-width: 720px) {
+  .detail-card-grid.cards-4, .detail-card-grid.cards-5, .detail-card-grid.cards-7 {grid-template-columns: minmax(0, 1fr);}
+  .detail-card-grid.cards-4 > .detail-card, .detail-card-grid.cards-5 > .detail-card, .detail-card-grid.cards-7 > .detail-card {grid-column: auto;}
+}
