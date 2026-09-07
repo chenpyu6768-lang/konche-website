@@ -5338,6 +5338,13 @@ body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner .hero-content { max-
 /* hero v2: narrower photo column, hugged right, so long one-line H1s clear it. */
 .product-hero-v2 .product-hero-visual { width: 100%; max-width: 470px; justify-self: end; margin-left: auto; }
 
+/* Crop the two dark source-image columns from the UV hub hero only (2026-09-07). */
+.uv-hero-photo .ind-photo-frame img {
+  width: calc(100% + 3px);
+  max-width: none;
+  margin-left: -3px;
+}
+
 
 /* Responsive hardening for cards-N grids (2026-09-04): guarantee collapse on narrow screens */
 @media (max-width: 900px) {

@@ -1,5 +1,10 @@
 # Konche Water Treatment Technology Website
 
+## v2.1.1 - 2026-09-07 - UV sterilizer hero cleanup
+
+- Removed the three redundant performance data tiles from the UV Water Sterilizer banner.
+- Cropped the two dark source-image columns from the banner photo without altering the reusable product image asset.
+
 ## v2.1.0 - 2026-09-07 - English management-system certificates
 
 - Published the current English ISO 9001, ISO 14001 and ISO 45001 certificate scans in the homepage Certified Manufacturing module.
