@@ -69,7 +69,7 @@ Official pages:
 
 ## Application routes
 
-The solutions page covers seven industry groups: industrial pure and ultrapure water; electronics-grade ultrapure water; seawater and brackish-water desalination; centralized drinking water; food and beverage process water; industrial UF pretreatment; and laboratory water. Each route is an initial decision aid, not a final process guarantee. A second grouping, market guides by country, opens with a Philippines water-refilling-station RO equipment guide written for local station owners: two ready configurations (500 LPH compact and 1,000 LPH community systems), water-source and GPD selection, and maintenance costs, with no income guarantees.
+The solutions page covers seven industry groups: industrial pure and ultrapure water; electronics-grade ultrapure water; seawater and brackish-water desalination; centralized drinking water; food and beverage process water; industrial UF pretreatment; and laboratory water. Each route is an initial decision aid, not a final process guarantee. A second grouping, market guides by country, opens with a Philippines water-refilling-station RO equipment guide written for local station owners: water-source and GPD selection plus two standard system cards linking to dedicated product pages (1,000 LPH community RO and 500 LPH compact RO, also featured on the RO category page), with no income guarantees.
 
 - https://www.konchewater.com/products/industry-solutions
 - https://www.konchewater.com/markets/philippines-water-refilling-station-ro-system
