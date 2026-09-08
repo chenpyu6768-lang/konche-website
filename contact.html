@@ -279,8 +279,9 @@
 <input id="rfqName" name="name" type="text" autocomplete="name" required>
 </div>
 <div class="rfq-field">
-<label for="rfqCompany">Company</label>
-<input id="rfqCompany" name="company" type="text" autocomplete="organization">
+<label for="rfqCompany">Company <b aria-hidden="true">*</b>
+</label>
+<input id="rfqCompany" name="company" type="text" autocomplete="organization" required>
 </div>
 </div>
 <div class="rfq-row">
@@ -290,56 +291,13 @@
 <input id="rfqEmail" name="email" type="email" autocomplete="email" required>
 </div>
 <div class="rfq-field">
-<label for="rfqCountry">Country / region of installation</label>
-<input id="rfqCountry" name="country" type="text" autocomplete="country-name">
-</div>
-</div>
-<div class="rfq-row">
-<div class="rfq-field">
-<label for="rfqRole">You are a</label>
-<select id="rfqRole" name="role">
-<option value="">Select…</option>
-<option>EPC contractor</option>
-<option>Engineering integrator</option>
-<option>Industrial client / direct end-user</option>
-<option>OEM / private-label buyer</option>
-<option>Distributor / wholesale buyer</option>
-<option>Other</option>
-</select>
-</div>
-<div class="rfq-field">
-<label for="rfqApplication">Application / industry</label>
-<select id="rfqApplication" name="application">
-<option value="">Select…</option>
-<option>Electronics &amp; semiconductors</option>
-<option>New energy &amp; batteries</option>
-<option>Pharmaceuticals</option>
-<option>Food &amp; beverage</option>
-<option>Drinking water</option>
-<option>Chemical processing</option>
-<option>Power &amp; boilers</option>
-<option>Laboratory &amp; research</option>
-<option>Other / not sure yet</option>
-</select>
-</div>
-</div>
-<div class="rfq-row">
-<div class="rfq-field">
-<label for="rfqCapacity">Required capacity (e.g., m³/h)</label>
-<input id="rfqCapacity" name="capacity" type="text" placeholder="e.g., 10 m³/h, 2 × 25 m³/h">
-</div>
-<div class="rfq-field">
-<label for="rfqQuality">Target water quality / standard</label>
-<input id="rfqQuality" name="quality" type="text" placeholder="e.g., ≤10 µS/cm, 18.2 MΩ·cm, WHO drinking">
+<label for="rfqPhone">Phone <b aria-hidden="true">*</b>
+</label>
+<input id="rfqPhone" name="phone" type="tel" autocomplete="tel" required>
 </div>
 </div>
 <div class="rfq-field">
-<label for="rfqSource">Source water (what you know about it)</label>
-<textarea id="rfqSource" name="source" rows="3" placeholder="e.g., municipal supply; brackish well water 3,500 ppm TDS; seawater; a lab analysis is available">
-</textarea>
-</div>
-<div class="rfq-field">
-<label for="rfqMessage">Anything else (operating hours, footprint, voltage, deadline)</label>
+<label for="rfqMessage">Anything else</label>
 <textarea id="rfqMessage" name="message" rows="3">
 </textarea>
 </div>
@@ -349,7 +307,7 @@
 <input id="rfqReport" name="report" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png">
 <small class="rfq-file-name">Accepted formats: PDF, Word, Excel, JPG or PNG — no file selected</small>
 </div>
-<p class="rfq-required-note" aria-hidden="true">* Required. The more inputs you share, the closer the first reply is to a quotable configuration.</p>
+<p class="rfq-required-note" aria-hidden="true">* Required</p>
 <button class="button button-primary rfq-submit" type="submit">Send Inquiry <span>↗</span>
 </button>
 <p class="rfq-status" role="status" aria-live="polite">

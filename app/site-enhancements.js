@@ -322,7 +322,7 @@
           <div class="inquiry-intro">
             <div class="eyebrow light"><span></span> PROJECT INQUIRY</div>
             <h2 id="project-inquiry-title">Tell us what your<br><em>water system must achieve.</em></h2>
-            <p>Share the application, available feed-water information and target capacity. KONCHE will use these inputs to prepare the right technical direction.</p>
+            <p>Share your name, company and contact details. KONCHE will use these inputs to prepare the right technical direction.</p>
             <div class="inquiry-contact-card">
               <span>DIRECT EMAIL</span>
               <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>
@@ -330,47 +330,25 @@
             </div>
           </div>
           <form class="inquiry-form" novalidate>
-            <div class="inquiry-field inquiry-field-wide">
-              <label for="inquiry-application">Equipment Application <b>*</b></label>
-              <textarea id="inquiry-application" name="equipment_application" rows="3" required maxlength="2000" placeholder="e.g. pharmaceutical purified water, PCB rinsing, drinking water"></textarea>
-            </div>
-            <div class="inquiry-field inquiry-field-wide">
-              <label for="inquiry-feed-water">Feed Water Quality <span>Optional</span></label>
-              <textarea id="inquiry-feed-water" name="feed_water_quality" rows="3" maxlength="2000" placeholder="Water source, TDS, hardness, turbidity or available analysis"></textarea>
-            </div>
-            <div class="inquiry-field inquiry-field-wide">
-              <label for="inquiry-product-water">Required Product Water Quality <span>Optional</span></label>
-              <textarea id="inquiry-product-water" name="product_water_quality" rows="3" maxlength="2000" placeholder="Conductivity, resistivity, TOC or applicable standard"></textarea>
+            <div class="inquiry-field">
+              <label for="inquiry-name">Your Name <b>*</b></label>
+              <input id="inquiry-name" name="customer_name" type="text" autocomplete="name" required maxlength="200" placeholder="Your name">
             </div>
             <div class="inquiry-field">
-              <label for="inquiry-capacity">Required Capacity <span>Optional</span></label>
-              <input id="inquiry-capacity" name="required_capacity" type="text" maxlength="200" placeholder="e.g. 10 m³/h">
-            </div>
-            <div class="inquiry-field">
-              <label for="inquiry-company">Company Name <b>*</b></label>
+              <label for="inquiry-company">Company <b>*</b></label>
               <input id="inquiry-company" name="company_name" type="text" autocomplete="organization" required maxlength="200" placeholder="Your company">
-            </div>
-            <div class="inquiry-field">
-              <label for="inquiry-title">Job Title <b>*</b></label>
-              <input id="inquiry-title" name="job_title" type="text" autocomplete="organization-title" required maxlength="200" placeholder="Your role">
             </div>
             <div class="inquiry-field">
               <label for="inquiry-email">Email <b>*</b></label>
               <input id="inquiry-email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="name@company.com">
             </div>
             <div class="inquiry-field">
-              <label for="inquiry-country">Country / Region <span>Optional</span></label>
-              <input id="inquiry-country" name="country_region" type="text" autocomplete="country-name" maxlength="120" placeholder="Project location">
+              <label for="inquiry-phone">Phone <b>*</b></label>
+              <input id="inquiry-phone" name="phone" type="tel" autocomplete="tel" required maxlength="100" placeholder="+86 188 1445 6813">
             </div>
-            <div class="inquiry-field">
-              <label for="inquiry-role">You Are A <span>Optional</span></label>
-              <select id="inquiry-role" name="inquiry_role">
-                <option value="">Select…</option>
-                <option>EPC contractor / engineering integrator</option>
-                <option>Distributor / importer / wholesaler</option>
-                <option>Direct end-user (factory, lab, hotel…)</option>
-                <option>Other</option>
-              </select>
+            <div class="inquiry-field inquiry-field-wide">
+              <label for="inquiry-message">Anything Else <span>Optional</span></label>
+              <textarea id="inquiry-message" name="message" rows="3" maxlength="2000" placeholder="Application, capacity, target water quality — anything that helps us respond faster"></textarea>
             </div>
             <div class="inquiry-field inquiry-field-wide inquiry-upload">
               <label for="inquiry-report">Water Quality Report <span>Optional · max 10 MB</span></label>
@@ -480,15 +458,11 @@
         `Page: ${document.title}`,
         `Page URL: ${window.location.href}`,
         "",
-        `Equipment Application: ${values.get("equipment_application")}`,
-        `Feed Water Quality: ${values.get("feed_water_quality")}`,
-        `Required Product Water Quality: ${values.get("product_water_quality")}`,
-        `Required Capacity: ${values.get("required_capacity")}`,
+        `Name: ${values.get("customer_name") || "-"}`,
         `Company Name: ${values.get("company_name")}`,
-        `Job Title: ${values.get("job_title")}`,
         `Customer Email: ${values.get("email")}`,
-        `Country / Region: ${values.get("country_region") || "-"}`,
-        `You Are A: ${values.get("inquiry_role") || "-"}`,
+        `Phone: ${values.get("phone") || "-"}`,
+        `Additional Details: ${values.get("message") || "-"}`,
         `Selected Report: ${report ? report.name + " (please attach to this email)" : "None"}`
       ].join("\n");
 
@@ -607,6 +581,7 @@
     const form = document.getElementById("partsForm");
     if (!form) return;
     const note = document.getElementById("partsFormNote");
+    const fileInput = form.querySelector('input[type="file"]');
     const submitButton = form.querySelector('button[type="submit"]');
     mountTurnstile(form, submitButton);
     form.addEventListener("submit", async (event) => {
@@ -616,9 +591,16 @@
       values.forEach((value, key) => {
         if (!(value instanceof File)) fields[key] = value;
       });
+      const report = fileInput?.files[0] || null;
+      if (report && report.size > 10 * 1024 * 1024) {
+        if (note) note.textContent = "The selected file is larger than 10 MB. Please choose a smaller file.";
+        return;
+      }
+      if (note) note.textContent = "Sending your requirement…";
       const submitted = await submitViaApi(form, {
         formType: "spare-parts",
         fields,
+        file: report,
         statusEl: null,
         submitBtn: submitButton
       });
@@ -628,14 +610,12 @@
         return;
       }
       const body = [
-        `Customer type: ${values.get("buyerType") || "-"}`,
-        `Product category: ${values.get("category") || "-"}`,
-        `Component: ${values.get("component") || "-"}`,
-        `Quantity / annual volume: ${values.get("quantity") || "-"}`,
-        `Packaging: ${values.get("packaging") || "-"}`,
-        `Special requirement: ${values.get("requirement") || "-"}`,
-        `Project info: ${values.get("project") || "-"}`,
-        `Contact: ${values.get("contact") || "-"}`
+        `Name: ${values.get("name") || "-"}`,
+        `Company: ${values.get("company") || "-"}`,
+        `Email: ${values.get("email") || "-"}`,
+        `Phone: ${values.get("phone") || "-"}`,
+        `Additional Details: ${values.get("message") || "-"}`,
+        `Selected Report: ${report ? report.name + " (please attach to this email)" : "None"}`
       ].join("\n");
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Spare Parts Requirement - KONCHE")}&body=${encodeURIComponent(body)}`;
       if (note) note.textContent = "Direct sending was unavailable. Your email application is opening — please send the email to complete the inquiry.";
@@ -648,15 +628,16 @@
     const form = document.getElementById("rfqForm");
     if (!form || form.dataset.rfqInit) return;
     form.dataset.rfqInit = "1";
+    // contact?role=epc|oem|… links still carry buying context; the visible
+    // role select is gone, so keep the value as hidden metadata only.
     const roleParam = new URLSearchParams(window.location.search).get("role");
-    const roleSelect = form.querySelector('[name="role"]');
     const roleMap = {
       epc: "EPC contractor",
       integrator: "Engineering integrator",
       oem: "OEM / private-label buyer",
       distributor: "Distributor / wholesale buyer"
     };
-    if (roleSelect && roleMap[roleParam]) roleSelect.value = roleMap[roleParam];
+    const hiddenRole = roleMap[roleParam] || "";
     const status = form.querySelector(".rfq-status");
     const fileInput = form.querySelector('input[type="file"]');
     const fileName = form.querySelector(".rfq-file-name");
@@ -684,6 +665,7 @@
       values.forEach((value, key) => {
         if (!(value instanceof File)) fields[key] = value;
       });
+      if (hiddenRole) fields.role = hiddenRole;
 
       const submitted = await submitViaApi(form, {
         formType: "rfq",
@@ -703,12 +685,7 @@
         `Name: ${values.get("name")}`,
         `Company: ${values.get("company") || "-"}`,
         `Email: ${values.get("email")}`,
-        `Country / Region: ${values.get("country") || "-"}`,
-        `You Are A: ${values.get("role") || "-"}`,
-        `Application / Industry: ${values.get("application") || "-"}`,
-        `Required Capacity: ${values.get("capacity") || "-"}`,
-        `Target Water Quality / Standard: ${values.get("quality") || "-"}`,
-        `Source Water: ${values.get("source") || "-"}`,
+        `Phone: ${values.get("phone") || "-"}`,
         `Additional Details: ${values.get("message") || "-"}`,
         `Selected Report: ${report ? report.name + " (please attach to this email)" : "None"}`
       ].join("\n");

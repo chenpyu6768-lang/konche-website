@@ -1,5 +1,14 @@
 # Konche Water Treatment Technology Website
 
+## v2.2.0 - 2026-09-08 - Unified inquiry forms and solutions hero cleanup
+
+- Unified every site form (contact page, spare-parts sourcing page and the injected project-inquiry form on the homepage and product pages) to one six-field structure: Your name, Company, Email, Phone (all four required) plus Anything else and Water quality report (optional, max 10 MB).
+- Removed the country, role, application, capacity, quality and source-water fields from the contact page; removed application, feed/product water, capacity, job title, country and role fields from the injected inquiry form; replaced the eight spare-parts fields with the shared structure and added file-upload support there.
+- `contact?role=epc|oem|...` entry links now carry their buying context as hidden inquiry metadata instead of a visible select.
+- Updated the direct-submit and mailto-fallback payloads for all three forms; the Cloudflare Worker needs no change (fields are stored as submitted).
+- Industry-solutions hero: removed the promise strip, promise note and numbered step tags; the headline block is now vertically centered in the hero band.
+- Fixed the mobile layout of the industry-solutions hero where a `display: grid !important` override kept the two-column hero squeezed on screens ≤1000px; the page now stacks to a single column.
+
 ## v2.1.1 - 2026-09-07 - UV sterilizer hero cleanup
 
 - Removed the three redundant performance data tiles from the UV Water Sterilizer banner.
