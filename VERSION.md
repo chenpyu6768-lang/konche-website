@@ -1,5 +1,12 @@
 # Konche Water Treatment Technology Website
 
+## v2.2.1 - 2026-09-10 - Branded company email update
+
+- Replaced the former Outlook contact address across all public pages, `mailto:` links, JSON-LD contact data and AI-readable site files with `KoncheChina@konchewater.com`.
+- Updated the shared inquiry-script contact constant so every mail-client fallback targets the new mailbox.
+- Bumped the shared inquiry script cache key to `20260910-1` across all pages so deployed browsers do not retain the previous fallback address.
+- The direct-submit Cloudflare Worker remains a separate deployment and must use the same notification recipient in its own configuration.
+
 ## v2.2.0 - 2026-09-08 - Unified inquiry forms and solutions hero cleanup
 
 - Unified every site form (contact page, spare-parts sourcing page and the injected project-inquiry form on the homepage and product pages) to one six-field structure: Your name, Company, Email, Phone (all four required) plus Anything else and Water quality report (optional, max 10 MB).

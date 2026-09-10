@@ -3,7 +3,7 @@
 
   // Contact details now live in the HTML source and llms.txt (see
   // tools/refactor_20260821.mjs); no runtime rewriting is performed here.
-  const CONTACT_EMAIL = "Konche.China3143@outlook.com";
+  const CONTACT_EMAIL = "KoncheChina@konchewater.com";
   const LINKEDIN_URL = "https://www.linkedin.com/company/143362929/";
   const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61593311157410";
   const WHATSAPP_URL = "https://wa.me/8618814456813?text=Hello%20KONCHE%2C%20I%20would%20like%20to%20discuss%20a%20water%20treatment%20requirement.";

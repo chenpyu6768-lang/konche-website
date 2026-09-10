@@ -10,6 +10,10 @@ handoff notes in `../konche-platform/HANDOFF.md`). Key points:
 
 - Submission flow, upload validation and admin endpoints are covered by
   `node tests/worker-smoke.mjs` (run from the project root; must pass 10/10).
+- The direct-submit notification recipient is configured in the separate Worker
+  deployment; it is not read from `CONTACT_EMAIL` in this website repository.
+  Whenever the public contact mailbox changes, update both the Worker recipient
+  and the website address, then test the direct-submit and mailto-fallback paths.
 - The Worker URL is whitelisted in every page's CSP meta tag
   (`connect-src`) and in `_headers`. If the Worker URL changes, update:
   `API_BASE` in `app/site-enhancements.js`, the CSP meta in all 27 pages,
