@@ -919,7 +919,7 @@ Owner request: render the treatment chain as horizontal step cards (node blocks 
 
 ## Single/double-stage RO geo-answer figure + CSS comment repair — 2026-08-24 (css v20260824-05)
 
-- **§44 geo-answer figure:** the single-double-stage-ro QUICK TECHNICAL ANSWER band returns to its two-column grid with the owner-supplied portrait system diagram (app/images/products/ro-double-stage-system-diagram.png, 1032×1382) in the right column — white hairline card, max-height 560px contain, copy column keeps its full measure (verified 653px, no overlap). The decorative corner circle (::after) is retired on figure-bearing bands (.geo-answer.has-figure). Mobile ≤860px: figure stacks below the copy, max-height 480/420px.
+- **§44 geo-answer figure:** the single-double-stage-ro QUICK TECHNICAL ANSWER band returns to its two-column grid with the owner-supplied portrait system diagram (app/images/products/ro-double-stage-system-diagram.webp, 1032×1382) in the right column — white hairline card, max-height 560px contain, copy column keeps its full measure (verified 653px, no overlap). The decorative corner circle (::after) is retired on figure-bearing bands (.geo-answer.has-figure). Mobile ≤860px: figure stacks below the copy, max-height 480/420px.
 - **CSS repair:** an unterminated inline comment in the §43 margin-bottom rule (missing `*/`) made the parser swallow every rule after it — §43 step-card mobile rules and §44 were dead in the v=04 sheet (image unconstrained, circle still visible). Comment closed; comment-token audit now balanced (93/93); sheet re-verified green (image loads, two columns, no squeeze, circle gone, mobile stacked).
 - Known pre-existing, out of scope this pass: at 375px this page's detail-card long content still reports scrollWidth 531 (clipped visually by the html overflow-x: clip guard); the local-preview-only preview-note badge also extends past the viewport. Neither is caused by the figure.
 
@@ -978,7 +978,7 @@ Verified 10/10 headless checks: TOC entries, all section ids, card/table/case/FA
 
 ## Containerized page: geo-answer figure — 2026-08-24
 
-The QUICK TECHNICAL ANSWER band on containerized-water-treatment-system.html now carries the owner-supplied containerized-RO diagram (app/images/products/containerized-ro-system-diagram.png, 1448×870 landscape) in a right-hand figure column, reusing the §44 has-figure pattern from single-double-stage-ro: two-column grid restored, copy column keeps its full measure, decorative corner circle removed, white hairline card at max-height 560px, mobile stacks below the copy. Verified headless at 1440px and 375px (loads, no overlap/squeeze, circle gone, no overflow).
+The QUICK TECHNICAL ANSWER band on containerized-water-treatment-system.html now carries the owner-supplied containerized-RO diagram (app/images/products/containerized-ro-system-diagram.webp, 1448×870 landscape) in a right-hand figure column, reusing the §44 has-figure pattern from single-double-stage-ro: two-column grid restored, copy column keeps its full measure, decorative corner circle removed, white hairline card at max-height 560px, mobile stacks below the copy. Verified headless at 1440px and 375px (loads, no overlap/squeeze, circle gone, no overflow).
 
 ## Geo-answer figures: white card background removed — 2026-08-24 (css v20260824-07)
 
@@ -1016,7 +1016,7 @@ Owner report: moving the cursor toward the Water Treatment Consumables group mad
 
 ## UF page: geo-answer figure — 2026-08-24
 
-The QUICK TECHNICAL ANSWER band on uf-ultrafiltration-system.html now carries the owner-supplied UF diagram (app/images/products/uf-system-diagram.png, 1086×1448 portrait) in a right-hand figure column via the §44 has-figure pattern: two-column grid, full-measure copy column, corner circle removed, transparent multiply-blended image (§44 v7 styling) at max-height 560px, mobile stacks below. Verified 4/4 at 1440px and 375px.
+The QUICK TECHNICAL ANSWER band on uf-ultrafiltration-system.html now carries the owner-supplied UF diagram (app/images/products/uf-system-diagram.webp, 1086×1448 portrait) in a right-hand figure column via the §44 has-figure pattern: two-column grid, full-measure copy column, corner circle removed, transparent multiply-blended image (§44 v7 styling) at max-height 560px, mobile stacks below. Verified 4/4 at 1440px and 375px.
 
 ## Products dropdown: instant submenu reveal — 2026-08-24 (css v20260824-10)
 

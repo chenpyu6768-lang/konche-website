@@ -1,0 +1,74 @@
+<!--
+  KONCHE 产品页 Banner 模板 v1（2026-09-11）
+  ============================================================
+  用途：把任意产品页的 <section class="product-hero"> 整段替换为下面的结构。
+  依赖：industrial.css?v=20260911-1 或更高（所有类名全站已就绪，无需新增 CSS）。
+  动效：需要页面尾部附带 upw-js 增强脚本（见使用指南第 4 步），无 JS 时内容完整可见。
+
+  填写规则速查：
+  - {{SCENARIO_SUBTITLE}} 场景承诺副标题：写给"这个产品为谁用"，列出 2-4 个行业，如
+    "Ultrapure Water for Semiconductors, PCB, Lithium Battery & PV Plants"
+    （不要写设备类别，设备类别挪到下面 subline）
+  - {{PROCESS_SUBLINE}} 工艺路线行：核心工艺 + 执行标准，如
+    "RO + EDI & Mixed-Bed Trains · Engineered to GB/T 11446.1 Electronic-Grade Water"
+  - {{TITLE}} 产品名（保留原 H1，SEO 不动）
+  - 三个参数（data-countup）：选客户最先问的 3 个数字，每个必须有 data-prefix/data-value/
+    data-decimals/data-suffix，dd 内文本 = 完整最终值（无 JS 时的显示内容）
+  - {{TAG}} 3-5 个事实标签：出水指标 / 工艺亮点 / 执行标准，短语式，不带句号
+  - {{INDUCTION_TARGET}} 次按钮锚点：本页行业/场景板块的 id（如 #industry-applications）；
+    若该页没有场景板块，删除幽灵按钮，只留主 CTA
+  - 质保折叠为全站统一文案，直接复制，不改
+-->
+
+<section class="product-hero">
+  <div class="product-hero-grid"></div>
+  <div class="container product-hero-inner">
+    <div class="product-breadcrumb"><!-- 保留原页面包屑，不动 --></div>
+    <div class="product-hero-copy">
+      <h1>{{TITLE}}</h1>
+      <p class="product-subtitle">{{SCENARIO_SUBTITLE}}</p>
+      <p class="upw-subline">{{PROCESS_SUBLINE}}</p>
+      <dl class="ind-params" data-industrial="v1">
+        <div><dd data-countup data-prefix="≥" data-value="18.2" data-decimals="1" data-suffix=" MΩ·cm">≥18.2 MΩ·cm</dd><dt>Resistivity</dt></div>
+        <div><dd data-countup data-prefix="≤" data-value="0.5" data-decimals="1" data-suffix=" μg/L">≤0.5 μg/L</dd><dt>TOC</dt></div>
+        <div><dd data-countup data-prefix="0.25–" data-value="50" data-decimals="0" data-suffix=" m³/h">0.25–50 m³/h</dd><dt>Capacity</dt></div>
+      </dl>
+      <ul class="qta-tags" aria-label="Key facts at a glance">
+        <li>{{TAG_1}}</li>
+        <li>{{TAG_2}}</li>
+        <li>{{TAG_3}}</li>
+        <li>{{TAG_4}}</li>
+        <li>{{TAG_5}}</li>
+      </ul>
+      <div class="upw-hero-actions">
+        <a class="button button-primary" href="/#contact">Discuss Your Requirement <span>→</span></a>
+        <a class="button button-ghost upw-jump" href="{{INDUCTION_TARGET}}" data-ga-event="hero_find_industry_click">Find Your Industry <span>↓</span></a>
+      </div>
+      <details class="upw-warranty-fold">
+        <summary>1-Year Warranty &amp; Consumables Terms <i class="upw-warranty-arrow">▾</i></summary>
+        <div class="upw-warranty-body">1-year whole-machine warranty from commissioning. Exclusions: membranes, UV lamps, filter cartridges and other consumables. First-tier brand membranes and components (e.g., Dow, Hydranautics) and control configuration are selected for your feed-water scenario and quality targets.</div>
+      </details>
+    </div>
+    <div class="product-hero-visual ind-hero-photo" data-industrial="v1">
+      <figure class="ind-photo-frame ind-cover">
+        <img src="{{HERO_IMAGE}}" alt="{{HERO_IMAGE_ALT}}" width="1448" height="1086" fetchpriority="high" decoding="async">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!--
+  可选模块 A：行业快捷入口条（放在 hero 之后、若有铭牌条则放铭牌之后）。
+  仅当页面内有可锚定的行业/场景板块时使用；每个 chip 指向一个场景卡 id。
+  若无场景板块，跳过此模块。
+-->
+<!--
+<section class="upw-industry-nav" aria-label="Find your industry">
+  <div class="container upw-industry-nav-inner">
+    <span class="upw-industry-nav-label">Find Your Industry</span>
+    <div class="upw-industry-nav-chips">
+      <a href="#scene-xxx" data-ga-event="industry_chip_click" data-ga-industry="xxx">Industry Name</a>
+    </div>
+  </div>
+</section>
+-->

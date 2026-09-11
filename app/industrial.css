@@ -1200,7 +1200,7 @@
       rgba(9, 47, 68, .62) 58%,
       rgba(11, 56, 80, .30) 82%,
       rgba(12, 62, 88, .18) 100%),
-    url("images/scenery/reservoir-intake-hero.jpg") center 42% / cover no-repeat;
+    url("images/scenery/reservoir-intake-hero.webp") center 42% / cover no-repeat;
   background-color: #08293C;
 }
 @media (max-width: 720px) {
@@ -1212,7 +1212,7 @@
         rgba(6, 24, 38, .93) 0%,
         rgba(7, 33, 50, .85) 48%,
         rgba(9, 47, 68, .68) 100%),
-      url("images/scenery/reservoir-intake-hero.jpg") center 42% / cover no-repeat;
+      url("images/scenery/reservoir-intake-hero.webp") center 42% / cover no-repeat;
     background-color: #08293C;
   }
 }
@@ -1228,7 +1228,7 @@
       rgba(7, 32, 48, .90) 0%,
       rgba(9, 44, 62, .84) 55%,
       rgba(10, 52, 72, .76) 100%),
-    url("images/scenery/alpine-lake-stats.jpg") center 40% / cover no-repeat;
+    url("images/scenery/alpine-lake-stats.webp") center 40% / cover no-repeat;
   background-color: #0A3046;
 }
 .contact-cta {
@@ -1525,7 +1525,7 @@
       rgba(7, 28, 44, .94) 0%,
       rgba(7, 33, 50, .82) 46%,
       rgba(9, 47, 68, .40) 100%),
-    url("images/scenery/about-hero.jpg") center 42% / cover no-repeat;
+    url("images/scenery/about-hero.webp") center 42% / cover no-repeat;
 }
 
 .product-hero.contact-hero {
@@ -1608,7 +1608,7 @@
         rgba(7, 28, 44, .93) 0%,
         rgba(7, 33, 50, .80) 55%,
         rgba(9, 47, 68, .55) 100%),
-      url("images/scenery/about-hero.jpg") center 42% / cover no-repeat;
+      url("images/scenery/about-hero.webp") center 42% / cover no-repeat;
   }
 
   .product-hero.contact-hero {
@@ -4501,7 +4501,7 @@ body.premium-demo.cinema-hero {background: #071627; color: #c7d6e5;}
 
 /* 65. About hero photo + kicker tone + legal hero original photo — 2026-08-27 */
 /* About hero: real factory photo behind the existing dark base. */
-.about-new-hero {background: url("images/about-hero-photo.jpg") center 42% / cover no-repeat, #071C2C;}
+.about-new-hero {background: url("images/about-hero-photo.webp") center 42% / cover no-repeat, #071C2C;}
 .about-new-hero::before {background: linear-gradient(100deg, rgba(4, 24, 40, .82) 0%, rgba(4, 24, 40, .55) 52%, rgba(4, 24, 40, .28) 100%);}
 /* Kicker (machine-facing line): tone blends with the photo instead of accent color. */
 .about-new-hero .about-kicker {color: #AFC1C8;}
@@ -4701,7 +4701,7 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
 .premium-demo.cinema-hero .hero.ind-hero-banner {
   background:
     linear-gradient(180deg, rgba(6, 24, 38, .62) 0%, rgba(7, 33, 50, .38) 48%, rgba(9, 47, 68, .55) 100%),
-    url("images/scenery/reservoir-intake-hero.jpg") center 45% / cover no-repeat;
+    url("images/scenery/reservoir-intake-hero.webp") center 45% / cover no-repeat;
   background-color: #08293C;
   min-height: 700px;
 }
@@ -4738,7 +4738,7 @@ body.premium-demo.cinema-hero {background: #fff; color: #223836;}
 .contact-hero .product-hero-copy {padding-top: 0;}
 
 /* 4) About hero: use the home ocean photo. */
-.about-new-hero {background: url("images/scenery/reservoir-intake-hero.jpg") center 45% / cover no-repeat, #071C2C;}
+.about-new-hero {background: url("images/scenery/reservoir-intake-hero.webp") center 45% / cover no-repeat, #071C2C;}
 .about-new-hero::before {background: linear-gradient(100deg, rgba(4, 24, 40, .8) 0%, rgba(4, 24, 40, .52) 52%, rgba(4, 24, 40, .26) 100%);}
 
 @media (max-width: 1000px) {
@@ -4860,7 +4860,7 @@ body.premium-demo.cinema-hero .hero-v3.hero.ind-hero-banner::before {
   position: absolute;
   inset: -48px;
   z-index: 0;
-  background: url("images/scenery/reservoir-intake-hero.jpg") center 42% / cover no-repeat;
+  background: url("images/scenery/reservoir-intake-hero.webp") center 42% / cover no-repeat;
   filter: blur(4px) brightness(.52) saturate(.9);
   transform: scale(1.05);
 }
@@ -5355,3 +5355,135 @@ body.premium-demo.cinema-hero .hero-v4.hero.ind-hero-banner .hero-content { max-
   .detail-card-grid.cards-4, .detail-card-grid.cards-5, .detail-card-grid.cards-7 {grid-template-columns: minmax(0, 1fr);}
   .detail-card-grid.cards-4 > .detail-card, .detail-card-grid.cards-5 > .detail-card, .detail-card-grid.cards-7 > .detail-card {grid-column: auto;}
 }
+
+/* ============================================================
+   UPW scenario-first redesign · 2026-09-10
+   Scoped to products/industrial-ultrapure-water-system.html (upw-*)
+   ============================================================ */
+.upw-subline {margin: 10px 0 0; color: #5A6870; font-size: clamp(14px, 1.2vw, 16px); letter-spacing: .01em;}
+.upw-industry-nav {background: #F0F5F4; border-top: 1px solid #E2E8EA; border-bottom: 1px solid #E2E8EA;}
+.upw-industry-nav-inner {display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; padding: 14px 0;}
+.upw-industry-nav-label {flex: none; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #005C43;}
+.upw-industry-nav-chips {display: flex; flex-wrap: wrap; gap: 8px;}
+.upw-industry-nav-chips a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; background: #fff; border: 1px solid #D5DEE1;
+  color: #123A50; font-size: 13px; font-weight: 600; text-decoration: none;
+  transition: border-color .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.upw-industry-nav-chips a::after {content: "\2193"; color: #005C43; font-size: 12px;}
+.upw-industry-nav-chips a:hover {border-color: #005C43; color: #005C43; transform: translateY(-1px); box-shadow: 0 8px 18px rgba(7, 28, 44, .07);}
+.upw-scene-lede {max-width: 780px; color: #4A575E; font-size: 16px; line-height: 1.65;}
+.upw-scene-grid {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 30px 0 0;}
+.upw-scene-card {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 24px 22px; background: #fff; border: 1px solid #E2E8EA; border-top: 3px solid #005C43;
+  scroll-margin-top: 96px;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.upw-scene-card:hover {border-color: rgba(0, 92, 67, .55); transform: translateY(-2px); box-shadow: 0 16px 32px rgba(7, 28, 44, .08);}
+.upw-scene-card h3 {margin: 0; font-size: 19px; line-height: 1.3; color: #071C2C; letter-spacing: -.015em;}
+.upw-scene-card p {margin: 0; font-size: 14px; line-height: 1.6; color: #4A575E;}
+.upw-scene-card p > span, .upw-scene-route > span {display: block; margin-bottom: 3px; font-size: 10.5px; font-weight: 700; letter-spacing: .14em; color: #7C8A91;}
+.upw-scene-target {color: #123A50 !important; font-weight: 600;}
+.upw-scene-route {margin-top: auto; padding-top: 12px; border-top: 1px dashed #D8DEE0; font-size: 14px; line-height: 1.5;}
+.upw-scene-route a {color: #005C43; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(0, 92, 67, .35);}
+.upw-scene-route a:hover {border-bottom-color: #005C43;}
+.upw-scene-cta {display: inline-flex; align-items: center; gap: 6px; margin-top: 2px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #071C2C; text-decoration: none;}
+.upw-scene-cta i {font-style: normal; color: #005C43;}
+.upw-scene-cta:hover {color: #005C43;}
+.upw-scene-note {margin: 26px 0 0; padding: 16px 20px; background: #F0F5F4; border: 1px solid #D5DEE1; color: #43525A; font-size: 14.5px; line-height: 1.6;}
+.upw-scene-note a {color: #005C43; font-weight: 700; text-decoration: none;}
+.upw-scene-note a:hover {text-decoration: underline;}
+.upw-route-fit {display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 16px 0 0; padding: 12px 16px; background: #F0F5F4; border-left: 3px solid #005C43; font-size: 14px; line-height: 1.7; color: #43525A;}
+.upw-route-fit > span {font-size: 10.5px; font-weight: 700; letter-spacing: .14em; color: #005C43;}
+.upw-route-fit a {color: #071C2C; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(7, 28, 44, .25);}
+.upw-route-fit a:hover {color: #005C43; border-bottom-color: #005C43;}
+.upw-route-fit .upw-fit-back {margin-left: auto; font-size: 12.5px; font-weight: 700; color: #5A6870; border-bottom: 0;}
+.upw-pharma {display: grid; grid-template-columns: 1.35fr .9fr; gap: 26px; align-items: start; margin-top: 18px;}
+.upw-pharma-copy ul {margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px;}
+.upw-pharma-copy li {position: relative; padding-left: 22px; color: #43525A; font-size: 14.5px; line-height: 1.55;}
+.upw-pharma-copy li::before {content: ""; position: absolute; left: 2px; top: .5em; width: 7px; height: 7px; background: #005C43;}
+.upw-pharma-ref {margin: 14px 0 0; font-size: 13px; line-height: 1.6; color: #7C8A91;}
+.upw-pharma-copy .button-primary {display: inline-block; margin-top: 22px; text-decoration: none;}
+.upw-pharma-spec {padding: 22px; background: #F0F5F4; border: 1px solid #D5DEE1;}
+.upw-pharma-spec h3 {margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #071C2C;}
+.upw-pharma-spec dl {margin: 0;}
+.upw-pharma-spec dl > div {display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid #DCE5E1; font-size: 13.5px;}
+.upw-pharma-spec dl > div:last-child {border-bottom: 0;}
+.upw-pharma-spec dt {color: #5A6870;}
+.upw-pharma-spec dd {margin: 0; color: #123A50; font-weight: 600; text-align: right;}
+@media (max-width: 1080px) {
+  .upw-scene-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
+  .upw-pharma {grid-template-columns: 1fr;}
+}
+@media (max-width: 720px) {
+  .upw-scene-grid {grid-template-columns: minmax(0, 1fr);}
+  .upw-industry-nav-inner {padding: 12px 0;}
+  .upw-industry-nav-chips {flex-wrap: nowrap; width: 100%; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch;}
+  .upw-industry-nav-chips a {flex: none;}
+  .upw-route-fit .upw-fit-back {margin-left: 0;}
+}
+
+/* ============================================================
+   UPW text-reduction pass · 2026-09-11 (upw- scoped)
+   ============================================================ */
+.upw-hero-actions {display: flex; flex-wrap: wrap; gap: 12px; margin-top: 23px;}
+.upw-hero-actions .button {text-decoration: none;}
+.upw-flow {display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 6px 0 26px;}
+.upw-flow-step {padding: 20px 18px; background: #fff; border: 1px solid #E2E8EA; border-top: 3px solid #005C43;}
+.upw-flow-step b {display: block; margin-bottom: 8px; font-size: 12px; letter-spacing: .14em; color: #005C43;}
+.upw-flow-step h3 {margin: 0 0 8px; font-size: 16.5px; color: #071C2C; letter-spacing: -.01em;}
+.upw-flow-step p {margin: 0; font-size: 13px; line-height: 1.55; color: #4A575E;}
+.upw-routes {display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;}
+.upw-route-card {display: flex; flex-direction: column; gap: 12px; padding: 26px 24px; background: #fff; border: 1px solid #E2E8EA; border-top: 3px solid #005C43; scroll-margin-top: 90px;}
+.upw-route-card h3 {margin: 0; font-size: 21px; color: #071C2C; letter-spacing: -.015em;}
+.upw-route-spec {margin: 0; font-size: 14.5px; line-height: 1.6; color: #4A575E;}
+.upw-route-spec b {color: #005C43; font-size: 17px;}
+.upw-route-card > ul {margin: 0; padding: 0; list-style: none; display: grid; gap: 7px;}
+.upw-route-card > ul li {position: relative; padding-left: 20px; font-size: 13.5px; line-height: 1.55; color: #43525A;}
+.upw-route-card > ul li::before {content: ""; position: absolute; left: 2px; top: .55em; width: 7px; height: 7px; background: #005C43;}
+.upw-route-card .upw-route-fit {margin-top: auto;}
+.upw-fold {border: 1px solid #D5DEE1; background: #F0F5F4;}
+.upw-fold + .upw-fold {margin-top: 10px;}
+.upw-fold summary {display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px 16px; font-size: 13.5px; font-weight: 700; color: #071C2C; cursor: pointer; list-style: none;}
+.upw-fold summary::-webkit-details-marker {display: none;}
+.upw-fold summary::after {content: "+"; font-size: 18px; line-height: 1; color: #005C43;}
+.upw-fold[open] summary {border-bottom: 1px solid #DCE5E1;}
+.upw-fold[open] summary::after {content: "\2013";}
+.upw-fold-body {padding: 16px; animation: upwFade .25s ease-out;}
+.upw-fold-body h4 {margin: 2px 0 10px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #5A6870;}
+.upw-fold-body h4 + .detail-table-wrap {margin-bottom: 18px;}
+@keyframes upwFade {from {opacity: 0;} to {opacity: 1;}}
+.upw-stat-grid {display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;}
+.upw-stat-card {padding: 26px 22px; background: #fff; border: 1px solid #E2E8EA; border-top: 3px solid #005C43;}
+.upw-stat-card b {display: block; font-size: clamp(30px, 2.6vw, 40px); line-height: 1; color: #005C43; letter-spacing: -.02em;}
+.upw-stat-card i {display: block; margin: 8px 0 10px; font-style: normal; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #071C2C;}
+.upw-stat-card p {margin: 0; font-size: 13.5px; line-height: 1.6; color: #4A575E;}
+.upw-why-grid {display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;}
+.upw-why-item {padding: 20px 18px; background: #F0F5F4; border-left: 3px solid #005C43;}
+.upw-why-item b {display: block; margin-bottom: 6px; font-size: 16px; color: #071C2C; letter-spacing: -.01em;}
+.upw-why-item span {font-size: 12.5px; line-height: 1.5; color: #5A6870;}
+.detail-section > p {max-width: 72ch;}
+.upw-js .upw-reveal {opacity: 0; transform: translateY(14px); transition: opacity .3s ease-out, transform .3s ease-out;}
+.upw-js .upw-reveal.is-in {opacity: 1; transform: none;}
+@media (prefers-reduced-motion: reduce) {.upw-js .upw-reveal {opacity: 1; transform: none; transition: none;}}
+@media (max-width: 1080px) {
+  .upw-flow {grid-template-columns: repeat(2, minmax(0, 1fr));}
+  .upw-routes {grid-template-columns: minmax(0, 1fr);}
+  .upw-stat-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
+  .upw-why-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
+}
+@media (max-width: 720px) {
+  .upw-flow, .upw-stat-grid, .upw-why-grid {grid-template-columns: minmax(0, 1fr);}
+}
+
+
+/* hero warranty fold (readable disclosure, replaces fineprint) */
+.upw-warranty-fold {margin: 16px 0 0; max-width: 620px;}
+.upw-warranty-fold summary {display: inline-flex; align-items: center; gap: 7px; cursor: pointer; list-style: none; font-size: 13.5px; font-weight: 600; color: #5A6870; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #C9D2D6;}
+.upw-warranty-fold summary::-webkit-details-marker {display: none;}
+.upw-warranty-fold summary:hover {color: #005C43; text-decoration-color: #005C43;}
+.upw-warranty-arrow {display: inline-block; font-style: normal; color: #005C43; transition: transform .2s ease;}
+.upw-warranty-fold[open] .upw-warranty-arrow {transform: rotate(180deg);}
+.upw-warranty-body {margin: 12px 0 0; padding: 16px 18px; background: #F0F5F4; border-left: 3px solid #005C43; font-size: 14px; line-height: 1.7; color: #43525A;}
