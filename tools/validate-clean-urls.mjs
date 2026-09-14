@@ -59,13 +59,32 @@ function findLegacyJsonLdUrls(value, path = "$") {
   return findings;
 }
 
+function findProductsWithoutOffers(value, path = "$") {
+  const findings = [];
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => findings.push(...findProductsWithoutOffers(item, `${path}[${index}]`)));
+  } else if (value && typeof value === "object") {
+    const type = Array.isArray(value["@type"]) ? value["@type"] : [value["@type"]];
+    if (type.includes("Product") && !("offers" in value)) findings.push(path);
+    for (const [key, item] of Object.entries(value)) {
+      if (key === "@type") continue;
+      findings.push(...findProductsWithoutOffers(item, `${path}.${key}`));
+    }
+  }
+  return findings;
+}
+
 const htmlFiles = walkHtml(ROOT).sort();
 const indexableCanonicals = new Set();
+const inboundLinks = new Map();
+const titles = new Map();
+const descriptions = new Map();
 
 for (const path of htmlFiles) {
   const rel = relative(ROOT, path).replaceAll("\\", "/");
   const html = readFileSync(path, "utf8");
   const isNoindex = /<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+  const sourceIndexable = !isNoindex && rel !== "404.html";
   const canonical = extractCanonical(html);
   const expected = pageUrl(rel);
 
@@ -80,11 +99,26 @@ for (const path of htmlFiles) {
     errors.push(`${rel}: homepage URL must be ${ORIGIN}/, not /index`);
   }
 
-  if (!isNoindex && rel !== "404.html") {
+  if (sourceIndexable) {
     if (canonical !== expected) errors.push(`${rel}: canonical ${canonical ?? "missing"} != ${expected}`);
     const ogUrl = extractOgUrl(html);
     if (ogUrl !== expected) errors.push(`${rel}: og:url ${ogUrl ?? "missing"} != ${expected}`);
     indexableCanonicals.add(expected);
+
+    const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.replace(/\s+/g, " ").trim();
+    if (title) {
+      if (titles.has(title)) errors.push(`${rel}: duplicate <title> (also on ${titles.get(title)}): ${title}`);
+      else titles.set(title, rel);
+    }
+    const descriptionTag = html.match(/<meta[^>]*name=["']description["'][^>]*>/i)?.[0];
+    const description = descriptionTag?.match(/content=["']([^"']*)["']/i)?.[1]?.replace(/\s+/g, " ").trim();
+    if (description) {
+      if (descriptions.has(description)) {
+        errors.push(`${rel}: duplicate meta description (also on ${descriptions.get(description)})`);
+      } else {
+        descriptions.set(description, rel);
+      }
+    }
   } else if (canonical?.includes(".html")) {
     errors.push(`${rel}: noindex redirect canonical still contains .html`);
   }
@@ -92,18 +126,35 @@ for (const path of htmlFiles) {
   for (const match of html.matchAll(/<a\s+[^>]*href=["']([^"']+)["']/gi)) {
     const href = match[1];
     const target = internalHrefTarget(expected, href);
-    if (target && !existsSync(target)) errors.push(`${rel}: missing internal target ${href}`);
+    if (!target) continue;
+    if (!existsSync(target)) {
+      errors.push(`${rel}: missing internal target ${href}`);
+    } else if (target !== path && sourceIndexable) {
+      inboundLinks.set(target, (inboundLinks.get(target) ?? 0) + 1);
+    }
   }
 
   for (const match of html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)) {
     try {
       const jsonLd = JSON.parse(match[1]);
-      for (const path of findLegacyJsonLdUrls(jsonLd)) {
-        errors.push(`${rel}: JSON-LD URL contains .html at ${path}`);
+      for (const legacyPath of findLegacyJsonLdUrls(jsonLd)) {
+        errors.push(`${rel}: JSON-LD URL contains .html at ${legacyPath}`);
+      }
+      for (const productPath of findProductsWithoutOffers(jsonLd)) {
+        errors.push(`${rel}: Product JSON-LD node without offers at ${productPath} (triggers GSC invalid product snippet)`);
       }
     } catch (error) {
       errors.push(`${rel}: invalid JSON-LD (${error.message})`);
     }
+  }
+}
+
+for (const url of indexableCanonicals) {
+  const file = url === `${ORIGIN}/`
+    ? join(ROOT, "index.html")
+    : join(ROOT, `${url.slice(ORIGIN.length + 1)}.html`);
+  if (!(inboundLinks.get(file) > 0)) {
+    errors.push(`orphan page (no internal inbound link from any indexable page): ${url}`);
   }
 }
 
