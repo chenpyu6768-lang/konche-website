@@ -1,4 +1,9 @@
 # Konche Water Treatment Technology Website
+## v2.2.2 - 2026-09-14 - Validator gate rules + Product schema cleanup
+
+- Added three static gate rules to `tools/validate-clean-urls.mjs`: (1) any JSON-LD `Product` node must carry `offers`, (2) indexable canonical pages with zero internal inbound links are reported as orphans, (3) duplicate `<title>` or meta description across pages fails the gate.
+- The new Product rule caught six product pages that had re-introduced offer-less `Product` nodes (drinking-water-system, industrial-ultrapure-water-system, low-pressure-uv-sterilizer, medium-pressure-uv-system, ozone-disinfection-system, toc-uv-degradation-system); removed those nodes and their `#product` references (same fix as PR #10), keeping Organization/WebSite/WebPage/BreadcrumbList/FAQPage intact.
+- No visible page content changed; schema-only cleanup plus tooling.
 
 ## v2.2.1 - 2026-09-10 - Branded company email update
 
