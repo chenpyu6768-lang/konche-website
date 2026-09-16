@@ -89,7 +89,10 @@ for (const path of htmlFiles) {
   const expected = pageUrl(rel);
 
   if (html.toLowerCase().includes(RETIRED_HOST)) errors.push(`${rel}: retired domain remains`);
-  if (/href=["'][^"']*\.html(?:[#?][^"']*)?["']/i.test(html)) {
+  // 拦截内部遗留 .html 链接；外部权威站点（如 CDC）的 .html 引用不适用本规则（2026-09-16）
+  const htmlHrefMatch = html.match(/href=["']([^"']*\.html)(?:[#?][^"']*)?["']/i);
+  const htmlHrefIsExternal = htmlHrefMatch && /^https?:\/\//i.test(htmlHrefMatch[1]) && !/konchewater\.com/i.test(htmlHrefMatch[1]);
+  if (htmlHrefMatch && !htmlHrefIsExternal) {
     errors.push(`${rel}: internal href still contains .html`);
   }
   if (/https:\/\/www\.konchewater\.com\/[^"'\s<>]*\.html/i.test(html)) {
