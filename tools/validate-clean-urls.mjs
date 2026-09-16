@@ -213,7 +213,10 @@ async function validateLive(origin) {
     }
     const html = await cleanResponse.text();
     if (extractCanonical(html) !== url) errors.push(`live canonical mismatch: ${url}`);
-    if (/href=["'][^"']*\.html(?:[#?][^"']*)?["']/i.test(html)) {
+    // 外部权威站点（如 CDC）的 .html 引用不适用内部遗留链接规则（2026-09-16）
+    const liveHtmlHref = html.match(/href=["']([^"']*\.html)(?:[#?][^"']*)?["']/i);
+    const liveHtmlIsExternal = liveHtmlHref && /^https?:\/\//i.test(liveHtmlHref[1]) && !/konchewater\.com/i.test(liveHtmlHref[1]);
+    if (liveHtmlHref && !liveHtmlIsExternal) {
       errors.push(`live page contains .html href: ${url}`);
     }
     if (/https:\/\/www\.konchewater\.com\/[^"'\s<>]*\.html/i.test(html)) {
