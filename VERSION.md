@@ -1199,3 +1199,9 @@ Definitive fix for the unreachable Consumables third-level links. True root caus
 
 - Removed `Shenzhen`, `Dongguan` and `Ji'an` from the three `SELECTED REFERENCE PROJECTS` homepage cards.
 - Retained each project's industry, process, capacity and result information; product-page reference-project details remain unchanged.
+
+## Four UV engineering guides — 2026-09-18
+
+- Published four UV-series engineering guides: `/articles/toc-reduction-uv-system`, `/articles/uv-water-treatment-food-beverage-plants`, `/articles/how-to-size-uv-water-treatment-system`, `/articles/uv-water-treatment-systems`.
+- Added 12 article images under `app/images/articles/` (toc-uv, food-beverage-uv, uv-sizing, uv-guide).
+- Added four geo-article cards to `resources.html` and four sitemap entries.
