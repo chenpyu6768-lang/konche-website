@@ -1,4 +1,11 @@
 # Konche Water Treatment Technology Website
+## v2.3.1 - 2026-09-21 - Open-channel UV case provenance correction
+
+- Replaced the unsupported South Africa framing with the verified South China project location and moved the canonical case URL to `/cases/open-channel-uv-municipal-wastewater-china`; added direct redirects from both legacy South Africa URL variants.
+- Rewrote the case around the original 2019 project basis: China Grade 1A target, 5,000 + 15,000 m³/d, 12 modules, 76 × 320 W lamps, PLC/HMI control, per-lamp alarms, water-level sensing, pneumatic wiping, equipment dimensions and channel interfaces.
+- Removed unsupported Class 1B, night low-flow shutdown and overseas-installation claims. Added a clearly separated international EPC adaptation section, buyer input checklist and visible GEO FAQ with matching FAQPage structured data.
+- Updated the case index, homepage project card, UV product-page reference, sitemap, llms.txt and llms-full.txt to the corrected location, URL and capability wording.
+
 ## v2.3.0 - 2026-09-21 - Cases module: /cases section + South Africa open-channel UV case study
 
 - New /cases case-study section: cases.html lists each case as a title + one-line summary linking to a full case page; first case at /cases/open-channel-uv-municipal-wastewater-south-africa (two-station 5,000 + 15,000 m³/d municipal wastewater program, client anonymized).

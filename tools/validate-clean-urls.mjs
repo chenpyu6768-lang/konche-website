@@ -7,6 +7,9 @@ import { fileURLToPath } from "node:url";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.konchewater.com";
 const RETIRED_HOST = ["konche", "123.com"].join("");
+const CLEAN_URL_MIGRATION_SOURCES = new Set([
+  "/cases/open-channel-uv-municipal-wastewater-south-africa",
+]);
 const liveOrigin = process.argv[2]?.replace(/\/$/, "");
 const errors = [];
 
@@ -187,7 +190,9 @@ for (const line of redirects.split(/\r?\n/)) {
   const trimmed = line.trim();
   if (!trimmed || trimmed.startsWith("#")) continue;
   const [source, target, status] = trimmed.split(/\s+/);
-  if (!source?.endsWith(".html")) errors.push(`_redirects: legacy source must end in .html: ${source}`);
+  if (!source?.endsWith(".html") && !CLEAN_URL_MIGRATION_SOURCES.has(source)) {
+    errors.push(`_redirects: source must be a legacy .html URL or an approved clean-URL migration: ${source}`);
+  }
   if (target?.includes(".html")) errors.push(`_redirects: target creates an extra hop: ${target}`);
   if (status !== "308") errors.push(`_redirects: legacy redirect must use 308: ${trimmed}`);
   const targetUrl = target ? new URL(target, ORIGIN).href : null;
@@ -230,6 +235,15 @@ async function validateLive(origin) {
       if (legacyResponse.status !== 308 || target !== url) {
         errors.push(`legacy URL must redirect once with 308: ${legacy} -> ${legacyResponse.status} ${target}`);
       }
+    }
+  }
+  for (const source of CLEAN_URL_MIGRATION_SOURCES) {
+    const sourceUrl = new URL(source, origin).href;
+    const migrationResponse = await fetch(sourceUrl, { redirect: "manual" });
+    const location = migrationResponse.headers.get("location");
+    const target = location ? new URL(location, sourceUrl).href : null;
+    if (migrationResponse.status !== 308 || !target || !indexableCanonicals.has(target)) {
+      errors.push(`clean-URL migration must redirect once with 308 to an indexable canonical: ${sourceUrl} -> ${migrationResponse.status} ${target}`);
     }
   }
 }

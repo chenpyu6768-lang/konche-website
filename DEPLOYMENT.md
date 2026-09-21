@@ -93,6 +93,8 @@ server {
   location = /products/edi-ultrapure-water-system.html { return 308 /products/industrial-ultrapure-water-system; }
   location = /products/pharmaceutical-purified-water-system.html { return 308 /products/industrial-ultrapure-water-system; }
   location = /products/deionized-water-system.html { return 308 /products/industrial-ultrapure-water-system; }
+  location = /cases/open-channel-uv-municipal-wastewater-south-africa { return 308 /cases/open-channel-uv-municipal-wastewater-china; }
+  location = /cases/open-channel-uv-municipal-wastewater-south-africa.html { return 308 /cases/open-channel-uv-municipal-wastewater-china; }
 
   # One canonical public URL: legacy .html requests make one hop to suffixless.
   location = /index.html { return 308 /; }

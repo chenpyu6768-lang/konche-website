@@ -14,7 +14,7 @@
 
 ## Project case studies
 
-- [Open-channel UV disinfection for municipal wastewater — South Africa](https://www.konchewater.com/cases/open-channel-uv-municipal-wastewater-south-africa): Two-station case (5,000 + 15,000 m³/d) — supplied configuration tables, flow-adaptive PLC operation with night low-flow auto shutdown, pneumatic sleeve wiping and results in service.
+- [Open-channel UV disinfection for municipal wastewater — South China](https://www.konchewater.com/cases/open-channel-uv-municipal-wastewater-china): Two-plant case (5,000 + 15,000 m³/d) — 12 modules with 76 × 320 W lamps, PLC/HMI control, per-lamp alarms, pneumatic sleeve wiping and international EPC adaptation guidance. The original project used a China Grade 1A effluent target; overseas compliance is project-specific.
 
 ## Market-specific solution guides
 
