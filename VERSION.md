@@ -1,4 +1,12 @@
 # Konche Water Treatment Technology Website
+## v2.3.0 - 2026-09-21 - Cases module: /cases section + South Africa open-channel UV case study
+
+- New /cases case-study section: cases.html lists each case as a title + one-line summary linking to a full case page; first case at /cases/open-channel-uv-municipal-wastewater-south-africa (two-station 5,000 + 15,000 m³/d municipal wastewater program, client anonymized).
+- Solutions first-level navigation converted to a dropdown with two entries: Cases (/cases) and Industrial Solutions (existing /products/industry-solutions content unchanged); footer EXPLORE column gains a Cases link on all 40 pages with header/footer chrome.
+- Homepage "Projects Delivered, Results Proven": the South Africa open-channel UV case is now the first card and links to the case page.
+- UV Water Sterilizer page: South Africa case added as the first ENGINEERING CASES card (links to the case page) and "Municipal wastewater — open-channel effluent disinfection" added to APPLICATION FIELDS.
+- Three project photographs added under app/images/cases/ (installation, channel modules, control cabinet); sitemap +2 clean URLs; llms.txt / llms-full.txt gained the cases section and first case entry.
+
 ## v2.2.3 - 2026-09-21 - GA4 WhatsApp click tracking
 
 - Added a delegated `whatsapp_click` GA4 event for every `wa.me`, `api.whatsapp.com` and `web.whatsapp.com` link, including static article CTAs and dynamically injected social-dock/form-success links.

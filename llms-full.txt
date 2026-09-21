@@ -14,6 +14,10 @@ The homepage separates three commercial paths without changing the underlying pr
 - Consumables, spare parts and wholesale sourcing: https://www.konchewater.com/products/spare-parts-sourcing-service
 - Project and EPC support: https://www.konchewater.com/project-support
 
+## Project case studies
+
+The case-study section (https://www.konchewater.com/cases) documents delivered projects with the water duty, site constraints, supplied configuration and outcome for each. First case: open-channel UV disinfection for a two-station municipal wastewater program in South Africa (https://www.konchewater.com/cases/open-channel-uv-municipal-wastewater-south-africa) — 5,000 + 15,000 m³/d, 12 modules with 76 × 320 W high-output low-pressure lamps, per-lamp ballast monitoring, pneumatic sleeve wiping, PLC operation with night low-flow auto shutdown, Class-1A design margin against a Class-1B effluent requirement.
+
 ## Product families
 
 ### Reverse osmosis

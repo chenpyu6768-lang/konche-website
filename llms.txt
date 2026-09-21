@@ -10,6 +10,11 @@
 - [Equipment & OEM capability](https://www.konchewater.com/equipment-oem): Standard equipment routes, configurable systems and private-label supply scope for distributors and OEM buyers.
 - [Project & EPC support](https://www.konchewater.com/project-support): Engineering support scope, selected project equipment, reference projects and the four-step enquiry path.
 - [Industrial water treatment solutions](https://www.konchewater.com/products/industry-solutions): Application-led process directions for seven common industrial and commercial water duties.
+- [Project case studies](https://www.konchewater.com/cases): Documented project cases — water duty, site constraints, supplied equipment, engineering approach and outcome.
+
+## Project case studies
+
+- [Open-channel UV disinfection for municipal wastewater — South Africa](https://www.konchewater.com/cases/open-channel-uv-municipal-wastewater-south-africa): Two-station case (5,000 + 15,000 m³/d) — supplied configuration tables, flow-adaptive PLC operation with night low-flow auto shutdown, pneumatic sleeve wiping and results in service.
 
 ## Market-specific solution guides
 
