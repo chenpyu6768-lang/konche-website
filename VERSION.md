@@ -1205,3 +1205,9 @@ Definitive fix for the unreachable Consumables third-level links. True root caus
 - Published four UV-series engineering guides: `/articles/toc-reduction-uv-system`, `/articles/uv-water-treatment-food-beverage-plants`, `/articles/how-to-size-uv-water-treatment-system`, `/articles/uv-water-treatment-systems`.
 - Added 12 article images under `app/images/articles/` (toc-uv, food-beverage-uv, uv-sizing, uv-guide).
 - Added four geo-article cards to `resources.html` and four sitemap entries.
+
+## Two laboratory water guides — 2026-09-21
+
+- Published two laboratory water engineering guides: `/articles/laboratory-water-purification-systems` (selection guide) and `/articles/distilled-vs-deionized-vs-ro-water-laboratory` (comparison guide).
+- Added six article images under `app/images/articles/lab-water/` (1200×675 webp).
+- Added two geo-article cards to `resources.html`, two sitemap entries and two llms.txt / llms-full.txt entries.
