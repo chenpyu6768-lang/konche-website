@@ -65,6 +65,49 @@
     }
   }
 
+  function whatsappCtaLocation(link) {
+    if (link.closest(".social-dock")) return "social_dock";
+    if (link.closest(".form-success-card")) return "form_success";
+    if (window.location.pathname.includes("/articles/") || link.closest("article, .article-cta, .geo-article")) return "article";
+    if (link.closest("header, .site-header")) return "header";
+    if (link.closest("footer, .site-footer")) return "footer";
+    return "page";
+  }
+
+  // Track WhatsApp intent separately from a confirmed inquiry. Delegation keeps
+  // coverage on static article CTAs and links injected later by this script.
+  function initWhatsAppTracking() {
+    const root = document.documentElement;
+    if (root.dataset.whatsappTrackingInit) return;
+    root.dataset.whatsappTrackingInit = "1";
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const link = target.closest("a[href]");
+      if (!link) return;
+
+      let url;
+      try {
+        url = new URL(link.href, window.location.href);
+      } catch {
+        return;
+      }
+      const host = url.hostname.toLowerCase();
+      if (!["wa.me", "api.whatsapp.com", "web.whatsapp.com"].includes(host)) return;
+      if (typeof gtag !== "function") return;
+
+      const linkText = (link.textContent || link.getAttribute("aria-label") || "WhatsApp")
+        .replace(/\s+/g, " ")
+        .trim()
+        .slice(0, 100);
+      gtag("event", "whatsapp_click", {
+        cta_location: whatsappCtaLocation(link),
+        link_text: linkText,
+        page_location: window.location.href.slice(0, 500)
+      });
+    }, true);
+  }
+
   let turnstileWidgets = new Map();
 
   function mountTurnstile(form, insertBeforeEl) {
@@ -741,6 +784,7 @@
   safe("nav-menu", initNavMenu);
   safe("product-quicknav", initProductQuicknav);
   safe("social-dock", addSocialDock);
+  safe("whatsapp-tracking", initWhatsAppTracking);
   safe("client-logos", rotateClientLogos);
   safe("service-carousel", initServiceCarousel);
   safe("inquiry-form", addInquiryForm);

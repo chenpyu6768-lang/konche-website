@@ -1,4 +1,11 @@
 # Konche Water Treatment Technology Website
+## v2.2.3 - 2026-09-21 - GA4 WhatsApp click tracking
+
+- Added a delegated `whatsapp_click` GA4 event for every `wa.me`, `api.whatsapp.com` and `web.whatsapp.com` link, including static article CTAs and dynamically injected social-dock/form-success links.
+- Event parameters are limited to `cta_location`, non-sensitive link text and page location; the WhatsApp phone number and prefilled message are not sent by the custom event.
+- Kept `generate_lead` reserved for inquiries confirmed by the form backend, so WhatsApp intent does not inflate the confirmed-form KPI.
+- Bumped the shared inquiry-script cache key across all HTML pages.
+
 ## v2.2.2 - 2026-09-14 - Validator gate rules + Product schema cleanup
 
 - Added three static gate rules to `tools/validate-clean-urls.mjs`: (1) any JSON-LD `Product` node must carry `offers`, (2) indexable canonical pages with zero internal inbound links are reported as orphans, (3) duplicate `<title>` or meta description across pages fails the gate.
