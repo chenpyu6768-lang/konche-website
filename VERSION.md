@@ -1211,3 +1211,9 @@ Definitive fix for the unreachable Consumables third-level links. True root caus
 - Published two laboratory water engineering guides: `/articles/laboratory-water-purification-systems` (selection guide) and `/articles/distilled-vs-deionized-vs-ro-water-laboratory` (comparison guide).
 - Added six article images under `app/images/articles/lab-water/` (1200×675 webp).
 - Added two geo-article cards to `resources.html`, two sitemap entries and two llms.txt / llms-full.txt entries.
+
+## Article product-card sections - 2026-09-21
+
+- Added a "Recommended systems for this application" product-card section to all 10 articles (2-3 product cards each, mapped by article topic; copy uses only facts already on product pages).
+- Cards insert between the article body and the existing CTA/footer; card CSS added to each article head style block.
+- Added one-shot tool `tools/add-article-product-cards.mjs` (idempotent; reusable for future articles by extending CARD_SETS).
