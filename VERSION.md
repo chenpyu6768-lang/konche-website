@@ -1,3 +1,9 @@
+## v2.5.4 - 2026-09-24 - Unify in-page CSP meta with the tightened header policy
+
+- All 51 pages with a CSP meta tag now carry the exact _headers Content-Security-Policy: the blanket script-src 'https:' wildcard is gone and challenges.cloudflare.com (Turnstile) allowances are present in both layers (audit item P2-9).
+- Seven legacy noindex stubs and the internal banner template remain without meta CSP by design; the response header still covers every request.
+- Verification: 51/51 meta==header, 0 wildcard occurrences, validate-clean-urls 50/50 pass.
+
 ## v2.5.3 - 2026-09-24 - Complete the 3-4 h turnover note on the hotel-pool case
 
 - The v2.5.2 pass missed the turnover-section rewrite on the case page (an earlier find-and-replace had already changed the target string); the case now reads 600 m3 / 100-120 m3/h = 5-6 hours and carries the three-to-four-hour commercial-pool turnover reference, matching the article.
