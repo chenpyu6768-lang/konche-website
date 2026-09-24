@@ -327,3 +327,8 @@
 }
 @media (max-width: 720px) {.container {width: min(100% - 40px, 580px);}.detail-section {padding-left: 0; padding-right: 0;}
 }html {overflow-x: clip;}body {max-width: 100%;}.geo-answer-copy h3 {display: flex; align-items: center; gap: 10px; margin: 26px 0 10px; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase}.geo-answer-copy h3::before {content: ""; width: 18px; height: 2px; flex: none}.compare-decision {max-width: 920px; margin: 18px 0 0; color: #43574f; font-size: 13px; line-height: 1.7}.compare-updated {margin: 14px 0 0; color: #7c8f86; font-size: 11px; letter-spacing: .02em}.geo-answer-copy h3 {display: flex; align-items: center; gap: 10px; margin: 26px 0 10px; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase}.geo-answer-copy h3::before {content: ""; width: 18px; height: 2px; flex: none}.compare-decision {max-width: 920px; margin: 18px 0 0; color: #43574f; font-size: 13px; line-height: 1.7}.compare-updated {margin: 14px 0 0; color: #7c8f86; font-size: 11px; letter-spacing: .02em}
+/* UV FAMILY clickable cards (2026-09-24) */
+.uv-cat-card > a { display: block; }
+.uv-cat-card > a img { transition: transform .25s ease; }
+.uv-cat-card > a:hover img { transform: translateY(-3px); }
+.uv-cat-more { display: inline-block; margin-top: 8px; font-weight: 700; font-size: 13px; letter-spacing: .01em; }

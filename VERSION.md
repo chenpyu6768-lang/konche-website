@@ -1,3 +1,14 @@
+## v2.4.0 - 2026-09-24 - UV family rebuild: five series pages + brochure image set
+
+- New suffixless series pages built from the 2026 brochure set: /products/kcw-open-channel-uv (KCW/H, KCW/V, KCW/S + design basis), /products/kcf-closed-vessel-uv (working principle, advantages, sub-products KCF-UV/A, B, C), /products/kcs-compact-uv (KCS/A, KCS/C, KCS/B model tables), /products/kcj-submersible-uv (model table) and /products/tio2-photocatalytic-uv (UV photocatalytic TiO2 sterilizer, engineered to order). Each page carries Product, Breadcrumb and FAQPage structured data.
+- UV Water Sterilizer page rebuilt: new UV FAMILY module with seven clickable series cards (KCW/H, KCW/V, KCW/S, KCF, KCS, KCJ, TiO2), UV SERIES MAP kept below it, and the legacy PRODUCT CATEGORIES KCF/A-C card block removed (forms now live on the KCF page).
+- Medium-pressure UV caliber fixes per konche123 reference: ordinary-water flow 1-500 m3/h, pure-water 5-200 m3/h, lamp life 5,000-8,000 h; new Advanced Photo-Oxidation (TiO2 photocatalytic, engineered to order) section, two new sizing FAQs, applications extended to textile/chemical/pulp effluents.
+- Low-pressure UV page: KCS small in-line and KCJ submersible configurations section (0.2-2.3 / 0.23-4.6 m3/h), dose-monitor and separated-ballast benefit rows, fused-silica sleeve data row, cosmetics/pharma application row, in-line vs submersible FAQ; hero lamp life unified to 8,000-10,000 h.
+- TOC UV page: 185 nm vs 254 nm FAQ and buyer's-guide related card.
+- 17 brochure photographs added under app/images/products/ (uv-kcw-h/v/s, uv-kcf-a/b/product/cutaway, uv-kcs-a/b/c/family, uv-kcj, uv-tio2-photocatalytic); uv-kcs-pool.jpg removed after the pool module was dropped from the KCS page per review.
+- sitemap.xml 41 -> 46 clean URLs; llms.txt and llms-full.txt list the five new series pages; card-link styles added to app/globals.css.
+- validate-clean-urls: 54 HTML files retained, 46 canonical pages, 46 sitemap URLs - all pass.
+
 # Konche Water Treatment Technology Website
 ## v2.3.1 - 2026-09-21 - Open-channel UV case provenance correction
 

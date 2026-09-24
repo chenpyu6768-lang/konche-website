@@ -49,6 +49,11 @@
 - [Containerized water treatment](https://www.konchewater.com/products/containerized-water-treatment-system): Transport-ready RO and desalination systems for compact or remote deployment.
 - [UF ultrafiltration systems](https://www.konchewater.com/products/uf-ultrafiltration-system): Membrane clarification for surface water, RO pretreatment and reuse, with a UF-vs-RO comparison.
 - [UV water disinfection](https://www.konchewater.com/products/uv-water-sterilizer): Low-pressure, medium-pressure and TOC UV selection, with a UV-vs-ozone comparison guide.
+- [KCW open-channel UV systems](https://www.konchewater.com/products/kcw-open-channel-uv): KCW/H standard modules, KCW/V vertical-insert and KCW/S compact channels for municipal and industrial wastewater disinfection.
+- [KCF closed-vessel UV sterilizers](https://www.konchewater.com/products/kcf-closed-vessel-uv): 254 nm in-line reactors in threaded monolithic, flanged split and auto-wiping forms, 2–600 m³/h.
+- [KCS compact in-line UV sterilizers](https://www.konchewater.com/products/kcs-compact-uv): KCS/A, KCS/B, KCS/C and pool models from 0.2 to 2.3 m³/h for pure-water and mineral-water duty.
+- [KCJ submersible in-tank UV sterilizers](https://www.konchewater.com/products/kcj-submersible-uv): in-tank disinfection of stored water and headspace for secondary supply, 0.23–4.6 m³/h.
+- [UV photocatalytic TiO₂ sterilizer](https://www.konchewater.com/products/tio2-photocatalytic-uv): TiO₂ photocatalytic photo-oxidation packages for refractory COD, color and odor — 1–30 kW class, engineered to order.
 - [TOC UV degradation](https://www.konchewater.com/products/toc-uv-degradation-system): 185/254 nm treatment for trace-organic and microbial control in ultrapure-water loops.
 - [Medium-pressure UV](https://www.konchewater.com/products/medium-pressure-uv-system): Broad-spectrum high-intensity UV for large-flow duties.
 - [Low-pressure UV](https://www.konchewater.com/products/low-pressure-uv-sterilizer): 254 nm chemical-free disinfection for suitable process-water conditions.
