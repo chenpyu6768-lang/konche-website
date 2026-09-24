@@ -1,3 +1,10 @@
+## v2.6.0 - 2026-09-24 - Audit P1 fixes: quicknav dedup + relationship internal links
+
+- Removed the duplicated google-translate/site-enhancements script pair and product-quicknav aside (duplicate id=pqPanel) from the seven affected article pages; every page now carries exactly one quicknav (audit P1-1).
+- Relationship internal links added per the audit recommendation table (P1-2): related-system cards on medium-pressure UV (pool guide + hotel-pool case), low-pressure UV (regrowth + sizing guides), ozone (UV-vs-ozone guide), RO (boiler feedwater + refilling-station guides), containerized (new related section with refilling guide + drinking water), UF (Saudi SWRO/BWRO market guide), KCS and KCJ (storage-tank regrowth guide); in-text pool link on the MP applications table; open-channel case card added to the UV overview, UV sizing and TOC UV articles.
+- Coverage after fixes: product->article 8/24 (was 1/24), article->case 4/13 (was 1/13), product->case 3/24; quicknav single on all pages; validate-clean-urls 50/50 pass.
+- build-uv-pages.mjs related lists for KCS/KCJ updated so regenerations keep the new links.
+
 ## v2.5.4 - 2026-09-24 - Unify in-page CSP meta with the tightened header policy
 
 - All 51 pages with a CSP meta tag now carry the exact _headers Content-Security-Policy: the blanket script-src 'https:' wildcard is gone and challenges.cloudflare.com (Turnstile) allowances are present in both layers (audit item P2-9).
