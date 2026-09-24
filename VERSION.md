@@ -1,3 +1,8 @@
+## v2.5.3 - 2026-09-24 - Complete the 3-4 h turnover note on the hotel-pool case
+
+- The v2.5.2 pass missed the turnover-section rewrite on the case page (an earlier find-and-replace had already changed the target string); the case now reads 600 m3 / 100-120 m3/h = 5-6 hours and carries the three-to-four-hour commercial-pool turnover reference, matching the article.
+- Build pipeline now applies the 1-8kw image naming itself, so rebuilds no longer depend on the manual rename.
+
 ## v2.5.2 - 2026-09-24 - Hotel-pool case fact corrections (1.8 kW, 100-120 m3/h, 3-4 h reference)
 
 - Corrected the hotel-pool case per the customer's confirmed facts: UV model KCM-UV4.0KW -> KCM-UV1.8KW; recirculation and UV flow 120 m3/h -> 100-120 m3/h; theoretical turnover recalculated to five to six hours, with a reference note that commercial pools are commonly designed to turn over every three to four hours.
