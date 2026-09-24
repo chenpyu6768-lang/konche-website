@@ -145,6 +145,7 @@ over HTTPS (HSTS can be enabled after both hosts serve TLS correctly).
 - AI answer-engine crawlers (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot,
   anthropic-ai, PerplexityBot, Google-Extended, GoogleOther, Applebot-Extended,
   Amazonbot, FacebookBot, CCBot) are explicitly allowed for maximum AI visibility.
+- GPTBot (model-training crawler) is deliberately blocked at both the Cloudflare WAF (403) and robots.txt (Disallow) — a 2026-09-24 decision. Search/citation crawlers (OAI-SearchBot, ChatGPT-User, PerplexityBot etc.) remain fully allowed, so ChatGPT Search indexing is unaffected.
 - Bytespider is disallowed as an aggressive crawler per the third-party
   geo-crawlers guidance; revisit if ByteDance channels become business-relevant.
 - The `Content-Signal:` robots directive from the IETF aipref draft is intentionally

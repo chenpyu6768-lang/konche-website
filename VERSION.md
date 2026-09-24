@@ -1,3 +1,9 @@
+## v2.6.1 - 2026-09-24 - Align robots.txt with the deliberate GPTBot block (audit P0-1 closed)
+
+- Owner confirmed GPTBot (model-training crawler) is intentionally blocked at the Cloudflare WAF; robots.txt now matches with GPTBot Disallow instead of Allow, removing the contradictory signal found in the audit.
+- All search/citation crawlers (OAI-SearchBot, ChatGPT-User, PerplexityBot, Googlebot, Bingbot and the rest) remain allowed — ChatGPT Search indexing unaffected.
+- Decision documented in robots.txt comments and DEPLOYMENT.md robots policy notes.
+
 ## v2.6.0 - 2026-09-24 - Audit P1 fixes: quicknav dedup + relationship internal links
 
 - Removed the duplicated google-translate/site-enhancements script pair and product-quicknav aside (duplicate id=pqPanel) from the seven affected article pages; every page now carries exactly one quicknav (audit P1-1).

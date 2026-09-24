@@ -2,8 +2,9 @@ User-agent: *
 Allow: /
 
 # Search and AI answer engines — explicitly allowed for maximum AI visibility.
+# (GPTBot below is the exception: model TRAINING crawler, deliberately blocked at WAF and robots.)
 User-agent: GPTBot
-Allow: /
+Disallow: /  # model-training crawler deliberately blocked (WAF + robots aligned); search/citation bots below remain allowed
 
 User-agent: OAI-SearchBot
 Allow: /
