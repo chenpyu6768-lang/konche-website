@@ -1,3 +1,13 @@
+## v2.5.0 - 2026-09-24 - Three UV buyer guides + hotel-pool MP UV case
+
+- Published three reviewed English buyer guides (content passed through from the 2026-09-23 drafts without rewrite): /articles/ro-water-storage-tank-bacteria-regrowth (4 FAQs), /articles/uv-vs-ozone-water-treatment (5 FAQs), /articles/medium-pressure-uv-commercial-pools (5 FAQs, 14 sections).
+- Published /cases/2025-hotel-pool-4kw-medium-pressure-uv: 2025 hotel-pool equipment-supply and factory-test record (600 m3 pool, 120 m3/h recirculation, KCM-UV4.0KW, five-hour theoretical turnover) with validation limits stated plainly.
+- All four pages carry Organization/WebSite/WebPage/BreadcrumbList/Article (and FAQPage on articles) structured data, suffixless canonicals, index-follow robots and image alts; factory photographs are explicitly labeled as factory shots, not site installations.
+- Suggested internal links mapped to real URLs (/products/ro-reverse-osmosis-system to /products/single-double-stage-ro; /case-studies/... to the /cases/ URL); the pool article links the case in-text and in its recommended cards; cross-links between the three new articles are live.
+- Images staged from the topic packs: three article image sets (9 webp) plus the hotel-pool case set (4 jpg factory photographs) with intrinsic width/height attributes.
+- resources.html gains three question-led article cards; cases.html gains the hotel-pool case item; sitemap.xml 46 -> 50 clean URLs; llms.txt and llms-full.txt list all four new pages.
+- validate-clean-urls: 58 HTML files retained, 50 canonical pages, 50 sitemap URLs - all pass.
+
 ## v2.4.0 - 2026-09-24 - UV family rebuild: five series pages + brochure image set
 
 - New suffixless series pages built from the 2026 brochure set: /products/kcw-open-channel-uv (KCW/H, KCW/V, KCW/S + design basis), /products/kcf-closed-vessel-uv (working principle, advantages, sub-products KCF-UV/A, B, C), /products/kcs-compact-uv (KCS/A, KCS/C, KCS/B model tables), /products/kcj-submersible-uv (model table) and /products/tio2-photocatalytic-uv (UV photocatalytic TiO2 sterilizer, engineered to order). Each page carries Product, Breadcrumb and FAQPage structured data.
