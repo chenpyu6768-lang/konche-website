@@ -1,3 +1,10 @@
+## v2.5.1 - 2026-09-24 - Hotfix: restore ordered-list text and visible FAQ answers; add in-body product links
+
+- Fixed the article converter so numbered lists render their full text (the v2.5.0 build had collapsed ordered-list items to bare numerals) and FAQ answers now appear in the visible body (previously present only in FAQPage structured data). Verified with a new text-completeness audit: all 242 paragraph/list/heading fragments from the four source drafts are present on the pages.
+- Article hero captions now render under the hero image instead of being dropped.
+- Added editorial in-body product links (first-occurrence anchors): storage-tank article links RO systems, recirculation UV, point-of-use UV (KCS) and ozone circulation; UV-vs-ozone article links the UV family page, ozone systems and the TiO2 photocatalytic page; pool article links medium-pressure (x2) and low-pressure systems; the hotel-pool case links KCM-UV4.0KW to the medium-pressure product page.
+- No wording or data in the reviewed drafts was changed; links wrap existing phrases only.
+
 ## v2.5.0 - 2026-09-24 - Three UV buyer guides + hotel-pool MP UV case
 
 - Published three reviewed English buyer guides (content passed through from the 2026-09-23 drafts without rewrite): /articles/ro-water-storage-tank-bacteria-regrowth (4 FAQs), /articles/uv-vs-ozone-water-treatment (5 FAQs), /articles/medium-pressure-uv-commercial-pools (5 FAQs, 14 sections).
