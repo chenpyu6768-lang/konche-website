@@ -1,3 +1,10 @@
+## v2.5.2 - 2026-09-24 - Hotel-pool case fact corrections (1.8 kW, 100-120 m3/h, 3-4 h reference)
+
+- Corrected the hotel-pool case per the customer's confirmed facts: UV model KCM-UV4.0KW -> KCM-UV1.8KW; recirculation and UV flow 120 m3/h -> 100-120 m3/h; theoretical turnover recalculated to five to six hours, with a reference note that commercial pools are commonly designed to turn over every three to four hours.
+- Case URL migrated to /cases/2025-hotel-pool-1-8kw-medium-pressure-uv with 308 redirects from the former 4kw URL (suffixless and .html); validator migration allowlist updated; case image files and folder renamed to match.
+- The commercial-pool article's project record and KCM-UV selection sections were corrected to the same figures; cases index, llms.txt/llms-full and sitemap updated to the new URL.
+- Text-completeness audit re-run: all fragments from the corrected drafts present; validate-clean-urls 50/50 pass.
+
 ## v2.5.1 - 2026-09-24 - Hotfix: restore ordered-list text and visible FAQ answers; add in-body product links
 
 - Fixed the article converter so numbered lists render their full text (the v2.5.0 build had collapsed ordered-list items to bare numerals) and FAQ answers now appear in the visible body (previously present only in FAQPage structured data). Verified with a new text-completeness audit: all 242 paragraph/list/heading fragments from the four source drafts are present on the pages.

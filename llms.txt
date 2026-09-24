@@ -57,7 +57,7 @@
 - [Why can bacteria return after RO water enters a storage tank?](https://www.konchewater.com/articles/ro-water-storage-tank-bacteria-regrowth): Two control zones after RO, diagnosis tables, section-by-section sampling, and how cleaning, recirculation UV and ozone fit the fix.
 - [UV or ozone for water treatment?](https://www.konchewater.com/articles/uv-vs-ozone-water-treatment): Disinfection versus oxidation, residuals, bromate control, combined trains and a seven-question RFQ list.
 - [Why use medium-pressure UV in a commercial pool?](https://www.konchewater.com/articles/medium-pressure-uv-commercial-pools): Chlorine residual rules, chloramine realities, LP versus MP, MAHC compliance documents and a 10-item RFQ list.
-- [2025 hotel pool 4.0 kW medium-pressure UV project](https://www.konchewater.com/cases/2025-hotel-pool-4kw-medium-pressure-uv): Equipment-supply and factory-test record — 600 m³ pool, 120 m³/h recirculation, KCM-UV4.0KW, five-hour theoretical turnover.
+- [2025 hotel pool 1.8 kW medium-pressure UV project](https://www.konchewater.com/cases/2025-hotel-pool-1-8kw-medium-pressure-uv): Equipment-supply and factory-test record — 600 m³ pool, 100–120 m³/h recirculation, KCM-UV1.8KW, five-to-six-hour theoretical turnover.
 - [TOC UV degradation](https://www.konchewater.com/products/toc-uv-degradation-system): 185/254 nm treatment for trace-organic and microbial control in ultrapure-water loops.
 - [Medium-pressure UV](https://www.konchewater.com/products/medium-pressure-uv-system): Broad-spectrum high-intensity UV for large-flow duties.
 - [Low-pressure UV](https://www.konchewater.com/products/low-pressure-uv-sterilizer): 254 nm chemical-free disinfection for suitable process-water conditions.

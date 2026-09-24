@@ -9,7 +9,7 @@ const ORIGIN = "https://www.konchewater.com";
 const RETIRED_HOST = ["konche", "123.com"].join("");
 const CLEAN_URL_MIGRATION_SOURCES = new Set([
   "/cases/open-channel-uv-municipal-wastewater-south-africa",
-]);
+  "/cases/2025-hotel-pool-4kw-medium-pressure-uv",]);
 const liveOrigin = process.argv[2]?.replace(/\/$/, "");
 const errors = [];
 
